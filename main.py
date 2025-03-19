@@ -60,7 +60,7 @@ def user_data(id, api_key):
 
         # Consulta para obtener los cursos del usuario
         cur.execute("""
-            SELECT c.id, c.nombre, c.duracion, c.img 
+            SELECT c.id, c.nombre, c.duracion, c.img, uc.progreso
             FROM usuario_curso uc
             JOIN cursos c ON uc.curso_id = c.id
             WHERE uc.usuario_id = %s
@@ -68,16 +68,14 @@ def user_data(id, api_key):
         
         cursos = cur.fetchall()
 
-        # Obtener nombres de columnas de la tabla cursos
-        cursos_column_names = [desc[0] for desc in cur.description]
-
-        # Construir diccionario de cursos
+        # Construir diccionario de cursos con progreso
         user_dict["cursos"] = [
             {
                 "id": curso[0],
                 "nombre": curso[1],
                 "duracion": curso[2],
-                "imagen": curso[3]
+                "imagen": curso[3],
+                "progreso": curso[4]
             }
             for curso in cursos 
         ]
