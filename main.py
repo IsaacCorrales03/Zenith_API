@@ -72,14 +72,15 @@ def user_data(id, api_key):
         cursos_column_names = [desc[0] for desc in cur.description]
 
         # Construir diccionario de cursos
-        user_dict["cursos"] = {
-            curso[1]: {  # Nombre del curso como clave
+        user_dict["cursos"] = [
+            {
                 "id": curso[0],
+                "nombre": curso[1],
                 "duracion": curso[2],
                 "imagen": curso[3]
-            } 
-            for curso in cursos
-        }
+            }
+            for curso in cursos 
+        ]
 
         # Cerrar cursor
         cur.close()
