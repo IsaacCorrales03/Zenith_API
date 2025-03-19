@@ -34,46 +34,60 @@ def user_data(id, api_key):
         # Crear cursor
         cur = mysql.connection.cursor()
         
-        # Consulta parametrizada (segura contra SQLi)
+        # Consulta para obtener datos del usuario
         cur.execute('SELECT * FROM usuarios WHERE id = %s', (id,))
-        
-        # Obtener datos
         user_row = cur.fetchone()
-        
-        # Si no se encuentra el usuario
+
         if not user_row:
             cur.close()
             return jsonify({"error": "Usuario no encontrado"}), 404
-        
+
         # Obtener nombres de columnas
         column_names = [desc[0] for desc in cur.description]
-        
-        # Cerrar cursor
-        cur.close()
-        
-        # Construir diccionario de usuario
+
+        # Construir diccionario del usuario
         user_dict = dict(zip(column_names, user_row))
         user_api_key = urllib.parse.unquote(user_dict.get("hashed_api_key"))
-        print(user_api_key)
-        if (user_api_key != api_key):
-            return jsonify({"error": "ACCESO NO AUTORIZADO"}), 401
-        print() 
 
-        # Convertir cadenas JSON a objetos Python
-        if user_dict.get("porcentaje_de_aprendizajes"):
-            user_dict["porcentaje_de_aprendizajes"] = json.loads(user_dict["porcentaje_de_aprendizajes"])
+        if user_api_key != api_key:
+            cur.close()
+            return jsonify({"error": "ACCESO NO AUTORIZADO"}), 401
+
+        # Convertir cadenas JSON a objetos Python si existen
+        for key in ["porcentaje_de_aprendizajes", "preferencias", "retroalimentacion"]:
+            if user_dict.get(key):
+                user_dict[key] = json.loads(user_dict[key])
+
+        # Consulta para obtener los cursos del usuario
+        cur.execute("""
+            SELECT c.id, c.nombre, c.duracion, c.img 
+            FROM usuario_curso uc
+            JOIN cursos c ON uc.curso_id = c.id
+            WHERE uc.usuario_id = %s
+        """, (id,))
         
-        if user_dict.get("preferencias"):
-            user_dict["preferencias"] = json.loads(user_dict["preferencias"])
-        
-        if user_dict.get("retroalimentacion"):
-            user_dict["retroalimentacion"] = json.loads(user_dict["retroalimentacion"])
-        
-        # Devolver datos del usuario
+        cursos = cur.fetchall()
+
+        # Obtener nombres de columnas de la tabla cursos
+        cursos_column_names = [desc[0] for desc in cur.description]
+
+        # Construir diccionario de cursos
+        user_dict["cursos"] = {
+            curso[1]: {  # Nombre del curso como clave
+                "id": curso[0],
+                "duracion": curso[2],
+                "imagen": curso[3]
+            } 
+            for curso in cursos
+        }
+
+        # Cerrar cursor
+        cur.close()
+        print(user_dict)
+        # Devolver datos del usuario con cursos
         return jsonify(user_dict)
-    
+
     except Exception as e:
-        # Manejo de errores
         return jsonify({"error": str(e)}), 500
 
 @app.route('/')
@@ -166,7 +180,7 @@ import requests
 def peticion_periodica():
     while True:
         # Llamar a la función que deseas ejecutar
-        requests.get("https://api-zenith.onrender.com")
+        requests.get("https://zenith-api-38ka.onrender.com")
         time.sleep(40)
 
 bot = False
@@ -179,4 +193,4 @@ def iniciar_subproceso():
         t.daemon = True  # Asegura que el hilo termine cuando el programa termine
         t.start()
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+app.run(host='0.0.0.0', port=8080)
