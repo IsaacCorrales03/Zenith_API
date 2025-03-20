@@ -83,7 +83,6 @@ def user_data(id, api_key):
 
         # Cerrar cursor
         cur.close()
-        print(user_dict)
         # Devolver datos del usuario con cursos
         return jsonify(user_dict)
 
