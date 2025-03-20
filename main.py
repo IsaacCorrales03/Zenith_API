@@ -264,7 +264,7 @@ def peticion_periodica():
     while True:
         # Llamar a la función que deseas ejecutar
         requests.get(URL)
-        time.sleep(40)
+        time.sleep(30)
 
 bot = False
 # Iniciar el subproceso
