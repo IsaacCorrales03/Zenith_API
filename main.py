@@ -275,5 +275,5 @@ def iniciar_subproceso():
         t = threading.Thread(target=peticion_periodica)
         t.daemon = True  # Asegura que el hilo termine cuando el programa termine
         t.start()
-
+iniciar_subproceso()
 app.run(host='0.0.0.0', port=8080, debug=True)
