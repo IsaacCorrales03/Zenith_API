@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, flash, redirect
+from werkzeug.utils import secure_filename
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from flask_cors import CORS
@@ -14,7 +15,7 @@ load_dotenv()
 
 app = Flask('__main__')
 app.secret_key = 'clave_super_secreta'
-
+URL = "https://zenith-api-38ka.onrender.com"
 # Configuración clave de sesión (debe ser fija para evitar que se pierda)
 app.secret_key = os.getenv('SECRET_KEY', 'clave_secreta_por_defecto')
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -89,6 +90,84 @@ def user_data(id, api_key):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+@app.route('/crear-curso', methods=['GET', 'POST'])
+def crear_curso():
+    if request.method == 'GET':
+        # Si es una solicitud GET, simplemente mostrar el formulario
+        return render_template('cursos.html')
+    
+    elif request.method == 'POST':
+        try:
+            # Verificar si la carpeta de destino existe, si no, crearla
+            upload_folder = 'assets/cursos'
+            if not os.path.exists(upload_folder):
+                os.makedirs(upload_folder)
+            
+            # Obtener datos del formulario
+            nombre = request.form['nombre']
+            duracion = request.form['duracion']
+            
+            # Verificar si se envió un archivo
+            if 'imagen' not in request.files:
+                flash('No se seleccionó ninguna imagen', 'error')
+                return redirect(request.url)
+            
+            imagen = request.files['imagen']
+            
+            # Si el usuario no selecciona un archivo, el navegador envía un archivo vacío
+            if imagen.filename == '':
+                flash('No se seleccionó ninguna imagen', 'error')
+                return redirect(request.url)
+            
+            # Si el archivo existe y tiene una extensión permitida
+            if imagen:
+                # Asegurar un nombre de archivo único
+                filename = secure_filename(imagen.filename)
+                # Agregar timestamp al nombre para evitar sobreescrituras
+                nombre_archivo = f"{int(time.time())}_{filename}"
+                # Guardar la imagen en la carpeta designada
+                ruta_imagen = os.path.join(upload_folder, nombre_archivo)
+                imagen.save(ruta_imagen)
+                
+                # Guardar la ruta completa relativa en la base de datos
+                ruta_bd = f"{URL}/assets/cursos/{nombre_archivo}"
+                # Guardar información en la base de datos
+                cursor = mysql.connection.cursor()
+                sql = "INSERT INTO cursos (nombre, duracion, img) VALUES (%s, %s, %s)"
+                cursor.execute(sql, (nombre, duracion, ruta_bd))
+                mysql.connection.commit()
+                cursor.close()
+                
+                flash('Curso creado exitosamente', 'success')
+                return redirect('/cursos')  # Redirigir a la lista de cursos
+            
+        except Exception as e:
+            flash(f'Error al crear el curso: {str(e)}', 'error')
+            return redirect(request.url)
+    
+    return render_template('cursos.html')
+
+
+@app.route('/cursos')
+def listar_cursos():
+    cursor = mysql.connection.cursor()
+    cursor.execute("SELECT * FROM cursos")
+    cursos = cursor.fetchall()
+    cursor.close()
+    
+    # Convertir resultados a lista de diccionarios para facilitar su uso en la plantilla
+    cursos_list = []
+    for curso in cursos:
+        cursos_list.append({
+            'id': curso[0],
+            'nombre': curso[1],
+            'duracion': curso[2],
+            'imagen': curso[3]
+        })
+    
+    return jsonify(cursos_list)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -116,6 +195,11 @@ def generar_api_key():
     api_key_codificada = urllib.parse.quote(api_key)
     
     return api_key_codificada
+from flask import send_from_directory
+
+@app.route('/assets/cursos/<filename>')
+def serve_course_image(filename):
+    return send_from_directory('assets/cursos', filename)
 
 @app.route('/create_user', methods=['POST'])
 def create_user():
@@ -179,7 +263,7 @@ import requests
 def peticion_periodica():
     while True:
         # Llamar a la función que deseas ejecutar
-        requests.get("https://zenith-api-38ka.onrender.com")
+        requests.get(URL)
         time.sleep(40)
 
 bot = False
@@ -192,4 +276,4 @@ def iniciar_subproceso():
         t.daemon = True  # Asegura que el hilo termine cuando el programa termine
         t.start()
 
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=8080, debug=True)
