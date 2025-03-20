@@ -200,6 +200,52 @@ from flask import send_from_directory
 def serve_course_image(filename):
     return send_from_directory('assets/cursos', filename)
 
+@app.route('/enroll/<int:user_id>/<int:curso_id>', methods=['POST'])
+def enroll(user_id, curso_id):
+    try:
+        # Crear cursor
+        cur = mysql.connection.cursor()
+        
+        # Verificar si el usuario existe
+        cur.execute('SELECT id FROM usuarios WHERE id = %s', (user_id,))
+        if not cur.fetchone():
+            cur.close()
+            return jsonify({"error": "Usuario no encontrado"}), 404
+            
+        # Verificar si el curso existe
+        cur.execute('SELECT id FROM cursos WHERE id = %s', (curso_id,))
+        if not cur.fetchone():
+            cur.close()
+            return jsonify({"error": "Curso no encontrado"}), 404
+            
+        # Verificar si ya está inscrito
+        cur.execute('SELECT * FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
+                   (user_id, curso_id))
+        if cur.fetchone():
+            cur.close()
+            return jsonify({"message": "Usuario ya inscrito en este curso"}), 409
+        
+        # Insertar en la tabla usuario_curso con progreso inicial 0
+        cur.execute('INSERT INTO usuario_curso (usuario_id, curso_id, progreso) VALUES (%s, %s, %s)', 
+                   (user_id, curso_id, 0))
+        
+        # Confirmar la transacción
+        mysql.connection.commit()
+        
+        # Cerrar cursor
+        cur.close()
+        
+        return jsonify({
+            "success": True,
+            "message": "Usuario inscrito correctamente",
+            "usuario_id": user_id,
+            "curso_id": curso_id,
+            "progreso": 0
+        })
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/create_user', methods=['POST'])
 def create_user():
     try:
@@ -261,19 +307,23 @@ import time
 import requests
 def peticion_periodica():
     while True:
-        # Llamar a la función que deseas ejecutar
-        print("BOT REQUEST URL")
-        requests.get(URL)
+        try:
+            requests.get(URL, timeout=5)
+            print("BOT REQUEST URL")
+        except Exception as e:
+            print(f"Error en petición periódica: {str(e)}")
         time.sleep(30)
 
 bot = False
 # Iniciar el subproceso
 def iniciar_subproceso():
+    print("Bot iniciado")
     global bot
     if not bot:
         bot = True
         t = threading.Thread(target=peticion_periodica)
         t.daemon = True  # Asegura que el hilo termine cuando el programa termine
         t.start()
-iniciar_subproceso()
-app.run(host='0.0.0.0', port=8080, debug=True)
+if __name__ == '__main__':
+    iniciar_subproceso()
+    app.run(host='0.0.0.0', port=8080, debug=True)
