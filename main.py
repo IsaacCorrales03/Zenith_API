@@ -262,6 +262,7 @@ import requests
 def peticion_periodica():
     while True:
         # Llamar a la función que deseas ejecutar
+        print("BOT REQUEST URL")
         requests.get(URL)
         time.sleep(30)
 
