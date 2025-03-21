@@ -246,6 +246,51 @@ def enroll(user_id, curso_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/unsubscribe/<int:user_id>/<int:curso_id>', methods=['DELETE'])
+def unsubscribe(user_id, curso_id):
+    try:
+        # Crear cursor
+        cur = mysql.connection.cursor()
+        
+        # Verificar si el usuario existe
+        cur.execute('SELECT id FROM usuarios WHERE id = %s', (user_id,))
+        if not cur.fetchone():
+            cur.close()
+            return jsonify({"error": "Usuario no encontrado"}), 404
+            
+        # Verificar si el curso existe
+        cur.execute('SELECT id FROM cursos WHERE id = %s', (curso_id,))
+        if not cur.fetchone():
+            cur.close()
+            return jsonify({"error": "Curso no encontrado"}), 404
+            
+        # Verificar si está inscrito
+        cur.execute('SELECT * FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
+                   (user_id, curso_id))
+        if not cur.fetchone():
+            cur.close()
+            return jsonify({"error": "El usuario no está inscrito en este curso"}), 404
+        
+        # Eliminar el registro de la tabla usuario_curso
+        cur.execute('DELETE FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
+                   (user_id, curso_id))
+        
+        # Confirmar la transacción
+        mysql.connection.commit()
+        
+        # Cerrar cursor
+        cur.close()
+        
+        return jsonify({
+            "success": True,
+            "message": "Usuario dado de baja correctamente",
+            "usuario_id": user_id,
+            "curso_id": curso_id
+        })
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
 @app.route('/create_user', methods=['POST'])
 def create_user():
     try:
