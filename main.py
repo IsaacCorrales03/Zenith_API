@@ -11,14 +11,14 @@ import json
 from dotenv import load_dotenv
 import urllib.parse
 from flask import send_from_directory
+from server_strings import *
 
 load_dotenv()
 
 app = Flask('__main__')
-app.secret_key = 'clave_super_secreta'
-URL = "https://zenith-api-38ka.onrender.com"
+
 # Configuración clave de sesión (debe ser fija para evitar que se pierda)
-app.secret_key = os.getenv('SECRET_KEY', 'clave_secreta_por_defecto')
+app.secret_key = os.getenv('secret_key')
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Configuración de MySQL
@@ -67,14 +67,6 @@ def generar_api_key():
 
 @app.route('/.well-known/assetlinks.json')
 def assetlinks():
-    links_json = [{
-        "relation": ["delegate_permission/common.handle_all_urls"],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.isaac.zenith",
-            "sha256_cert_fingerprints": ["D4:A0:81:B8:6A:65:87:D6:07:E4:AF:B2:4E:48:04:51:A7:1B:CF:DB:B9:64:02:3A:58:24:02:68:CC:B6:4C:DC"]
-        }
-    }]
     return jsonify(links_json)
 
 @app.route('/user/<int:id>/<string:api_key>')
@@ -89,7 +81,7 @@ def user_data(id, api_key):
 
         if not user_row:
             cur.close()
-            return jsonify({"error": "Usuario no encontrado"}), 404
+            return jsonify({error: error_not_found_user}), 404
 
         # Obtener nombres de columnas
         column_names = [desc[0] for desc in cur.description]
@@ -100,7 +92,7 @@ def user_data(id, api_key):
 
         if user_api_key != api_key:
             cur.close()
-            return jsonify({"error": "ACCESO NO AUTORIZADO"}), 401
+            return jsonify({error: error_access_not_authorized}), 401
 
         # Convertir cadenas JSON a objetos Python si existen
         for key in ["porcentaje_de_aprendizajes", "preferencias", "retroalimentacion"]:
@@ -157,14 +149,14 @@ def crear_curso():
             
             # Verificar si se envió un archivo
             if 'imagen' not in request.files:
-                flash('No se seleccionó ninguna imagen', 'error')
+                flash(error_not_image_provided, error)
                 return redirect(request.url)
             
             imagen = request.files['imagen']
             
             # Si el usuario no selecciona un archivo, el navegador envía un archivo vacío
             if imagen.filename == '':
-                flash('No se seleccionó ninguna imagen', 'error')
+                flash(error_not_image_provided, error)
                 return redirect(request.url)
             
             # Si el archivo existe y tiene una extensión permitida
@@ -178,7 +170,7 @@ def crear_curso():
                 imagen.save(ruta_imagen)
                 
                 # Guardar la ruta completa relativa en la base de datos
-                ruta_bd = f"{URL}/assets/cursos/{nombre_archivo}"
+                ruta_bd = f"{service_url}/assets/cursos/{nombre_archivo}"
                 # Guardar información en la base de datos
                 cursor = mysql.connection.cursor()
                 sql = "INSERT INTO cursos (nombre, duracion, img) VALUES (%s, %s, %s)"
@@ -186,11 +178,11 @@ def crear_curso():
                 mysql.connection.commit()
                 cursor.close()
                 
-                flash('Curso creado exitosamente', 'success')
+                flash(info_course_created_correctly, success)
                 return redirect('/cursos')  # Redirigir a la lista de cursos
             
         except Exception as e:
-            flash(f'Error al crear el curso: {str(e)}', 'error')
+            flash(f'{error_creating_course}: {str(e)}', error)
             return redirect(request.url)
     
     return render_template('cursos.html')
@@ -233,20 +225,20 @@ def enroll(user_id, curso_id):
         cur.execute('SELECT id FROM usuarios WHERE id = %s', (user_id,))
         if not cur.fetchone():
             cur.close()
-            return jsonify({"error": "Usuario no encontrado"}), 404
+            return jsonify({error: error_not_found_user}), 404
             
         # Verificar si el curso existe
         cur.execute('SELECT id FROM cursos WHERE id = %s', (curso_id,))
         if not cur.fetchone():
             cur.close()
-            return jsonify({"error": "Curso no encontrado"}), 404
+            return jsonify({error: error_not_found_course}), 404
             
         # Verificar si ya está inscrito
         cur.execute('SELECT * FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
                    (user_id, curso_id))
         if cur.fetchone():
             cur.close()
-            return jsonify({"message": "Usuario ya inscrito en este curso"}), 409
+            return jsonify({message: info_user_already_enroll}), 409
         
         # Insertar en la tabla usuario_curso con progreso inicial 0
         cur.execute('INSERT INTO usuario_curso (usuario_id, curso_id, progreso) VALUES (%s, %s, %s)', 
@@ -260,14 +252,14 @@ def enroll(user_id, curso_id):
         
         return jsonify({
             "success": True,
-            "message": "Usuario inscrito correctamente",
+            "message": info_user_enrolled,
             "usuario_id": user_id,
             "curso_id": curso_id,
             "progreso": 0
         })
         
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({error: str(e)}), 500
 
 @app.route('/unsubscribe/<int:user_id>/<int:curso_id>', methods=['DELETE'])
 def unsubscribe(user_id, curso_id):
@@ -279,20 +271,20 @@ def unsubscribe(user_id, curso_id):
         cur.execute('SELECT id FROM usuarios WHERE id = %s', (user_id,))
         if not cur.fetchone():
             cur.close()
-            return jsonify({"error": "Usuario no encontrado"}), 404
+            return jsonify({error: error_not_found_user}), 404
             
         # Verificar si el curso existe
         cur.execute('SELECT id FROM cursos WHERE id = %s', (curso_id,))
         if not cur.fetchone():
             cur.close()
-            return jsonify({"error": "Curso no encontrado"}), 404
+            return jsonify({error: error_not_found_course}), 404
             
         # Verificar si está inscrito
         cur.execute('SELECT * FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
                    (user_id, curso_id))
         if not cur.fetchone():
             cur.close()
-            return jsonify({"error": "El usuario no está inscrito en este curso"}), 404
+            return jsonify({error: error_user_not_in_course}), 404
         
         # Eliminar el registro de la tabla usuario_curso
         cur.execute('DELETE FROM usuario_curso WHERE usuario_id = %s AND curso_id = %s', 
@@ -306,7 +298,7 @@ def unsubscribe(user_id, curso_id):
         
         return jsonify({
             "success": True,
-            "message": "Usuario dado de baja correctamente",
+            "message": info_user_unsubscribe,
             "usuario_id": user_id,
             "curso_id": curso_id
         })
@@ -331,7 +323,7 @@ def create_user():
         
         # Validar datos requeridos
         if not data or 'nombre' not in data or 'correo' not in data or 'contraseña' not in data:
-            return jsonify({"error": "Nombre, correo y contraseña son requeridos"}), 400
+            return jsonify({nombre: error_credentials_not_provided}), 400
         
         # Extraer datos
         nombre = data.get('nombre')
@@ -351,7 +343,7 @@ def create_user():
         cur.execute('SELECT id FROM usuarios WHERE correo = %s', (correo,))
         if cur.fetchone():
             cur.close()
-            return jsonify({"error": "El correo ya está registrado"}), 409
+            return jsonify({error: error_email_already_register}), 409
         
         # Ejecutar la consulta para insertar usuario
         cur.execute(
@@ -369,7 +361,7 @@ def create_user():
         cur.close()
         
         return jsonify({
-            "message": "Usuario creado exitosamente",
+            "message": infor_user_created_correctly,
             "user_id": user_id,
             "api_key": api_key  # Opcional: devolver la api_key al usuario
         }), 201
@@ -385,7 +377,7 @@ import requests
 def peticion_periodica():
     while True:
         try:
-            responce = requests.get(URL, timeout=5)
+            responce = requests.get(service_url, timeout=5)
             print(responce.content[0:10])
             print("BOT REQUEST URL")
         except Exception as e:
