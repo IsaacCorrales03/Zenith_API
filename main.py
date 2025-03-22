@@ -10,6 +10,7 @@ import bcrypt
 import json
 from dotenv import load_dotenv
 import urllib.parse
+from flask import send_from_directory
 
 load_dotenv()
 
@@ -19,6 +20,7 @@ URL = "https://zenith-api-38ka.onrender.com"
 # Configuración clave de sesión (debe ser fija para evitar que se pierda)
 app.secret_key = os.getenv('SECRET_KEY', 'clave_secreta_por_defecto')
 CORS(app, resources={r"/*": {"origins": "*"}})
+
 # Configuración de MySQL
 app.config['MYSQL_HOST'] = os.getenv('host')
 app.config['MYSQL_USER'] = os.getenv('user')
@@ -28,6 +30,40 @@ app.config['MYSQL_PORT'] = int(os.getenv('port'))
 
 mysql = MySQL(app)
 
+
+def create_link():
+    numeros = ''.join(random.choices(string.digits, k=4))
+    letras_minusculas = ''.join(random.choices(string.ascii_lowercase, k=4))
+    letras_mayusculas = ''.join(random.choices(string.ascii_uppercase, k=4))
+    cadena = numeros + letras_mayusculas + letras_minusculas
+    lista_caracteres = list(cadena)
+    random.shuffle(lista_caracteres)
+    link = ''.join(lista_caracteres)
+    return link
+
+def generar_api_key():
+    # Generar los grupos de caracteres
+    numeros = ''.join(random.choices(string.digits, k=12))
+    letras_minusculas = ''.join(random.choices(string.ascii_lowercase, k=12))
+    simbolos = ''.join(random.choices('!@#$%^&*()_+-=[]{}|;:,.<>', k=12))
+    letras_mayusculas = ''.join(random.choices(string.ascii_uppercase, k=12))
+    
+    # Combinar todos los caracteres
+    todos_los_caracteres = numeros + letras_minusculas + simbolos + letras_mayusculas
+    
+    # Convertir a lista para poder mezclar
+    lista_caracteres = list(todos_los_caracteres)
+    
+    # Mezclar la lista aleatoriamente
+    random.shuffle(lista_caracteres)
+    
+    # Convertir de nuevo a string
+    api_key = ''.join(lista_caracteres)
+    
+    # Codificar la API Key para ser segura en URLs
+    api_key_codificada = urllib.parse.quote(api_key)
+    
+    return api_key_codificada
 
 @app.route('/user/<int:id>/<string:api_key>')
 def user_data(id, api_key):
@@ -171,31 +207,6 @@ def listar_cursos():
 def index():
     return render_template('index.html')
 
-def generar_api_key():
-    # Generar los grupos de caracteres
-    numeros = ''.join(random.choices(string.digits, k=12))
-    letras_minusculas = ''.join(random.choices(string.ascii_lowercase, k=12))
-    simbolos = ''.join(random.choices('!@#$%^&*()_+-=[]{}|;:,.<>', k=12))
-    letras_mayusculas = ''.join(random.choices(string.ascii_uppercase, k=12))
-    
-    # Combinar todos los caracteres
-    todos_los_caracteres = numeros + letras_minusculas + simbolos + letras_mayusculas
-    
-    # Convertir a lista para poder mezclar
-    lista_caracteres = list(todos_los_caracteres)
-    
-    # Mezclar la lista aleatoriamente
-    random.shuffle(lista_caracteres)
-    
-    # Convertir de nuevo a string
-    api_key = ''.join(lista_caracteres)
-    
-    # Codificar la API Key para ser segura en URLs
-    api_key_codificada = urllib.parse.quote(api_key)
-    
-    return api_key_codificada
-from flask import send_from_directory
-
 @app.route('/assets/cursos/<filename>')
 def serve_course_image(filename):
     return send_from_directory('assets/cursos', filename)
@@ -290,7 +301,16 @@ def unsubscribe(user_id, curso_id):
         
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/create_group', methods=['POST'])
+def create_group():
+    name = request.form['name']
+    public = request.form['public']
+    admin = request.form['admin']
     
+    cursor = mysql.connection.cursor()
+    
+
 @app.route('/create_user', methods=['POST'])
 def create_user():
     try:
@@ -353,7 +373,8 @@ import requests
 def peticion_periodica():
     while True:
         try:
-            requests.get(URL, timeout=5)
+            responce = requests.get(URL, timeout=5)
+            print(responce.content[0:10])
             print("BOT REQUEST URL")
         except Exception as e:
             print(f"Error en petición periódica: {str(e)}")
@@ -369,6 +390,7 @@ def iniciar_subproceso():
         t = threading.Thread(target=peticion_periodica)
         t.daemon = True  # Asegura que el hilo termine cuando el programa termine
         t.start()
+
 if __name__ == '__main__':
     iniciar_subproceso()
     app.run(host='0.0.0.0', port=8080, debug=True)
