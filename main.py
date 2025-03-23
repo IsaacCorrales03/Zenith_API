@@ -330,13 +330,13 @@ def create_user():
         return jsonify({"error": str(e)}), 500
     
 
-@app.route('/group_data/<int:group_id>')
-def group_data(group_id):
+@app.route('/group/<string:group_code>')
+def group_data(group_code):
     try:
         cursor = mysql.connection.cursor()
         
         # Usar el parámetro group_id en lugar de hardcodear 1
-        cursor.execute("SELECT * FROM grupos WHERE id = %s", (group_id,))
+        cursor.execute("SELECT * FROM grupos WHERE codigo = %s", (group_code,))
         data = cursor.fetchone()
         
         if not data:
@@ -363,10 +363,11 @@ def group_data(group_id):
             'miembros': data[3],
             'admin': admin_nombre,
             'public': data[5],
-            'description': data[6]
+            'description': data[6],
+            'codigo':data[7]
         }
         
-        mysql.connection.commit()  # Asegurar que se han completado las operaciones
+        mysql.connection.commit()  
         return jsonify(data_json), 200
     
     except Exception as e:
@@ -379,6 +380,32 @@ def group_data(group_id):
         if 'cursor' in locals() and cursor:
             cursor.close()
 
+@app.route('/join/<string:group_code>/<int:user_id>')
+def join_user(group_code, user_id):
+    cursor = mysql.connection.cursor()
+    
+    # Get the group ID
+    cursor.execute('SELECT id FROM grupos WHERE codigo = %s', (group_code,))
+    result = cursor.fetchone()
+    
+    # Check if group exists
+    if not result:
+        return jsonify({'error': 'Group not found'}), 404
+    
+    group_id = result[0]
+    
+    # Check if user is already in the group
+    cursor.execute('SELECT * FROM usuario_grupo WHERE usuario_id = %s AND grupo_id = %s', (user_id, group_id))
+    existing = cursor.fetchone()
+    
+    if existing:
+        return jsonify({'message': 'User already in group'}), 200
+    
+    # Insert user into group
+    cursor.execute('INSERT INTO usuario_grupo(usuario_id, grupo_id) VALUES(%s, %s)', (user_id, group_id))
+    mysql.connection.commit()
+    
+    return jsonify({'message': 'User added to group successfully'}), 201
 
 import threading
 import time
