@@ -319,7 +319,7 @@ def create_user():
         cur.close()
         
         return jsonify({
-            "message": infor_user_created_correctly,
+            "message": info_user_created_correctly,
             "user_id": user_id,
             "api_key": api_key  # Opcional: devolver la api_key al usuario
         }), 201
@@ -390,7 +390,7 @@ def join_user(group_code, user_id):
     
     # Check if group exists
     if not result:
-        return jsonify({'error': 'Group not found'}), 404
+        return jsonify({error: error_not_found_group}), 404
     
     group_id = result[0]
     
@@ -399,13 +399,13 @@ def join_user(group_code, user_id):
     existing = cursor.fetchone()
     
     if existing:
-        return jsonify({'message': 'User already in group'}), 200
+        return jsonify({message: info_already_in_group}), 200
     
     # Insert user into group
     cursor.execute('INSERT INTO usuario_grupo(usuario_id, grupo_id) VALUES(%s, %s)', (user_id, group_id))
     mysql.connection.commit()
     
-    return jsonify({'message': 'User added to group successfully'}), 201
+    return jsonify({message: info_user_join_correctly}), 201
 
 import threading
 import time

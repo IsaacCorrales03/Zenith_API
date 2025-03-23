@@ -7,6 +7,7 @@ message = 'message'
 
 error_not_found_user = 'Usuario no encontrado'
 error_not_found_course = 'Curso no encontrado'
+error_not_found_group = 'Grupo no encontrado'
 error_access_not_authorized = 'Acceso no autorizado'
 error_not_image_provided = 'No se seleccionó ninguna imagen'
 error_creating_course = 'Error al crear el curso'   
@@ -15,8 +16,11 @@ error_credentials_not_provided = 'Nombre, correo y contraseña son requeridos'
 error_email_already_register = 'El correo ya está registrado'
 
 
+
 info_course_created_correctly = 'Curso creado exitosamente'
 info_user_already_enroll = 'Usuario ya inscrito en este curso'
+info_already_in_group = 'Usuario ya está en este grupo'
+info_user_join_correctly= 'El usuario se unió al grupo correctamente'
 info_user_enrolled = 'Usuario inscrito correctamente'
 info_user_unsubscribe = 'Usuario dado de baja correctamente'
-infor_user_created_correctly = 'Usuario creado exitosamente'
+info_user_created_correctly = 'Usuario creado exitosamente'
