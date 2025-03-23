@@ -1,18 +1,15 @@
 from flask import Flask, request, jsonify, render_template, flash, redirect
 from werkzeug.utils import secure_filename
 from flask_mysqldb import MySQL
-import MySQLdb.cursors
 from flask_cors import CORS
 import os
-import string
-import random
 import bcrypt
 import json
 from dotenv import load_dotenv
 import urllib.parse
 from flask import send_from_directory
 from server_strings import *
-
+from criptografic import generate_api_key, generate_group_link
 load_dotenv()
 
 app = Flask('__main__')
@@ -31,39 +28,6 @@ app.config['MYSQL_PORT'] = int(os.getenv('port'))
 mysql = MySQL(app)
 
 
-def create_link():
-    numeros = ''.join(random.choices(string.digits, k=4))
-    letras_minusculas = ''.join(random.choices(string.ascii_lowercase, k=4))
-    letras_mayusculas = ''.join(random.choices(string.ascii_uppercase, k=4))
-    cadena = numeros + letras_mayusculas + letras_minusculas
-    lista_caracteres = list(cadena)
-    random.shuffle(lista_caracteres)
-    link = ''.join(lista_caracteres)
-    return link
-
-def generar_api_key():
-    # Generar los grupos de caracteres
-    numeros = ''.join(random.choices(string.digits, k=12))
-    letras_minusculas = ''.join(random.choices(string.ascii_lowercase, k=12))
-    simbolos = ''.join(random.choices('!@#$%^&*()_+-=[]{}|;:,.<>', k=12))
-    letras_mayusculas = ''.join(random.choices(string.ascii_uppercase, k=12))
-    
-    # Combinar todos los caracteres
-    todos_los_caracteres = numeros + letras_minusculas + simbolos + letras_mayusculas
-    
-    # Convertir a lista para poder mezclar
-    lista_caracteres = list(todos_los_caracteres)
-    
-    # Mezclar la lista aleatoriamente
-    random.shuffle(lista_caracteres)
-    
-    # Convertir de nuevo a string
-    api_key = ''.join(lista_caracteres)
-    
-    # Codificar la API Key para ser segura en URLs
-    api_key_codificada = urllib.parse.quote(api_key)
-    
-    return api_key_codificada
 
 @app.route('/.well-known/assetlinks.json')
 def assetlinks():
@@ -306,13 +270,7 @@ def unsubscribe(user_id, curso_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route('/create_group', methods=['POST'])
-def create_group():
-    name = request.form['name']
-    public = request.form['public']
-    admin = request.form['admin']
-    
-    cursor = mysql.connection.cursor()
+
     
 
 @app.route('/create_user', methods=['POST'])
@@ -334,7 +292,7 @@ def create_user():
         hashed_password = bcrypt.hashpw(contraseña.encode('utf-8'), bcrypt.gensalt())
 
         # Concatenar todo en el orden especificado
-        api_key = generar_api_key()
+        api_key = generate_api_key()
         
         # Crear cursor
         cur = mysql.connection.cursor()
@@ -371,6 +329,57 @@ def create_user():
         mysql.connection.rollback()
         return jsonify({"error": str(e)}), 500
     
+
+@app.route('/group_data/<int:group_id>')
+def group_data(group_id):
+    try:
+        cursor = mysql.connection.cursor()
+        
+        # Usar el parámetro group_id en lugar de hardcodear 1
+        cursor.execute("SELECT * FROM grupos WHERE id = %s", (group_id,))
+        data = cursor.fetchone()
+        
+        if not data:
+            return jsonify({"error": "Grupo no encontrado"}), 404
+        
+        # Con Flask-MySQLdb, fetchone() devuelve una tupla, no un diccionario
+        # Obtener el admin_id del índice 4
+        admin_id = data[4]
+        
+        # Obtener el nombre del admin en una consulta separada
+        cursor.execute("SELECT nombre FROM usuarios WHERE id = %s", (admin_id,))
+        admin_result = cursor.fetchone()
+        
+        if not admin_result:
+            admin_nombre = "Desconocido"  # Valor por defecto si no se encuentra el admin
+        else:
+            admin_nombre = admin_result[0]  # El primer elemento de la tupla
+        
+        # Crear el diccionario de respuesta usando los índices
+        data_json = {
+            'id': data[0],
+            'nombre': data[1],
+            'banner': data[2],
+            'miembros': data[3],
+            'admin': admin_nombre,
+            'public': data[5],
+            'description': data[6]
+        }
+        
+        mysql.connection.commit()  # Asegurar que se han completado las operaciones
+        return jsonify(data_json), 200
+    
+    except Exception as e:
+        # Manejo de errores
+        app.logger.error(f"Error al obtener datos del grupo: {str(e)}")
+        return jsonify({"error": "Error al procesar la solicitud"}), 500
+    
+    finally:
+        # Cerrar el cursor explícitamente
+        if 'cursor' in locals() and cursor:
+            cursor.close()
+
+
 import threading
 import time
 import requests
