@@ -445,7 +445,7 @@ def login():
         cur = mysql.connection.cursor()
         
         # Buscar usuario por correo
-        cur.execute('SELECT id, nombre, correo, clave, hashed_api_key FROM usuarios WHERE correo = %s', (correo,))
+        cur.execute('SELECT id, clave, hashed_api_key FROM usuarios WHERE correo = %s', (correo,))
         usuario = cur.fetchone()
         
         # Verificar si el usuario existe
