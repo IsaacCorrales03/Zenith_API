@@ -454,7 +454,7 @@ def login():
             return jsonify({"error": "Credenciales incorrectas"}), 401
         
         # Verificar contraseña
-        user_id, nombre, email, hashed_password, current_api_key = usuario
+        user_id, hashed_password, current_api_key = usuario
         
         # Verificar contraseña usando bcrypt
         if bcrypt.checkpw(contraseña.encode('utf-8'), hashed_password.encode('utf-8')):
@@ -465,8 +465,7 @@ def login():
             return jsonify({
                 "success": "Credenciales correctas",
                 "user_id": user_id,
-                "nombre": nombre,
-                "correo": email,
+                "api_key": current_api_key
             }), 200
         else:
             cur.close()
