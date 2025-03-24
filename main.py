@@ -70,8 +70,32 @@ def user_data(id, api_key):
             JOIN cursos c ON uc.curso_id = c.id
             WHERE uc.usuario_id = %s
         """, (id,))
+
         
         cursos = cur.fetchall()
+        cur.execute("""
+            SELECT g.id, g.nombre, g.banner, g.miembros, g.administrador, g.public, g.description, g.codigo
+            FROM usuario_grupo ug
+            JOIN grupos g ON ug.grupo_id = g.id
+            WHERE ug.usuario_id = %s
+        """, (id,))
+
+        grupos = cur.fetchall()
+
+        # Construir diccionario de grupos
+        user_dict["grupos"] = [
+            {
+                "id": grupo[0],
+                "nombre": grupo[1],
+                "banner": grupo[2],
+                "miembros": grupo[3],
+                "administrador": grupo[4],
+                "public": grupo[5],
+                "description": grupo[6],
+                "codigo": grupo[7]
+            }
+            for grupo in grupos
+        ]
 
         # Construir diccionario de cursos con progreso
         user_dict["cursos"] = [
@@ -270,9 +294,6 @@ def unsubscribe(user_id, curso_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
-    
-
 @app.route('/create_user', methods=['POST'])
 def create_user():
     try:
@@ -327,8 +348,7 @@ def create_user():
     except Exception as e:
         # Si ocurre algún error, hacer rollback
         mysql.connection.rollback()
-        return jsonify({"error": str(e)}), 500
-    
+        return jsonify({"error": str(e)}), 500    
 
 @app.route('/group/<string:group_code>')
 def group_data(group_code):
