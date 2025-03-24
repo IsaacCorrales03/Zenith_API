@@ -380,7 +380,7 @@ def group_data(group_code):
         if 'cursor' in locals() and cursor:
             cursor.close()
 
-@app.route('/join/<string:group_code>/<int:user_id>')
+@app.route('/join/<string:group_code>/<int:user_id>', methods=['POST'])
 def join_user(group_code, user_id):
     cursor = mysql.connection.cursor()
     
@@ -418,7 +418,7 @@ def peticion_periodica():
             print("BOT REQUEST URL")
         except Exception as e:
             print(f"Error en petición periódica: {str(e)}")
-        time.sleep(30)
+        time.sleep(50)
 
 bot = False
 # Iniciar el subproceso
