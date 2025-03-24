@@ -399,7 +399,7 @@ def join_user(group_code, user_id):
     existing = cursor.fetchone()
     
     if existing:
-        return jsonify({message: info_already_in_group}), 200
+        return jsonify({error: info_already_in_group}), 401
     
     # Insert user into group
     cursor.execute('INSERT INTO usuario_grupo(usuario_id, grupo_id) VALUES(%s, %s)', (user_id, group_id))
