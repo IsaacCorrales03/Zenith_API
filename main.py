@@ -117,7 +117,6 @@ def user_data(id, api_key):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
 @app.route('/crear-curso', methods=['GET', 'POST'])
 def crear_curso():
     if request.method == 'GET':
@@ -174,7 +173,6 @@ def crear_curso():
             return redirect(request.url)
     
     return render_template('cursos.html')
-
 
 @app.route('/cursos')
 def listar_cursos():
@@ -296,22 +294,24 @@ def unsubscribe(user_id, curso_id):
 
 @app.route('/create_user', methods=['POST'])
 def create_user():
+    
+
     try:
         # Obtener datos del request
         data = request.get_json()
-        
         # Validar datos requeridos
-        if not data or 'nombre' not in data or 'correo' not in data or 'contraseña' not in data:
+        if not data or 'nombre' not in data or 'correo' not in data or 'clave' not in data:
+            print(f"data.get('nombre')")
             return jsonify({nombre: error_credentials_not_provided}), 400
-        
+
         # Extraer datos
         nombre = data.get('nombre')
         correo = data.get('correo')
-        contraseña = data.get('contraseña')
+        clave = data.get('clave')
         
         # Encriptar la contraseña
-        hashed_password = bcrypt.hashpw(contraseña.encode('utf-8'), bcrypt.gensalt())
-
+        hashed_password = bcrypt.hashpw(clave.encode('utf-8'), bcrypt.gensalt())
+        
         # Concatenar todo en el orden especificado
         api_key = generate_api_key()
         
@@ -427,15 +427,64 @@ def join_user(group_code, user_id):
     
     return jsonify({message: info_user_join_correctly}), 201
 
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        # Obtener datos del request
+        data = request.get_json()
+        
+        # Validar datos requeridos
+        if not data or 'correo' not in data or 'contraseña' not in data:
+            return jsonify({"error": "Credenciales no proporcionadas"}), 400
+        
+        # Extraer datos
+        correo = data.get('correo')
+        contraseña = data.get('contraseña')
+        
+        # Crear cursor
+        cur = mysql.connection.cursor()
+        
+        # Buscar usuario por correo
+        cur.execute('SELECT id, nombre, correo, clave, hashed_api_key FROM usuarios WHERE correo = %s', (correo,))
+        usuario = cur.fetchone()
+        
+        # Verificar si el usuario existe
+        if not usuario:
+            cur.close()
+            return jsonify({"error": "Credenciales incorrectas"}), 401
+        
+        # Verificar contraseña
+        user_id, nombre, email, hashed_password, current_api_key = usuario
+        
+        # Verificar contraseña usando bcrypt
+        if bcrypt.checkpw(contraseña.encode('utf-8'), hashed_password.encode('utf-8')):
+            
+            # Cerrar cursor
+            cur.close()
+            
+            return jsonify({
+                "success": "Credenciales correctas",
+                "user_id": user_id,
+                "nombre": nombre,
+                "correo": email,
+            }), 200
+        else:
+            cur.close()
+            return jsonify({"error": "Credenciales incorrectas"}), 401
+    
+    except Exception as e:
+        # Si ocurre algún error
+        mysql.connection.rollback()
+        return jsonify({"error": str(e)}), 500
+    
+
 import threading
 import time
 import requests
 def peticion_periodica():
     while True:
         try:
-            responce = requests.get(service_url, timeout=5)
-            print(responce.content[0:10])
-            print("BOT REQUEST URL")
+            requests.get(service_url, timeout=5)
         except Exception as e:
             print(f"Error en petición periódica: {str(e)}")
         time.sleep(50)
