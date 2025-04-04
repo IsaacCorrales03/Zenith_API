@@ -46,15 +46,12 @@ El proyecto se basa en varios componentes clave:
 1. Clonar el repositorio
 2. Instalar paquetes requeridos:
    ```
-   pip install flask flask-cors werkzeug
+   pip install -r requirements.txt
    ```
-3. Configurar la variable de entorno para seguridad:
-   ```
-   export secret_key="tu-clave-secreta"
-   ```
+3. Configurar la variable de entorno en el .env con la URI de la base de datos
 4. Ejecutar la aplicación:
    ```
-   python app.py
+   python main.py
    ```
 
 ## Endpoints de la API
@@ -245,4 +242,4 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
 ```
 
-> **Nota:** Para despliegue en producción, se recomienda deshabilitar el modo de depuración y utilizar un servidor WSGI de producción como Gunicorn.
+> **Nota:** Para despliegue en producción, deshabilitar el modo de depuración y utilizar el servidor WSGI de producción Gunicorn.
