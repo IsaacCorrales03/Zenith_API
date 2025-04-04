@@ -1,5 +1,0 @@
-invitacion -> apizenith/group/XXXX
-el endpoint "group" busca ese código en los grupos, y devuelve los datos
-unirse -> apizenith/join/XXXX/user_id
-une a el usuario al grupo con el codigo
-

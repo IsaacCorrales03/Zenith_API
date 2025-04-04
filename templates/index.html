@@ -129,13 +129,13 @@
             
             // Crear objeto con los datos del usuario
             const userData = {
-                nombre: nombre,
-                correo: correo,
-                clave: contraseña
+                username: nombre,
+                email: correo,
+                password: contraseña
             };
             
             // Enviar los datos al servidor
-            fetch('/create_user', {
+            fetch('/usuario', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -152,11 +152,11 @@
                     document.getElementById('apiKeyContainer').style.display = 'none';
                 } else {
                     mensaje.className = 'message success';
-                    mensaje.textContent = data.message + ' (ID: ' + data.user_id + ')';
+                    mensaje.textContent = data.message + ' (ID: ' + data.User_ID + ')';
                     
                     // Mostrar la API key
                     if (data.api_key) {
-                        document.getElementById('apiKeyValue').textContent = data.api_key;
+                        document.getElementById('apiKeyValue').textContent = data.Api_key;
                         document.getElementById('apiKeyContainer').style.display = 'block';
                     }
                     
@@ -167,9 +167,6 @@
                 mensaje.style.display = 'block';
                 
                 // Ocultar el mensaje después de 5 segundos (pero mantener la API key visible)
-                setTimeout(() => {
-                    mensaje.style.display = 'none';
-                }, 5000);
             })
             .catch(error => {
                 const mensaje = document.getElementById('mensaje');

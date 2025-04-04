@@ -15,8 +15,6 @@ error_user_not_in_course = 'El usuario no está inscrito en este curso'
 error_credentials_not_provided = 'Nombre, correo y contraseña son requeridos'
 error_email_already_register = 'El correo ya está registrado'
 
-
-
 info_course_created_correctly = 'Curso creado exitosamente'
 info_user_already_enroll = 'Usuario ya inscrito en este curso'
 info_already_in_group = 'Usuario ya está en este grupo'
