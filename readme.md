@@ -1,18 +1,24 @@
-# API de Zenith AI
+# 🌟 API de Zenith AI
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Flask](https://img.shields.io/badge/flask-API-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 Este repositorio contiene una API REST basada en Flask para un sistema de gestión de recursos para el proyecto android Zenith AI. La API proporciona endpoints para la gestión de usuarios, administración de cursos y organización de grupos.
 
 ## Tabla de Contenidos
-- [Visión General](#visión-general)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Configuración e Instalación](#configuración-e-instalación)
-- [Endpoints de la API](#endpoints-de-la-api)
-  - [Gestión de Usuarios](#gestión-de-usuarios)
-  - [Gestión de Cursos](#gestión-de-cursos)
-  - [Gestión de Grupos](#gestión-de-grupos)
-- [Manejo de Archivos](#manejo-de-archivos)
-- [Seguridad](#seguridad)
-- [Características Adicionales](#características-adicionales)
+- 📌 [Visión General](#visión-general)
+- 🗂️ [Estructura del Proyecto](#estructura-del-proyecto)
+- ⚙️ [Configuración e Instalación](#configuración-e-instalación)
+- 📡 [Endpoints de la API](#endpoints-de-la-api)
+  - 👤 [Gestión de Usuarios](#gestión-de-usuarios)
+  - 🎓 [Gestión de Cursos](#gestión-de-cursos)
+  - 👥 [Gestión de Grupos](#gestión-de-grupos)
+- 📁 [Manejo de Archivos](#manejo-de-archivos)
+- 🔐 [Seguridad](#seguridad)
+- 🚀 [Características Adicionales](#características-adicionales)
+- ▶️ [Ejecución de la Aplicación](#ejecución-de-la-aplicación)
+
 
 ## Visión General
 
