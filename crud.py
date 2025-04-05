@@ -165,6 +165,7 @@ def obtener_usuario_by_id(id, api_key):
             "User_ID": usuario.id,
             "Username": usuario.nombre,
             "Email": usuario.correo,
+            "Api_Key": usuario.api_key,
             "Primary_Learning": usuario.aprendizaje_principal.value,
             "Streak": usuario.racha,
             "Lessons": usuario.lecciones,
