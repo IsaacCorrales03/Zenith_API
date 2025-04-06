@@ -129,7 +129,7 @@ def cursos():
             return {'error', 'Algo salió mal'}, 400
         return {'mensaje': 'El usuario se dio de baja'}
 
-@app.route('/grupos', methods=['POST', 'GET', 'PUT', 'DELETE'])
+@app.route('/grupos', methods=['POST', 'GET', 'LINK', 'DELETE', 'UNLINK'])
 def grupos():
     if request.method == 'GET':
         id_grupo = request.args.get('id', type=int)
@@ -153,7 +153,7 @@ def grupos():
         banner_url = f'{service_url}/{image_path}'
         grupo = crud.crear_grupo(nombre, id_admin, public, banner_url)
         return {'Info': 'Created Group'}, 200
-    elif request.method == 'PUT':
+    elif request.method == 'LINK':
         id_usuario = request.form.get('usuario_id', type=int)
         id_grupo = request.form.get('grupo_id', type=int)
 
@@ -164,7 +164,7 @@ def grupos():
             return {'mensaje': 'Usuario unido al grupo correctamente'}, 200
         else:
             return {'error': 'El usuario ya está en el grupo o ocurrió un error'}, 400
-    elif request.method == 'DELETE':
+    elif request.method == 'UNLINK':
         usuario_id = request.args.get('usuario_id', type=int)
         grupo_id = request.args.get('grupo_id', type=int)
         if not usuario_id or not grupo_id:
@@ -173,6 +173,15 @@ def grupos():
         if not resultado:
             return {'error': 'Algo salió mal'}
         return {'mensaje': 'Se sacó al grupo'}
+    elif request.method == 'DELETE':
+        id_grupo = request.args.get('grupo_id', type=int)
+        admin_id = request.args.get('admin_id', type=int)
+        if not admin_id or not id_grupo:
+            return jsonify({'error': 'Faltan datos'})
+        resultado = crud.eliminar_grupo(id_grupo, admin_id)
+        if not resultado:
+            return jsonify({'error': 'No existe el grupo o no tienes permiso para eliminarlo'})
+        return jsonify({'success': 'Grupo eliminado'})
 
 @app.route('/assets/<folder>/<filename>')
 def static_images(folder, filename):

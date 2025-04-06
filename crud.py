@@ -224,6 +224,19 @@ def obtener_grupo_by_id(id, codigo):
             print(f"Error al obtener el Grupo: {e}")
             return None
 
+def eliminar_grupo(grupo_id, usuario_id):
+    try:
+        grupo = session.query(Grupo).filter(Grupo.id == grupo_id, Grupo.administrador_id == usuario_id).first()
+        if not grupo:
+            return False
+        session.delete(grupo)
+        session.commit()
+        return True
+    except Exception as e:
+        session.rollback()
+        print(f"Error al darse de baja: {str(e)}")
+        return False
+
 def inscribir_usuario_a_curso(id_usuario: int, id_curso: int):
     """
     Inscribir un usuario a un curso.
