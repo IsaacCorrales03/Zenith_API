@@ -63,6 +63,7 @@ class Grupo(Base):
     public: Mapped[bool] = mapped_column(BOOLEAN(), default=False)
     miembros: Mapped[int] = mapped_column(Integer(), server_default='0', nullable=True)
     codigo: Mapped[str] = mapped_column(String(16), nullable=False)
+    url_banner: Mapped[str] = mapped_column(TEXT, nullable=True)
 
     administrador: Mapped['Usuario'] = relationship("Usuario", back_populates="grupos_administrados")
     membresias: Mapped[List['Membresia']] = relationship("Membresia", back_populates="grupo")
@@ -90,5 +91,5 @@ class Membresia(Base):
     grupo: Mapped['Grupo'] = relationship("Grupo", back_populates="membresias")
 
 
-# Base.metadata.drop_all(Engine)
-# Base.metadata.create_all(Engine)
+Base.metadata.drop_all(Engine)
+Base.metadata.create_all(Engine)

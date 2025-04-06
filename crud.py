@@ -3,6 +3,8 @@ from psycopg2.errors import StringDataRightTruncation
 import re
 from criptografic import PasswordManager, generate_api_key, generate_group_link
 from models import session, Usuario, Curso, Grupo, Inscripciones, Membresia
+from server_strings import service_url
+
 
 def crear_usuario(nombre: str, correo: str, password: str):
     """
@@ -77,7 +79,7 @@ def crear_curso(nombre: str, duracion: int, url_imagen: str = ""):
         print(f"Error al crear curso: {e}")
         return None
 
-def crear_grupo(nombre: str, administrador_id: str, es_publico: bool = False):
+def crear_grupo(nombre: str, administrador_id: str, es_publico: bool = False, banner: str = f"{service_url}/grupos/default.webp"):
     """
     Crear un nuevo grupo en la base de datos.
     
@@ -103,6 +105,7 @@ def crear_grupo(nombre: str, administrador_id: str, es_publico: bool = False):
             nombre=nombre,
             administrador_id=administrador.id,
             public=es_publico,
+            url_banner= banner,
             codigo=generate_group_link()
         )
         
@@ -304,7 +307,7 @@ def unir_usuario_a_grupo(id_usuario: int, id_grupo: int):
             id_usuario=usuario.id,
             id_grupo=grupo.id
         )
-        
+        nueva_membresia.grupo.miembros += 1
         session.add(nueva_membresia)
         session.commit()
         print(f"{usuario.nombre} se unió a {grupo.nombre} exitosamente.")

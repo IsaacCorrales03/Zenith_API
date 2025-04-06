@@ -14,7 +14,8 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 UPLOAD_FOLDER_BASE = "assets"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER_BASE
 UPLOAD_FOLDER_CURSOS = os.path.join(UPLOAD_FOLDER_BASE, "cursos")
-os.makedirs(UPLOAD_FOLDER_CURSOS, exist_ok=True)
+UPLOAD_FOLDER_GRUPOS = os.path.join(UPLOAD_FOLDER_BASE, "grupos")
+
 
 @app.route('/')
 def index():
@@ -138,12 +139,19 @@ def grupos():
         grupo = crud.obtener_grupo_by_id(id_grupo, codigo)
         return jsonify(grupo)
     elif request.method == 'POST':
+        if not request.content_type.startswith('multipart/form-data'):
+            return jsonify({"error": "La solicitud debe ser multipart/form-data"}), 400
         nombre = request.form.get('nombre')
         id_admin = request.form.get('admin_id')
         public = bool(request.form.get('public'))
-        if not all([nombre, id_admin, public != None]):
+        banner = request.files.get('imagen')
+        if not all([nombre, id_admin, banner, public != None]):
             return 'Faltan datos', 400
-        grupo = crud.crear_grupo(nombre, id_admin, public)
+        filename = secure_filename(banner.filename)
+        image_path = os.path.join(UPLOAD_FOLDER_GRUPOS, filename)
+        banner.save(image_path)
+        banner_url = f'{service_url}/{image_path}'
+        grupo = crud.crear_grupo(nombre, id_admin, public, banner_url)
         return {'Info': 'Created Group'}, 200
     elif request.method == 'PUT':
         id_usuario = request.form.get('usuario_id', type=int)
@@ -164,9 +172,8 @@ def grupos():
         resultado = crud.salirse_de_un_grupo(usuario_id, grupo_id)
         if not resultado:
             return {'error': 'Algo salió mal'}
-        return {'mensaje': 'Se unió al grupo'}
+        return {'mensaje': 'Se sacó al grupo'}
 
-    
 @app.route('/assets/<folder>/<filename>')
 def static_images(folder, filename):
     asset_directory = os.path.join('assets', folder)
