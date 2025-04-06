@@ -35,7 +35,6 @@ class PasswordManager:
         salt = bcrypt.gensalt()
         hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
         return hashed.decode('utf-8')
-    
     @staticmethod
     def verify_password(plain_password: str, hashed_password: str) -> bool:
         try:

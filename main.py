@@ -68,7 +68,6 @@ def login():
         return jsonify({"error": "Faltan credenciales"}), 400
     
     resultado = crud.iniciar_sesion(email, password)
-    
     if resultado == 401:
         return jsonify({"error": "Credenciales incorrectas"}), 401
     elif resultado == 500:

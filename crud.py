@@ -143,12 +143,15 @@ def obtener_usuario_by_id(id, api_key):
         # Procesar grupos
         grupos_miembro = [
             {
-                "Group_ID": membresia.grupo.id,
-                "Group_Name": membresia.grupo.nombre,
-                "Group_Type": "Público" if membresia.grupo.public else "Privado",
-                "Group_Admin": membresia.grupo.administrador.nombre,
+                "Group_ID": grupo.id,
+                "Group_Name": grupo.nombre,
+                "Group_Type": "Público" if grupo.public else "Privado",
+                "Group_Code": grupo.codigo,
+                "Group_Admin_ID": grupo.administrador_id,
+                "Group_Admin_Name": grupo.administrador.nombre if grupo.administrador else None,
+                "Group_Members": grupo.miembros,
                 "Membership_Date": membresia.fecha_membresia.strftime('%d/%m/%Y')
-            } for membresia in usuario.membresias
+            } for membresia in usuario.membresias for grupo in [membresia.grupo]
         ]
 
         # Grupos administrados
