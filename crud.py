@@ -41,7 +41,6 @@ def crear_usuario(nombre: str, correo: str, password: str):
             print(f"Error de integridad: {error}")
         return None
     except StringDataRightTruncation as e:
-        print('asdasd')
         session.rollback()
         print(e)
         return 401

@@ -62,6 +62,7 @@ def login():
     data = request.get_json()
     email = data.get("correo")
     password = data.get("password")
+    print(data)
     
     if not email or not password:
         return jsonify({"error": "Faltan credenciales"}), 400
