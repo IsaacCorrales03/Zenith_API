@@ -157,44 +157,74 @@ Desvincula a un usuario de un curso.
 - `200`: Baja exitosa
 - `400`: Error durante la baja o datos faltantes
 
-### Gestión de Grupos
+# Gestión de Grupos API
 
-#### GET `/grupos`
+Esta sección documenta las operaciones relacionadas con la gestión de grupos en la API.
+
+## Endpoints
+
+### GET `/grupos`
 Recupera información del grupo por ID o código.
 
-**Parámetros:**
+**Parámetros de consulta:**
 - `id` (int): ID del grupo (opcional)
 - `codigo` (str): Código del grupo (opcional)
 
-**Respuestas:**
-- `200`: Detalles del grupo
-- `400`: Parámetros faltantes
+**Nota:** Al menos uno de los parámetros debe ser proporcionado.
 
-#### POST `/grupos`
+**Respuestas:**
+- `200`: Detalles del grupo en formato JSON
+- `400`: Error "Credenciales no proporcionadas"
+
+### POST `/grupos`
 Crea un nuevo grupo.
 
-**Datos del Formulario:**
+**Formato de solicitud:**
+- `multipart/form-data`
+
+**Datos del formulario:**
 - `nombre` (str): Nombre del grupo
-- `admin_id` (int): ID del usuario administrador
+- `admin_id` (str): ID del usuario administrador
 - `public` (bool): Indicador de estado público
+- `imagen` (file): Imagen del banner del grupo
 
 **Respuestas:**
-- `200`: Grupo creado exitosamente
-- `400`: Datos faltantes
+- `200`: Grupo creado exitosamente `{"Info": "Created Group"}`
+- `400`: Error por datos faltantes o formato incorrecto
 
-#### PUT `/grupos`
+### LINK `/grupos`
 Añade un usuario a un grupo.
 
-**Datos del Formulario:**
+**Datos del formulario:**
 - `usuario_id` (int): ID del usuario
 - `grupo_id` (int): ID del grupo
 
 **Respuestas:**
-- `200`: Usuario añadido exitosamente
-- `400`: Error al añadir usuario o datos faltantes
+- `200`: Usuario añadido exitosamente `{"mensaje": "Usuario unido al grupo correctamente"}`
+- `400`: Error por datos faltantes o el usuario ya pertenece al grupo
 
-#### DELETE `/grupos`
+### UNLINK `/grupos`
 Elimina un usuario de un grupo.
+
+**Parámetros de consulta:**
+- `usuario_id` (int): ID del usuario
+- `grupo_id` (int): ID del grupo
+
+**Respuestas:**
+- `200`: Usuario eliminado exitosamente `{"mensaje": "Se sacó al grupo"}`
+- `400`: Error por datos faltantes o problemas al procesar la solicitud
+
+### DELETE `/grupos`
+Elimina un grupo completo.
+
+**Parámetros de consulta:**
+- `grupo_id` (int): ID del grupo
+- `admin_id` (int): ID del administrador del grupo
+
+**Respuestas:**
+- `200`: Grupo eliminado exitosamente `{"success": "Grupo eliminado"}`
+- `400`: Error por datos faltantes
+- Respuesta de error si el grupo no existe o el usuario no tiene permisos `{"error": "No existe el grupo o no tienes permiso para eliminarlo"}`
 
 **Parámetros:**
 - `usuario_id` (int): ID del usuario
