@@ -91,5 +91,5 @@ class Membresia(Base):
     grupo: Mapped['Grupo'] = relationship("Grupo", back_populates="membresias")
 
 
-Base.metadata.drop_all(Engine)
-Base.metadata.create_all(Engine)
+# Base.metadata.drop_all(Engine)
+# Base.metadata.create_all(Engine)

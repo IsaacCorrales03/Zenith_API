@@ -205,6 +205,27 @@ def obtener_curso_by_id(id):
         print(f"Error al obtener el Curso: {e}")
         return None
 
+def obtener_grupos():
+    try:
+        grupos = session.query(Grupo).filter(Grupo.public == True).all()
+        grupos_list = []
+        
+        for grupo in grupos:
+            grupo_dict = {
+                'Grupo_ID': grupo.id,
+                'Nombre': grupo.nombre,
+                'Administrador': grupo.administrador.nombre,
+                'Miembros': grupo.miembros,
+                'Is_public': grupo.public,
+                'codigo': grupo.codigo
+            }
+            grupos_list.append(grupo_dict)
+            
+        return grupos_list
+    except Exception as e:
+        print(f"Error al obtener los Grupos: {e}")
+        return []
+
 def obtener_grupo_by_id(id, codigo):
     try:
         print(codigo)

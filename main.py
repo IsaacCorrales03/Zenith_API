@@ -51,7 +51,7 @@ def usuarios():
                 password=data['password']
             )
             if user == 400:
-                return jsonify({'error':'El nombre o correo ya está en uso'})
+                return jsonify({'error':'El nombre ya está en uso'}), 400
             if user == 401:
                 return jsonify({'error':'El nombre es demasiado largo'})
             return jsonify({'message':'Usuario Creado con éxito','User_ID': user.id, 'Api_Key': user.api_key}), 201
@@ -132,6 +132,9 @@ def cursos():
 @app.route('/grupos', methods=['POST', 'GET', 'LINK', 'DELETE', 'UNLINK'])
 def grupos():
     if request.method == 'GET':
+        send_all = request.args.get('all', type=bool)
+        if send_all:
+            return jsonify(crud.obtener_grupos())
         id_grupo = request.args.get('id', type=int)
         codigo = request.args.get('codigo', type=str)
         if not id_grupo and not codigo:
