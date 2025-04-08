@@ -30,13 +30,17 @@ def crear_usuario(nombre: str, correo: str, password: str):
         # Si el error es de tipo 'UniqueViolation', extraemos el detalle
         if "duplicate key value violates unique constraint" in str(error):
             # Intentamos obtener el campo que causó la violación
-            detail_match = re.search(r'DETAIL:\s*Key\s*\((\w+)\)=\((\w+)\)', str(error))
+            detail_match = re.search(r'Key \((\w+)\)=\(([^)]+)\)', str(error))
+            print(detail_match)
             if detail_match:
                 violated_field = detail_match.group(1)
                 violated_value = detail_match.group(2)
                 error = f"Error: El campo '{violated_field}' con el valor '{violated_value}' ya existe."
                 print(error)
-                return 400
+                if violated_field == "nombre":
+                    return 440
+                elif violated_field == "correo":
+                    return 441
             else:
                 print(f"Error de integridad: {error}")
         else:

@@ -50,8 +50,10 @@ def usuarios():
                 correo=data['email'], 
                 password=data['password']
             )
-            if user == 400:
-                return jsonify({'error':'El nombre ya está en uso'}), 400
+            if user == 440:
+                return jsonify({'error':'El nombre ya está en uso'}), 440
+            if user == 441:
+                return jsonify({'error':'El correo ya está en uso'}), 441
             if user == 401:
                 return jsonify({'error':'El nombre es demasiado largo'})
             return jsonify({'message':'Usuario Creado con éxito','User_ID': user.id, 'Api_Key': user.api_key}), 201
