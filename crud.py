@@ -31,7 +31,6 @@ def crear_usuario(nombre: str, correo: str, password: str):
         if "duplicate key value violates unique constraint" in str(error):
             # Intentamos obtener el campo que causó la violación
             detail_match = re.search(r'Key \((\w+)\)=\(([^)]+)\)', str(error))
-            print(detail_match)
             if detail_match:
                 violated_field = detail_match.group(1)
                 violated_value = detail_match.group(2)
