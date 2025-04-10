@@ -56,7 +56,7 @@ def usuarios():
                 return jsonify({'error':'El correo ya está en uso'}), 441
             if user == 442:
                 return jsonify({'error':'El nombre es demasiado largo'}), 442
-            return jsonify({'message':'Usuario Creado con éxito','User_ID': user.id, 'Api_Key': user.api_key}), 201
+            return jsonify(user), 201
         except Exception as e:
             return jsonify({'error': f'Error al crear usuario: {str(e)}'}), 500
 
@@ -76,15 +76,7 @@ def login():
     elif resultado == 500:
         return jsonify({"error": "Error interno del servidor"}), 500
     
-    return jsonify({
-        "mensaje": "Inicio de sesión exitoso",
-        "usuario": {
-            "id": resultado.id,
-            "nombre": resultado.nombre,
-            "correo": resultado.correo,
-            "api_key": resultado.api_key
-        }
-    }), 200
+    return jsonify(resultado), 200
 
 @app.route('/cursos', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def cursos():

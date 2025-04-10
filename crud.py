@@ -24,7 +24,7 @@ def crear_usuario(nombre: str, correo: str, password: str):
     try:
         session.add(nuevo_usuario)
         session.commit()
-        return nuevo_usuario
+        return nuevo_usuario.to_dict()
     except IntegrityError as error:
         session.rollback()
         # Si el error es de tipo 'UniqueViolation', extraemos el detalle
@@ -140,56 +140,8 @@ def obtener_usuario_by_id(id, api_key):
         if usuario is None:
             print(f"No se encontró un usuario con el ID {id}")
             return None
-
-        # Procesar cursos inscritos
-        cursos_inscritos = [
-            {
-                "Course_ID": inscripcion.curso.id,
-                "Course_Name": inscripcion.curso.nombre,
-                "Inscription_Date": inscripcion.fecha_inscripcion.strftime('%d/%m/%Y')
-            } for inscripcion in usuario.inscripciones
-        ]
-
-        # Procesar grupos
-        grupos_miembro = [
-            {
-                "Group_ID": grupo.id,
-                "Group_Name": grupo.nombre,
-                "Group_Type": "Público" if grupo.public else "Privado",
-                "Group_Code": grupo.codigo,
-                "Group_Admin_ID": grupo.administrador_id,
-                "Group_Admin_Name": grupo.administrador.nombre if grupo.administrador else None,
-                "Group_Members": grupo.miembros,
-                "Membership_Date": membresia.fecha_membresia.strftime('%d/%m/%Y')
-            } for membresia in usuario.membresias for grupo in [membresia.grupo]
-        ]
-
-        # Grupos administrados
-        grupos_administrados = [
-            {
-                "Group_ID": grupo.id,
-                "Group_Name": grupo.nombre,
-                "Group_Type": "Público" if grupo.public else "Privado"
-            } for grupo in usuario.grupos_administrados
-        ]
-
-        user_dict = {
-            "User_ID": usuario.id,
-            "Username": usuario.nombre,
-            "Email": usuario.correo,
-            "Api_Key": usuario.api_key,
-            "Primary_Learning": usuario.aprendizaje_principal.value,
-            "Streak": usuario.racha,
-            "Lessons": usuario.lecciones,
-            "Learning_Percentages": usuario.porcentajes_aprendizaje,
-            "Preferences": usuario.preferencias,
-            "Enrolled_Courses": cursos_inscritos,
-            "Member_Groups": grupos_miembro,
-            "Administered_Groups": grupos_administrados,
-            "Feedback": usuario.retroalimentacion
-        }
         
-        return user_dict
+        return usuario.to_dict()
     except Exception as e:
         print(f"Error al obtener usuario: {e}")
         return None
@@ -406,7 +358,7 @@ def iniciar_sesion(email, password):
         if not usuario:
             return 401
         if PasswordManager.verify_password(password, usuario.password):
-            return usuario
+            return usuario.to_dict()
         else:
             return 401
     

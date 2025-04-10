@@ -43,6 +43,58 @@ class Usuario(Base):
 
     def __repr__(self):
         return f"<Usuario {self.nombre}>"
+    def to_dict(self):
+        try:
+            # Procesar cursos inscritos
+            cursos_inscritos = [
+                {
+                    "Course_ID": inscripcion.curso.id,
+                    "Course_Name": inscripcion.curso.nombre,
+                    "Inscription_Date": inscripcion.fecha_inscripcion.strftime('%d/%m/%Y')
+                } for inscripcion in self.inscripciones
+            ]
+
+            # Procesar grupos
+            grupos_miembro = [
+                {
+                    "Group_ID": grupo.id,
+                    "Group_Name": grupo.nombre,
+                    "Group_Type": "Público" if grupo.public else "Privado",
+                    "Group_Code": grupo.codigo,
+                    "Group_Admin_ID": grupo.administrador_id,
+                    "Group_Admin_Name": grupo.administrador.nombre if grupo.administrador else None,
+                    "Group_Members": grupo.miembros,
+                    "Membership_Date": membresia.fecha_membresia.strftime('%d/%m/%Y')
+                } for membresia in self.membresias for grupo in [membresia.grupo]
+            ]
+
+            # Grupos administrados
+            grupos_administrados = [
+                {
+                    "Group_ID": grupo.id,
+                    "Group_Name": grupo.nombre,
+                    "Group_Type": "Público" if grupo.public else "Privado"
+                } for grupo in self.grupos_administrados
+            ]
+
+            return {
+                "User_ID": self.id,
+                "Username": self.nombre,
+                "Email": self.correo,
+                "Api_Key": self.api_key,
+                "Primary_Learning": self.aprendizaje_principal.value,
+                "Streak": self.racha,
+                "Lessons": self.lecciones,
+                "Learning_Percentages": self.porcentajes_aprendizaje,
+                "Preferences": self.preferencias,
+                "Enrolled_Courses": cursos_inscritos,
+                "Member_Groups": grupos_miembro,
+                "Administered_Groups": grupos_administrados,
+                "Feedback": self.retroalimentacion
+            }
+        except Exception as e:
+            print(f"Error al convertir usuario a diccionario: {e}")
+            return None
 
 class Curso(Base):
     __tablename__ = 'Cursos'
