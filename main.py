@@ -54,8 +54,8 @@ def usuarios():
                 return jsonify({'error':'El nombre ya está en uso'}), 440
             if user == 441:
                 return jsonify({'error':'El correo ya está en uso'}), 441
-            if user == 401:
-                return jsonify({'error':'El nombre es demasiado largo'})
+            if user == 442:
+                return jsonify({'error':'El nombre es demasiado largo'}), 442
             return jsonify({'message':'Usuario Creado con éxito','User_ID': user.id, 'Api_Key': user.api_key}), 201
         except Exception as e:
             return jsonify({'error': f'Error al crear usuario: {str(e)}'}), 500

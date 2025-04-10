@@ -18,6 +18,7 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     except Exception as e:
         print(f"Error verifying password: {e}")
         return False
+        
 def generate_api_key(length=32):
     # Generar bytes aleatorios
     random_bytes = secrets.token_bytes(length)

@@ -1,4 +1,4 @@
-from sqlalchemy.exc import IntegrityError
+from sqlalchemy.exc import IntegrityError, DataError
 from psycopg2.errors import StringDataRightTruncation
 import re
 from criptografic import PasswordManager, generate_api_key, generate_group_link
@@ -19,7 +19,7 @@ def crear_usuario(nombre: str, correo: str, password: str):
         nombre=nombre,
         api_key=generate_api_key(),
         correo=correo,
-        password =PasswordManager.hash_password(password),
+        password=PasswordManager.hash_password(password),
     )
     try:
         session.add(nuevo_usuario)
@@ -45,9 +45,13 @@ def crear_usuario(nombre: str, correo: str, password: str):
         else:
             print(f"Error de integridad: {error}")
         return None
-    except StringDataRightTruncation as e:
+    except DataError as e:
         session.rollback()
-        print(e)
+        print(f"Error de longitud de datos: {e}")
+        return 442
+    except Exception as e:
+        session.rollback()
+        print(f"Error inesperado: {e.__context__}")
         return 401
 
 def crear_curso(nombre: str, duracion: int, url_imagen: str = ""):
