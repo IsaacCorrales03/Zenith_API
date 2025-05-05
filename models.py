@@ -107,6 +107,22 @@ class Curso(Base):
     url_imagen: Mapped[str] = mapped_column(TEXT())
     
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="curso")
+    lecciones: Mapped[List['Leccion']] = relationship("Leccion", back_populates="curso", cascade="all, delete-orphan")
+
+class Leccion(Base):
+    __tablename__ = 'Lecciones'
+    
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nombre: Mapped[str] = mapped_column(String(64), nullable=False)
+    duracion: Mapped[int] = mapped_column(Integer(), nullable=False)  # en minutos
+    creditos: Mapped[int] = mapped_column(Integer(), nullable=False)
+    tema_principal: Mapped[str] = mapped_column(String(128), nullable=False)
+    
+    # Clave foránea para relacionar con el curso
+    curso_id: Mapped[int] = mapped_column(ForeignKey('Cursos.id'))
+    
+    # Relación con la tabla de Cursos
+    curso: Mapped["Curso"] = relationship("Curso", back_populates="lecciones")
 
 class Grupo(Base):
     __tablename__ = 'Grupos'

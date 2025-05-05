@@ -84,7 +84,8 @@ def cursos():
     if request.method == 'GET':
         id_curso = request.args.get('id', type=int)
         if not id_curso:
-            return 'No se especifíca un curso', 400
+            cursos = crud.obtener_cursos()
+            return jsonify(cursos)
         curso = crud.obtener_curso_by_id(id_curso)
         if not curso:
             return 'No se encontró un curso', 400

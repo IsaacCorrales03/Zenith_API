@@ -164,6 +164,15 @@ def obtener_curso_by_id(id):
         print(f"Error al obtener el Curso: {e}")
         return None
 
+def obtener_cursos():
+    try: 
+        cursos = session.query(Curso).all()
+        print(cursos)
+        return cursos
+    except Exception as e:
+        print(e) 
+        return 401
+
 def obtener_grupos():
     try:
         grupos = session.query(Grupo).filter(Grupo.public == True).all()
