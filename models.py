@@ -36,6 +36,7 @@ class Usuario(Base):
     porcentajes_aprendizaje: Mapped[dict] = mapped_column(JSON(), default=default_porcentajes)
     preferencias: Mapped[dict] = mapped_column(JSON(), default=default_preferencias)
     retroalimentacion: Mapped[List[dict]] = mapped_column(ARRAY(JSON), nullable=True, default=list)
+    url_foto_perfil: Mapped[str] = mapped_column(String(600), nullable=True, server_default=f'{service_url}/assets/perfil_usuario/default.webp')
 
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="usuario")
     grupos_administrados: Mapped[List['Grupo']] = relationship("Grupo", back_populates="administrador")

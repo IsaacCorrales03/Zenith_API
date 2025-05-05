@@ -339,6 +339,15 @@ def salirse_de_un_grupo(id_usuario, id_grupo):
         print(f"Error al salirse de un grupo: {str(e)}")
         return False
 
+def actualizar_foto(id_usuario, nueva_url):
+    usuario = session.query(Usuario).filter(Usuario.id == id_usuario).first()
+    
+    if usuario is None:
+        return False
+        
+    usuario.url_foto_perfil = nueva_url
+    session.commit()
+    return True
 
 def iniciar_sesion(email, password):
     """

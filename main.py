@@ -15,7 +15,7 @@ UPLOAD_FOLDER_BASE = "assets"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER_BASE
 UPLOAD_FOLDER_CURSOS = os.path.join(UPLOAD_FOLDER_BASE, "cursos")
 UPLOAD_FOLDER_GRUPOS = os.path.join(UPLOAD_FOLDER_BASE, "grupos")
-
+UPLOAD_FOLDER_FOTOS_PERFIL = os.path.join(UPLOAD_FOLDER_BASE, "perfil_usuario")
 
 @app.route('/')
 def index():
@@ -50,6 +50,7 @@ def usuarios():
                 correo=data['email'], 
                 password=data['password']
             )
+            print(user)
             if user == 440:
                 return jsonify({'error':'El nombre ya está en uso'}), 440
             if user == 441:
@@ -184,6 +185,18 @@ def grupos():
 def static_images(folder, filename):
     asset_directory = os.path.join('assets', folder)
     return send_from_directory(asset_directory, filename)
+
+@app.route('/change_profile_picture', methods=['POST'])
+def change_profile_picture():
+    if request.method == 'POST':
+        id_user = request.args.get('id_usuario')
+        imagen = request.files.get('imagen')
+        if not imagen:
+            return {'error': 'No se brindó ninguna imagen'}
+        filename = secure_filename(imagen.filename)
+        image_path = os.path.join(UPLOAD_FOLDER_FOTOS_PERFIL, filename)
+        imagen_url = f'{service_url}/{image_path}'
+        crud.cambiar_foto()
 
 @app.route('/.well-known/assetlinks.json')
 def assetlinks():
