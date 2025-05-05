@@ -82,6 +82,7 @@ class Usuario(Base):
                 "User_ID": self.id,
                 "Username": self.nombre,
                 "Email": self.correo,
+                "Url_foto_perfil": self.url_foto_perfil,
                 "Api_Key": self.api_key,
                 "Primary_Learning": self.aprendizaje_principal.value,
                 "Streak": self.racha,
