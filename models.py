@@ -108,6 +108,43 @@ class Curso(Base):
     
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="curso")
     lecciones: Mapped[List['Leccion']] = relationship("Leccion", back_populates="curso", cascade="all, delete-orphan")
+    def to_dict(self):
+        try:
+            # Proceso de lecciones
+            lecciones_data = [
+                {
+                    "Leccion_ID": leccion.id,
+                    "Leccion_Title": leccion.titulo,
+                    "Leccion_Duration": leccion.duracion
+                } for leccion in self.lecciones
+            ]
+            
+            # Proceso de inscripciones
+            inscripciones_data = [
+                {
+                    "Inscription_ID": inscripcion.id,
+                    "User_ID": inscripcion.usuario_id,
+                    "User_Name": inscripcion.usuario.nombre if inscripcion.usuario else None,
+                    "Inscription_Date": inscripcion.fecha_inscripcion.strftime('%d/%m/%Y') if inscripcion.fecha_inscripcion else None
+                } for inscripcion in self.inscripciones
+            ]
+            
+            return {
+                "Course_ID": self.id,
+                "Course_Name": self.nombre,
+                "Course_Duration": self.duracion,
+                "Course_Image": self.url_imagen,
+                "Lessons": lecciones_data,
+                "Inscriptions": inscripciones_data
+            }
+        except Exception as e:
+            # En caso de error, devolver un diccionario básico
+            return {
+                "Course_ID": self.id,
+                "Course_Name": self.nombre,
+                "Course_Duration": self.duracion,
+                "Course_Image": self.url_imagen
+            }
 
 class Leccion(Base):
     __tablename__ = 'Lecciones'
