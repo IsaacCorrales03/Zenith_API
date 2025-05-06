@@ -41,6 +41,7 @@ class Usuario(Base):
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="usuario")
     grupos_administrados: Mapped[List['Grupo']] = relationship("Grupo", back_populates="administrador")
     membresias: Mapped[List['Membresia']] = relationship("Membresia", back_populates="usuario")
+    cursos_creados: Mapped[List['Curso']] = relationship("Curso", back_populates="autor")
 
     def __repr__(self):
         return f"<Usuario {self.nombre}>"

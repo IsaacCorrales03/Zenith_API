@@ -86,6 +86,7 @@ def cursos():
         if not id_curso:
             cursos = crud.obtener_cursos()
             cursos_list = []
+            print(cursos)
             for curso in cursos:
                 cursos_list.append(curso.to_dict())
 
