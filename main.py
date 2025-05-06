@@ -101,13 +101,14 @@ def cursos():
         curso_name = request.form.get('nombre')
         curso_duracion = request.form.get('duracion', type=int)
         curso_imagen = request.files.get('imagen') 
+        curso_autor = request.form.get('autor')
         if not curso_name or not curso_duracion or not curso_imagen:
             return jsonify({"error": "Faltan datos obligatorios"}), 400
         filename = secure_filename(curso_imagen.filename)
         image_path = os.path.join(UPLOAD_FOLDER_CURSOS, filename)
         curso_imagen.save(image_path)
         img_url = f'{service_url}/{image_path}'
-        curso = crud.crear_curso(nombre=curso_name, duracion=curso_duracion, url_imagen=img_url)
+        curso = crud.crear_curso(nombre=curso_name, duracion=curso_duracion,autor_id=curso_autor, url_imagen=img_url)
         return {'Info': 'Created course'}, 200
     elif request.method == 'PUT':
         id_usuario = request.form.get('usuario_id', type=int)

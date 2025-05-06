@@ -54,7 +54,7 @@ def crear_usuario(nombre: str, correo: str, password: str):
         print(f"Error inesperado: {e.__context__}")
         return 401
 
-def crear_curso(nombre: str, duracion: int, url_imagen: str = ""):
+def crear_curso(nombre: str, duracion: int,autor_id:str, url_imagen: str = ""):
     """
     Crear un nuevo curso en la base de datos.
     
@@ -73,7 +73,8 @@ def crear_curso(nombre: str, duracion: int, url_imagen: str = ""):
         nuevo_curso = Curso(
             nombre=nombre,
             duracion=duracion,
-            url_imagen=url_imagen or "https://placeholder.com/curso.jpg"
+            url_imagen=url_imagen or "https://placeholder.com/curso.jpg",
+            autor_id=autor_id
         )
         
         session.add(nuevo_curso)

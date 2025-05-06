@@ -105,9 +105,13 @@ class Curso(Base):
     nombre: Mapped[str] = mapped_column(String(32), nullable=False)
     duracion: Mapped[int] = mapped_column(Integer(), nullable=False)
     url_imagen: Mapped[str] = mapped_column(TEXT())
+    autor_id: Mapped[int] = mapped_column(ForeignKey("Usuarios.id"), nullable=False)
     
+    # Relaciones
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="curso")
     lecciones: Mapped[List['Leccion']] = relationship("Leccion", back_populates="curso", cascade="all, delete-orphan")
+    autor: Mapped['Usuario'] = relationship("Usuario", back_populates="cursos_creados")
+    
     def to_dict(self):
         try:
             # Proceso de lecciones
@@ -129,11 +133,18 @@ class Curso(Base):
                 } for inscripcion in self.inscripciones
             ]
             
+            # Obtener datos del autor
+            autor_data = {
+                "User_ID": self.autor.id,
+                "User_Name": self.autor.nombre
+            } if self.autor else None
+            
             return {
                 "Course_ID": self.id,
                 "Course_Name": self.nombre,
                 "Course_Duration": self.duracion,
                 "Course_Image": self.url_imagen,
+                "Course_Author": autor_data,
                 "Lessons": lecciones_data,
                 "Inscriptions": inscripciones_data
             }
@@ -143,7 +154,8 @@ class Curso(Base):
                 "Course_ID": self.id,
                 "Course_Name": self.nombre,
                 "Course_Duration": self.duracion,
-                "Course_Image": self.url_imagen
+                "Course_Image": self.url_imagen,
+                "Course_Author_ID": self.autor_id
             }
 
 class Leccion(Base):
