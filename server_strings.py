@@ -1,4 +1,4 @@
-service_url = "https://zenith-api-38ka.onrender.com"
+service_url = "https://zenith-ai-api.onrender.com/"
 links_json = [{"relation": ["delegate_permission/common.handle_all_urls"], "target": {"namespace": "android_app","package_name": "com.isaac.zenith","sha256_cert_fingerprints": ["D4:A0:81:B8:6A:65:87:D6:07:E4:AF:B2:4E:48:04:51:A7:1B:CF:DB:B9:64:02:3A:58:24:02:68:CC:B6:4C:DC"]}}]
 
 error = 'error'
