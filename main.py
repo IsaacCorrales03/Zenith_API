@@ -5,10 +5,67 @@ import crud
 from werkzeug.utils import secure_filename
 from server_strings import *
 from bot import Bot
+from waitress import serve
+import logging
+import torch
+from Zenith import Zenith, cargar_escalador
+import numpy as np
 
+# Configurar logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("zenith_server.log"),
+        logging.StreamHandler()
+    ]
+)
+
+logger = logging.getLogger("ZenithServer")
 app = Flask('__main__')
 app.secret_key = os.getenv('secret_key')
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Cargar el modelo y escalador al iniciar el servidor
+logger.info("Inicializando el modelo Zenith...")
+# Cargar el escalador utilizado durante el entrenamiento
+try:
+    escalador = cargar_escalador('escalador_preferencias.pkl')
+    logger.info("Escalador cargado correctamente")
+except Exception as e:
+    logger.error(f"Error al cargar el escalador: {str(e)}")
+    raise
+
+# Inicializar el modelo
+n_entradas = 30  
+modelo = Zenith(n_entradas=n_entradas)
+# Cargar los parámetros entrenados
+try:
+    model_path = os.path.join('modelos', 'zenithQ1.pt')
+    modelo.load_state_dict(torch.load(model_path))
+    modelo.eval()  # Poner el modelo en modo evaluación
+    logger.info(f"Modelo cargado correctamente desde {model_path}")
+except Exception as e:
+    logger.error(f"Error al cargar el modelo: {str(e)}")
+    raise
+
+def predecir(datos_entrada):
+    try:
+        # Aplicar el mismo escalado que se usó durante el entrenamiento
+        datos_escalados = escalador.transform(datos_entrada)
+        
+        # Convertir a tensor de PyTorch
+        tensor_entrada = torch.from_numpy(datos_escalados).float()
+        
+        # Realizar la predicción
+        with torch.no_grad():  # No necesitamos gradientes para la predicción
+            predicciones = modelo(tensor_entrada)
+        
+        # Convertir el resultado a numpy array
+        return predicciones.numpy()
+    except Exception as e:
+        logger.error(f"Error durante la predicción: {str(e)}")
+        raise
 
 # Carpetas de archivos
 UPLOAD_FOLDER_BASE = "assets"
@@ -17,6 +74,92 @@ UPLOAD_FOLDER_CURSOS = os.path.join(UPLOAD_FOLDER_BASE, "cursos")
 UPLOAD_FOLDER_GRUPOS = os.path.join(UPLOAD_FOLDER_BASE, "grupos")
 UPLOAD_FOLDER_FOTOS_PERFIL = os.path.join(UPLOAD_FOLDER_BASE, "perfil_usuario")
 
+@app.route('/status', methods=['GET'])
+def health_check():
+    """Endpoint para verificar que el servidor está funcionando"""
+    return jsonify({'status': 'ok', 'model': 'Zenith'}), 200
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    try:
+        data = request.json
+
+        if not data or 'preferencias' not in data or 'feedback' not in data:
+            return jsonify({
+                'success': False, 
+                'message': 'Los datos deben incluir "preferencias" y "feedback"'
+            }), 400
+
+        preferencias = np.array(data['preferencias'], dtype=np.float32)
+        feedback = np.array(data['feedback'], dtype=np.float32)
+
+        if len(preferencias) != 15 or len(feedback) != 15:
+            return jsonify({
+                'success': False, 
+                'message': 'Tanto "preferencias" como "feedback" deben tener exactamente 15 valores'
+            }), 400
+
+        if not np.isclose(np.sum(preferencias), 100, atol=0.1):
+            return jsonify({
+                'success': False, 
+                'message': 'Las preferencias deben sumar 100'
+            }), 400
+
+        datos_entrada = np.concatenate([preferencias, feedback]).reshape(1, -1)
+        prediccion = predecir(datos_entrada)[0]
+
+        pred_normalizada = (prediccion / prediccion.sum()) * 100
+        pred_redondeada = np.round(pred_normalizada, 1)
+        suma_actual = round(np.sum(pred_redondeada), 1)
+        diferencia = round(100.0 - suma_actual, 1)
+
+        if diferencia != 0:
+            # Indices ordenados por feedback descendente (mejor feedback primero)
+            indices_ordenados = np.argsort(-feedback) if diferencia > 0 else np.argsort(feedback)
+
+            for idx in indices_ordenados:
+                if diferencia == 0:
+                    break
+
+                # Calcular cuánto se puede ajustar sin violar límites
+                ajuste = min(abs(diferencia), 100.0)
+                if diferencia > 0:
+                    # Sumar si no supera 100
+                    pred_redondeada[idx] += ajuste
+                    diferencia -= ajuste
+                else:
+                    # Restar si no baja de 0
+                    if pred_redondeada[idx] >= ajuste:
+                        pred_redondeada[idx] -= ajuste
+                        diferencia += ajuste
+
+        # Clipping final para evitar errores
+        pred_redondeada = np.clip(pred_redondeada, 0, None)
+        pred_redondeada = np.round(pred_redondeada, 1)
+        diferencia_final = round(100.0 - np.sum(pred_redondeada), 1)
+
+        # Ajuste mínimo si sigue habiendo diferencia (seguridad extra)
+        if diferencia_final != 0:
+            idx = np.argmax(feedback) if diferencia_final > 0 else np.argmin(feedback)
+            pred_redondeada[idx] += diferencia_final
+            pred_redondeada = np.round(pred_redondeada, 1)
+
+        pred_final = pred_redondeada.tolist()
+
+        logger.info(f"Predicción realizada. Suma final: {sum(pred_final):.1f}")
+        return jsonify({
+            'success': True,
+            'predicciones': pred_final,
+            'message': 'Predicción ajustada con éxito'
+        }), 200
+
+    except Exception as e:
+        logger.error(f"Error al procesar la solicitud: {str(e)}")
+        return jsonify({
+            'success': False,
+            'message': f'Error al procesar la solicitud: {str(e)}'
+        }), 500
+    
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -213,4 +356,5 @@ uptime_bot = Bot(service_url, 40)
 
 if __name__ == '__main__':
     uptime_bot.iniciar()
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    serve(app, host='0.0.0.0', port=8080, threads=4)
+    logger.info("Servidor detenido")

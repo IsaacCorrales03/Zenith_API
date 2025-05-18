@@ -1,181 +1,547 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .message {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 4px;
-            text-align: center;
-            display: none;
-        }
-        .success {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .error {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .api-key {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e9f5ff;
-            border-radius: 4px;
-            word-break: break-all;
-            display: none;
-        }
-        .api-key-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-    </style>
+    <title>Zenith - Predictor de Preferencias</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <h2>Registro de Usuario</h2>
-        
-        <form id="registroForm">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+
+<body class="bg-gray-50 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <h1 class="text-3xl font-bold text-center text-indigo-700 mb-8">Predictor de Preferencias Zenith</h1>
+
+        <div id="warning" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded hidden">
+            <p class="font-semibold">Las preferencias deben sumar exactamente 100.</p>
+            <p>Actualmente: <span id="totalValue" class="font-bold">0</span></p>
+        </div>
+
+        <form id="preferenceForm" class="space-y-10">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b">Preferencias Actuales (Deben sumar
+                    100)</h2>
+                <div id="preferenciasContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div class="preference-item">
+                        <label for="pref_lectura" class="block text-sm font-medium text-gray-700 mb-1">Lectura:</label>
+                        <input type="number" id="pref_lectura" name="pref_lectura" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_graficos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Gráficos:</label>
+                        <input type="number" id="pref_graficos" name="pref_graficos" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_diagramas"
+                            class="block text-sm font-medium text-gray-700 mb-1">Diagramas:</label>
+                        <input type="number" id="pref_diagramas" name="pref_diagramas" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_videos" class="block text-sm font-medium text-gray-700 mb-1">Videos:</label>
+                        <input type="number" id="pref_videos" name="pref_videos" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_imagenes"
+                            class="block text-sm font-medium text-gray-700 mb-1">Imágenes:</label>
+                        <input type="number" id="pref_imagenes" name="pref_imagenes" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_escuchar_clase" class="block text-sm font-medium text-gray-700 mb-1">Escuchar
+                            Clase:</label>
+                        <input type="number" id="pref_escuchar_clase" name="pref_escuchar_clase" min="0" max="100"
+                            step="0.1" value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_grabaciones"
+                            class="block text-sm font-medium text-gray-700 mb-1">Grabaciones:</label>
+                        <input type="number" id="pref_grabaciones" name="pref_grabaciones" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_musica" class="block text-sm font-medium text-gray-700 mb-1">Música:</label>
+                        <input type="number" id="pref_musica" name="pref_musica" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_podcast" class="block text-sm font-medium text-gray-700 mb-1">Podcast:</label>
+                        <input type="number" id="pref_podcast" name="pref_podcast" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_debates" class="block text-sm font-medium text-gray-700 mb-1">Debates:</label>
+                        <input type="number" id="pref_debates" name="pref_debates" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_experimentos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Experimentos:</label>
+                        <input type="number" id="pref_experimentos" name="pref_experimentos" min="0" max="100"
+                            step="0.1" value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_simulaciones"
+                            class="block text-sm font-medium text-gray-700 mb-1">Simulaciones:</label>
+                        <input type="number" id="pref_simulaciones" name="pref_simulaciones" min="0" max="100"
+                            step="0.1" value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_proyectos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Proyectos:</label>
+                        <input type="number" id="pref_proyectos" name="pref_proyectos" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_practica"
+                            class="block text-sm font-medium text-gray-700 mb-1">Práctica:</label>
+                        <input type="number" id="pref_practica" name="pref_practica" min="0" max="100" step="0.1"
+                            value="6.7" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="preference-item">
+                        <label for="pref_juegos" class="block text-sm font-medium text-gray-700 mb-1">Juegos:</label>
+                        <input type="number" id="pref_juegos" name="pref_juegos" min="0" max="100" step="0.1"
+                            value="6.6" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                </div>
+                <button type="button" id="distributeEvenlyBtn"
+                    class="mt-4 bg-indigo-100 text-indigo-700 py-2 px-4 rounded-md hover:bg-indigo-200 transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    Distribuir Equitativamente
+                </button>
             </div>
-            
-            <div class="form-group">
-                <label for="correo">Correo electrónico:</label>
-                <input type="text" id="correo" name="correo" required>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b">Feedback (Del 1 al 10 qué tanto te
+                    gusta cada método)</h2>
+                <div id="feedbackContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="feedback-item">
+                        <label for="feedback_lectura"
+                            class="block text-sm font-medium text-gray-700 mb-1">Lectura:</label>
+                        <input type="number" id="feedback_lectura" name="feedback_lectura" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_graficos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Gráficos:</label>
+                        <input type="number" id="feedback_graficos" name="feedback_graficos" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_diagramas"
+                            class="block text-sm font-medium text-gray-700 mb-1">Diagramas:</label>
+                        <input type="number" id="feedback_diagramas" name="feedback_diagramas" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_videos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Videos:</label>
+                        <input type="number" id="feedback_videos" name="feedback_videos" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_imagenes"
+                            class="block text-sm font-medium text-gray-700 mb-1">Imágenes:</label>
+                        <input type="number" id="feedback_imagenes" name="feedback_imagenes" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_escuchar_clase"
+                            class="block text-sm font-medium text-gray-700 mb-1">Escuchar Clase:</label>
+                        <input type="number" id="feedback_escuchar_clase" name="feedback_escuchar_clase" min="0"
+                            max="10" step="1" value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_grabaciones"
+                            class="block text-sm font-medium text-gray-700 mb-1">Grabaciones:</label>
+                        <input type="number" id="feedback_grabaciones" name="feedback_grabaciones" min="0" max="10"
+                            step="1" value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_musica"
+                            class="block text-sm font-medium text-gray-700 mb-1">Música:</label>
+                        <input type="number" id="feedback_musica" name="feedback_musica" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_podcast"
+                            class="block text-sm font-medium text-gray-700 mb-1">Podcast:</label>
+                        <input type="number" id="feedback_podcast" name="feedback_podcast" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_debates"
+                            class="block text-sm font-medium text-gray-700 mb-1">Debates:</label>
+                        <input type="number" id="feedback_debates" name="feedback_debates" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_experimentos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Experimentos:</label>
+                        <input type="number" id="feedback_experimentos" name="feedback_experimentos" min="0" max="10"
+                            step="1" value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_simulaciones"
+                            class="block text-sm font-medium text-gray-700 mb-1">Simulaciones:</label>
+                        <input type="number" id="feedback_simulaciones" name="feedback_simulaciones" min="0" max="10"
+                            step="1" value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_proyectos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Proyectos:</label>
+                        <input type="number" id="feedback_proyectos" name="feedback_proyectos" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_practica"
+                            class="block text-sm font-medium text-gray-700 mb-1">Práctica:</label>
+                        <input type="number" id="feedback_practica" name="feedback_practica" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="feedback-item">
+                        <label for="feedback_juegos"
+                            class="block text-sm font-medium text-gray-700 mb-1">Juegos:</label>
+                        <input type="number" id="feedback_juegos" name="feedback_juegos" min="0" max="10" step="1"
+                            value="5" required
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label for="contraseña">Contraseña:</label>
-                <input type="password" id="contraseña" name="contraseña" required>
+
+            <div class="flex justify-center">
+                <button type="button" id="predictBtn"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-md shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    Predecir Nuevas Preferencias
+                </button>
             </div>
-            
-            <button type="submit">Registrarse</button>
         </form>
-        
-        <div id="mensaje" class="message"></div>
-        
-        <div id="apiKeyContainer" class="api-key">
-            <div class="api-key-title">Tu API Key:</div>
-            <div id="apiKeyValue"></div>
+
+        <div id="results" class="mt-10 bg-white p-6 rounded-lg shadow-md hidden">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b">Resultados</h2>
+            <div class="mb-8">
+                <canvas id="resultsChart" class="w-full"></canvas>
+            </div>
+            <div id="numericalResults" class="overflow-x-auto"></div>
         </div>
     </div>
 
     <script>
-        document.getElementById('registroForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Obtener los valores del formulario
-            const nombre = document.getElementById('nombre').value;
-            const correo = document.getElementById('correo').value;
-            const contraseña = document.getElementById('contraseña').value;
-            
-            // Crear objeto con los datos del usuario
-            const userData = {
-                username: nombre,
-                email: correo,
-                password: contraseña
-            };
-            
-            // Enviar los datos al servidor
-            fetch('/usuario', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(userData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                const mensaje = document.getElementById('mensaje');
-                
-                if (data.error) {
-                    mensaje.className = 'message error';
-                    mensaje.textContent = data.error;
-                    document.getElementById('apiKeyContainer').style.display = 'none';
-                } else {
-                    mensaje.className = 'message success';
-                    mensaje.textContent = data.message + ' (ID: ' + data.User_ID + ')';
-                    
-                    // Mostrar la API key
-                    if (data.api_key) {
-                        document.getElementById('apiKeyValue').textContent = data.Api_key;
-                        document.getElementById('apiKeyContainer').style.display = 'block';
-                    }
-                    
-                    // Limpiar el formulario
-                    document.getElementById('registroForm').reset();
-                }
-                
-                mensaje.style.display = 'block';
-                
-                // Ocultar el mensaje después de 5 segundos (pero mantener la API key visible)
-            })
-            .catch(error => {
-                const mensaje = document.getElementById('mensaje');
-                mensaje.className = 'message error';
-                mensaje.textContent = 'Error al procesar la solicitud: ' + error;
-                mensaje.style.display = 'block';
-                document.getElementById('apiKeyContainer').style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function () {
+            // Elementos del DOM
+            const preferenciasInputs = document.querySelectorAll('#preferenciasContainer input');
+            const warningElement = document.getElementById('warning');
+            const totalValueElement = document.getElementById('totalValue');
+            const distributeEvenlyBtn = document.getElementById('distributeEvenlyBtn');
+            const predictBtn = document.getElementById('predictBtn');
+            const resultsDiv = document.getElementById('results');
+
+            // Variables para almacenar datos
+            let chart = null;
+            let originalPreferences = [];
+            let predictedPreferences = [];
+            let feedbackValues = [];
+            // Obtener todos los inputs de feedback
+            const feedbackInputs = document.querySelectorAll('#feedbackContainer input');
+
+            // Aplicar validación a cada input
+            feedbackInputs.forEach(input => {
+                // Validar al cambiar el valor
+                input.addEventListener('input', function () {
+                    validateFeedbackInput(this);
+                });
+
+                // Validar al perder el foco
+                input.addEventListener('blur', function () {
+                    validateFeedbackInput(this);
+                });
             });
+
+            // Función de validación para inputs de feedback
+            function validateFeedbackInput(input) {
+                let value = parseFloat(input.value);
+
+                // Si no es un número, establecer valor predeterminado
+                if (isNaN(value)) {
+                    input.value = 5;
+                    return;
+                }
+
+                // Asegurarse de que sea un número entero
+                value = Math.round(value);
+
+                // Limitar entre 1 y 10
+                if (value < 0) {
+                    value = 0;
+                } else if (value > 10) {
+                    value = 10;
+                }
+
+                // Actualizar el valor del input
+                input.value = value;
+            }
+
+            // Validar todos los inputs al cargar la página
+            feedbackInputs.forEach(input => {
+                validateFeedbackInput(input);
+            });
+            // Verificar que las preferencias sumen 100
+            function checkTotal() {
+                let total = 0;
+                preferenciasInputs.forEach(input => {
+                    total += parseFloat(input.value || 0);
+                });
+
+                totalValueElement.textContent = total.toFixed(1);
+
+                if (Math.abs(total - 100) > 0.1) {
+                    warningElement.classList.remove('hidden');
+                    return false;
+                } else {
+                    warningElement.classList.add('hidden');
+                    return true;
+                }
+            }
+
+            // Distribuir equitativamente
+            distributeEvenlyBtn.addEventListener('click', function () {
+                const evenValue = (100 / preferenciasInputs.length).toFixed(1);
+
+                // Ajustar el último valor para asegurar que sumen exactamente 100
+                const lastValue = (100 - (parseFloat(evenValue) * (preferenciasInputs.length - 1))).toFixed(1);
+
+                preferenciasInputs.forEach((input, index) => {
+                    if (index === preferenciasInputs.length - 1) {
+                        input.value = lastValue;
+                    } else {
+                        input.value = evenValue;
+                    }
+                });
+
+                checkTotal();
+            });
+
+            // Actualizar el total cuando cambian los valores
+            preferenciasInputs.forEach(input => {
+                input.addEventListener('input', checkTotal);
+            });
+
+            // Convertir feedback de escala 1-10 a escala 0-1
+            function normalizeFeedback(value) {
+                return (value - 1) / 9; // Convierte 1-10 a 0-1
+            }
+
+            // Recopilar datos y enviar al servidor
+            predictBtn.addEventListener('click', async function () {
+                if (!checkTotal()) {
+                    alert('Las preferencias deben sumar exactamente 100 antes de continuar.');
+                    return;
+                }
+
+                // Recopilar preferencias actuales
+                const preferencias = [];
+                preferenciasInputs.forEach(input => {
+                    preferencias.push(parseFloat(input.value));
+                });
+
+                // Recopilar y normalizar feedback
+                const feedbackInputs = document.querySelectorAll('#feedbackContainer input');
+                const feedback = [];
+                feedbackValues = []; // Para usar en la visualización
+
+                feedbackInputs.forEach(input => {
+                    const rawValue = parseFloat(input.value);
+                    feedbackValues.push(rawValue);
+                    feedback.push(normalizeFeedback(rawValue));
+                });
+
+                // Guardar preferencias originales para la gráfica
+                originalPreferences = [...preferencias];
+
+                // Preparar datos para enviar
+                const requestData = {
+                    preferencias: preferencias,
+                    feedback: feedback
+                };
+
+                try {
+                    // Enviar solicitud al servidor
+                    const response = await fetch('http://localhost:8080/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(requestData)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        // Guardar predicciones para la gráfica
+                        predictedPreferences = result.predicciones;
+
+                        // Mostrar resultados
+                        displayResults();
+                    } else {
+                        alert('Error: ' + result.message);
+                    }
+                } catch (error) {
+                    alert('Error de conexión: ' + error.message);
+                }
+            });
+
+            // Mostrar gráfica de resultados
+            function displayResults() {
+                // Mostrar la sección de resultados
+                resultsDiv.classList.remove('hidden');
+
+                // Categorías (etiquetas)
+                const labels = [
+                    'Lectura', 'Gráficos', 'Diagramas', 'Videos', 'Imágenes',
+                    'Escuchar Clase', 'Grabaciones', 'Música', 'Podcast', 'Debates',
+                    'Experimentos', 'Simulaciones', 'Proyectos', 'Práctica', 'Juegos'
+                ];
+
+                // Crear o actualizar gráfica
+                const ctx = document.getElementById('resultsChart').getContext('2d');
+
+                if (chart) {
+                    chart.destroy();
+                }
+
+                chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Preferencias Originales',
+                                data: originalPreferences,
+                                backgroundColor: 'rgba(79, 70, 229, 0.6)',
+                                borderColor: 'rgba(79, 70, 229, 1)',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Preferencias Predichas',
+                                data: predictedPreferences,
+                                backgroundColor: 'rgba(239, 68, 68, 0.6)',
+                                borderColor: 'rgba(239, 68, 68, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Valor (%)'
+                                }
+                            }
+                        },
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Comparación de Preferencias',
+                                font: {
+                                    size: 18
+                                }
+                            },
+                            legend: {
+                                position: 'top'
+                            }
+                        }
+                    }
+                });
+
+                // Mostrar resultados numéricos
+                const numericalResults = document.getElementById('numericalResults');
+
+                let resultsHTML = `
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Método</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Original</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Predicción</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cambio</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+            `;
+
+                for (let i = 0; i < labels.length; i++) {
+                    const original = originalPreferences[i];
+                    const predicted = predictedPreferences[i];
+                    const change = (predicted - original).toFixed(1);
+                    const feedbackRaw = feedbackValues[i];
+                    const feedbackPercent = (feedbackRaw * 10); // Multiplicamos por 10 (de 1-10 a 10-100)
+
+                    const changeColor = change > 0 ? 'text-green-600' : (change < 0 ? 'text-red-600' : 'text-gray-500');
+                    const rowClass = i % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+
+                    resultsHTML += `
+                    <tr class="${rowClass}">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${labels[i]}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${original.toFixed(1)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${predicted.toFixed(1)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm ${changeColor} font-medium">
+                            ${change > 0 ? '+' : ''}${change}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${feedbackPercent}</td>
+                    </tr>
+                `;
+                }
+
+                resultsHTML += `
+                    </tbody>
+                </table>
+            `;
+
+                numericalResults.innerHTML = resultsHTML;
+            }
+
+            // Ejecutar la verificación inicial
+            checkTotal();
         });
     </script>
 </body>
+
 </html>
