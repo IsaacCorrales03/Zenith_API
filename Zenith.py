@@ -15,7 +15,6 @@ import joblib
 torch.manual_seed(42)
 np.random.seed(42)
 
-
 class Zenith(nn.Module):
     def __init__(self, n_entradas, n_salidas=15):
         super(Zenith, self).__init__()

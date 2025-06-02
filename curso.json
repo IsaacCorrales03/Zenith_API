@@ -1,0 +1,53 @@
+{
+  "id": "1",
+  "nombre": "Matemáticas Noveno",
+  "duracion": 540,
+  "url_imagen": null,
+  "autor": {
+    "id": 1,
+    "nombre": "usuario_ejemplo"
+  },
+  "capitulos": {
+    "1": {
+      "id": 1,
+      "nombre": "Números reales y sus operaciones.",
+      "lecciones": {
+        "1": {
+          "id": 1,
+          "nombre": "Introducción a los números reales",
+          "duracion": 25,
+          "creditos": 400,
+          "tema": "Uso y clasificación de los números reales.",
+          "concepto": "En esta lección, se introducirá el conjunto de los números reales, que incluye números enteros, fraccionarios, decimales y los irracionales. Se explicará cómo se representan estos números en la recta numérica y su aplicación en situaciones cotidianas.",
+          "recursos": {
+            "1": {
+              "id": 1,
+              "tipo": "Visual",
+              "afinacion": "Artículo",
+              "contenido": "https://www.sdelsol.com/glosario/numeros-reales/",
+              "externo": true,
+              "descripcion": "Glosario sobre los números reales."
+            },
+            "2": {
+              "id": 2,
+              "tipo": "Visual",
+              "afinacion": "Artículo",
+              "contenido": "https://classbot.es/ejemplos-de-numeros-reales-aprende-su-uso-y-aplicacion/",
+              "externo": true,
+              "descripcion": "Ejemplos de uso de números reales."
+            },
+            "3": {
+              "id": 3,
+              "tipo": "Audiovisual",
+              "afinacion": "Video",
+              "contenido": "https://www.youtube.com/watch?v=lsoFP2YApvs",
+              "externo": true,
+              "descripcion": "Video explicativo sobre los números reales."
+            }
+          }
+        }
+      }
+    }
+  },
+  "inscripciones": []
+}

@@ -1,12 +1,12 @@
-from sqlalchemy import create_engine, ForeignKey, Enum
+from sqlalchemy import create_engine, ForeignKey, Enum, Boolean, Text
 from sqlalchemy.orm import sessionmaker, mapped_column, Mapped, relationship, declarative_base
 from sqlalchemy import Integer, String, JSON, ARRAY, TEXT, BOOLEAN, DateTime
-from default import *
 from dotenv import load_dotenv
 import enum
 from typing import List
 from datetime import datetime
 import os
+
 load_dotenv()
 # Use postgresql+psycopg2 as the dialect
 postgre_uri = os.getenv('SQL_URI')
@@ -33,10 +33,10 @@ class Usuario(Base):
     racha: Mapped[int] = mapped_column(Integer(), default=0)
     lecciones: Mapped[int] = mapped_column(Integer(), default=30, server_default='30')
     aprendizaje_principal: Mapped[EstilosDeAprendizaje] = mapped_column(Enum(EstilosDeAprendizaje), default=EstilosDeAprendizaje.NO_DEFINIDO)
-    porcentajes_aprendizaje: Mapped[dict] = mapped_column(JSON(), default=default_porcentajes)
-    preferencias: Mapped[dict] = mapped_column(JSON(), default=default_preferencias)
+    porcentajes_aprendizaje: Mapped[dict] = mapped_column(JSON(), default=dict)  # Cambia default_porcentajes si es necesario
+    preferencias: Mapped[dict] = mapped_column(JSON(), default=dict)  # Cambia default_preferencias si es necesario
     retroalimentacion: Mapped[List[dict]] = mapped_column(ARRAY(JSON), nullable=True, default=list)
-    url_foto_perfil: Mapped[str] = mapped_column(String(600), nullable=True, server_default=f'{service_url}/assets/perfil_usuario/default.webp')
+    url_foto_perfil: Mapped[str] = mapped_column(String(600), nullable=True, server_default='https://example.com/assets/perfil_usuario/default.webp')
 
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="usuario")
     grupos_administrados: Mapped[List['Grupo']] = relationship("Grupo", back_populates="administrador")
@@ -45,9 +45,9 @@ class Usuario(Base):
 
     def __repr__(self):
         return f"<Usuario {self.nombre}>"
+
     def to_dict(self):
         try:
-            # Procesar cursos inscritos
             cursos_inscritos = [
                 {
                     "Course_ID": inscripcion.curso.id,
@@ -56,21 +56,19 @@ class Usuario(Base):
                 } for inscripcion in self.inscripciones
             ]
 
-            # Procesar grupos
             grupos_miembro = [
                 {
-                    "Group_ID": grupo.id,
-                    "Group_Name": grupo.nombre,
-                    "Group_Type": "Público" if grupo.public else "Privado",
-                    "Group_Code": grupo.codigo,
-                    "Group_Admin_ID": grupo.administrador_id,
-                    "Group_Admin_Name": grupo.administrador.nombre if grupo.administrador else None,
-                    "Group_Members": grupo.miembros,
+                    "Group_ID": membresia.grupo.id,
+                    "Group_Name": membresia.grupo.nombre,
+                    "Group_Type": "Público" if membresia.grupo.public else "Privado",
+                    "Group_Code": membresia.grupo.codigo,
+                    "Group_Admin_ID": membresia.grupo.administrador_id,
+                    "Group_Admin_Name": membresia.grupo.administrador.nombre if membresia.grupo.administrador else None,
+                    "Group_Members": membresia.grupo.miembros,
                     "Membership_Date": membresia.fecha_membresia.strftime('%d/%m/%Y')
-                } for membresia in self.membresias for grupo in [membresia.grupo]
+                } for membresia in self.membresias
             ]
 
-            # Grupos administrados
             grupos_administrados = [
                 {
                     "Group_ID": grupo.id,
@@ -103,76 +101,119 @@ class Curso(Base):
     __tablename__ = 'Cursos'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    nombre: Mapped[str] = mapped_column(String(32), nullable=False)
-    duracion: Mapped[int] = mapped_column(Integer(), nullable=False)
-    url_imagen: Mapped[str] = mapped_column(TEXT())
+    nombre: Mapped[str] = mapped_column(String(64), nullable=False)
+    duracion: Mapped[int] = mapped_column(Integer(), nullable=False)  # duración en minutos u horas
+    url_imagen: Mapped[str] = mapped_column(Text(), nullable=True)
     autor_id: Mapped[int] = mapped_column(ForeignKey("Usuarios.id"), nullable=False)
-    
-    # Relaciones
+
     inscripciones: Mapped[List['Inscripciones']] = relationship("Inscripciones", back_populates="curso")
-    lecciones: Mapped[List['Leccion']] = relationship("Leccion", back_populates="curso", cascade="all, delete-orphan")
+    capitulos: Mapped[List['Capitulo']] = relationship("Capitulo", back_populates="curso", cascade="all, delete-orphan")
     autor: Mapped['Usuario'] = relationship("Usuario", back_populates="cursos_creados")
-    
+
     def to_dict(self):
         try:
-            # Proceso de lecciones
-            lecciones_data = [
-                {
-                    "Leccion_ID": leccion.id,
-                    "Leccion_Title": leccion.titulo,
-                    "Leccion_Duration": leccion.duracion
-                } for leccion in self.lecciones
-            ]
-            
-            # Proceso de inscripciones
+            capitulos_data = {}
+            for cap in self.capitulos:
+                lecciones_data = {}
+                for i, lec in enumerate(cap.lecciones, start=1):
+                    recursos_data = {}
+                    for j, rec in enumerate(lec.recursos, start=1):
+                        recursos_data[j] = {
+                            "id": rec.id,
+                            "tipo": rec.tipo,
+                            "afinacion": rec.afinacion,
+                            "contenido": rec.contenido,
+                            "externo": rec.externo,
+                            "descripcion": rec.descripcion
+                        }
+                    lecciones_data[i] = {
+                        "id": lec.id,
+                        "nombre": lec.nombre,
+                        "duracion": lec.duracion,
+                        "creditos": lec.creditos,
+                        "tema": lec.tema,
+                        "concepto":lec.concepto,
+                        "recursos": recursos_data
+                    }
+                capitulos_data[cap.numero] = {
+                    "id": cap.id,
+                    "nombre": cap.nombre,
+                    "lecciones": lecciones_data
+                }
+
             inscripciones_data = [
                 {
-                    "Inscription_ID": inscripcion.id,
-                    "User_ID": inscripcion.usuario_id,
-                    "User_Name": inscripcion.usuario.nombre if inscripcion.usuario else None,
-                    "Inscription_Date": inscripcion.fecha_inscripcion.strftime('%d/%m/%Y') if inscripcion.fecha_inscripcion else None
-                } for inscripcion in self.inscripciones
+                    "id": inscripcion.id,
+                    "usuario_id": inscripcion.usuario_id,
+                    "usuario_nombre": inscripcion.usuario.nombre if inscripcion.usuario else None,
+                    "fecha_inscripcion": inscripcion.fecha_inscripcion.strftime('%d/%m/%Y') if inscripcion.fecha_inscripcion else None
+                }
+                for inscripcion in self.inscripciones
             ]
-            
-            # Obtener datos del autor
+
             autor_data = {
-                "User_ID": self.autor.id,
-                "User_Name": self.autor.nombre
+                "id": self.autor.id,
+                "nombre": self.autor.nombre
             } if self.autor else None
-            
+
             return {
-                "Course_ID": self.id,
-                "Course_Name": self.nombre,
-                "Course_Duration": self.duracion,
-                "Course_Image": self.url_imagen,
-                "Course_Author": autor_data,
-                "Lessons": lecciones_data,
-                "Inscriptions": inscripciones_data
+                "id": self.id,
+                "nombre": self.nombre,
+                "duracion": self.duracion,
+                "url_imagen": self.url_imagen,
+                "autor": autor_data,
+                "capitulos": capitulos_data,
+                "inscripciones": inscripciones_data
             }
         except Exception as e:
-            # En caso de error, devolver un diccionario básico
+            print("Error", e)
+            # En caso de error, devuelve info básica
             return {
-                "Course_ID": self.id,
-                "Course_Name": self.nombre,
-                "Course_Duration": self.duracion,
-                "Course_Image": self.url_imagen,
-                "Course_Author_ID": self.autor_id
+                "id": self.id,
+                "nombre": self.nombre,
+                "duracion": self.duracion,
+                "autor_id": self.autor_id
             }
+
+class Capitulo(Base):
+    __tablename__ = 'Capitulos'
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nombre: Mapped[str] = mapped_column(String(64), nullable=False)
+    numero: Mapped[int] = mapped_column(Integer(), nullable=False)
+    curso_id: Mapped[int] = mapped_column(ForeignKey("Cursos.id"), nullable=False)
+
+    curso: Mapped['Curso'] = relationship("Curso", back_populates="capitulos")
+    lecciones: Mapped[List['Leccion']] = relationship("Leccion", back_populates="capitulo", cascade="all, delete-orphan")
 
 class Leccion(Base):
     __tablename__ = 'Lecciones'
-    
+
     id: Mapped[int] = mapped_column(primary_key=True)
     nombre: Mapped[str] = mapped_column(String(64), nullable=False)
-    duracion: Mapped[int] = mapped_column(Integer(), nullable=False)  # en minutos
-    creditos: Mapped[int] = mapped_column(Integer(), nullable=False)
-    tema_principal: Mapped[str] = mapped_column(String(128), nullable=False)
-    
-    # Clave foránea para relacionar con el curso
-    curso_id: Mapped[int] = mapped_column(ForeignKey('Cursos.id'))
-    
-    # Relación con la tabla de Cursos
-    curso: Mapped["Curso"] = relationship("Curso", back_populates="lecciones")
+    numero: Mapped[str] = mapped_column(Integer(), nullable=False)
+    duracion: Mapped[int] = mapped_column(Integer(), nullable=True)
+    creditos: Mapped[int] = mapped_column(Integer(), nullable=True)
+    tema: Mapped[str] = mapped_column(String(255), nullable=True)
+    concepto: Mapped[str] = mapped_column(String(1200), nullable=False)
+    capitulo_id: Mapped[int] = mapped_column(ForeignKey("Capitulos.id"), nullable=False)
+
+    capitulo: Mapped['Capitulo'] = relationship("Capitulo", back_populates="lecciones")
+    recursos: Mapped[List['Recurso']] = relationship("Recurso", back_populates="leccion", cascade="all, delete-orphan")
+
+class Recurso(Base):
+    __tablename__ = "Recursos"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    leccion_id: Mapped[int] = mapped_column(ForeignKey("Lecciones.id"), nullable=False)
+
+    tipo: Mapped[str] = mapped_column(String(32), nullable=False)      # Visual, Audiovisual, Auditivo, etc.
+    afinacion: Mapped[str] = mapped_column(String(32), nullable=False)  # Video, Artículo, Texto, Práctica
+    contenido: Mapped[str] = mapped_column(String(256), nullable=False) # URL o ruta relativa
+    externo: Mapped[bool] = mapped_column(Boolean, default=True)       # True si es un enlace externo
+    descripcion: Mapped[str] = mapped_column(String(256), nullable=True)
+
+    leccion: Mapped["Leccion"] = relationship("Leccion", back_populates="recursos")
 
 class Grupo(Base):
     __tablename__ = 'Grupos'
@@ -192,9 +233,9 @@ class Inscripciones(Base):
     __tablename__ = 'Inscripciones'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    id_usuario: Mapped[int] = mapped_column(ForeignKey('Usuarios.id'))
-    id_curso: Mapped[int] = mapped_column(ForeignKey('Cursos.id'))
-    fecha_inscripcion: Mapped[datetime] = mapped_column(DateTime(), default=datetime.now)
+    usuario_id: Mapped[int] = mapped_column(ForeignKey("Usuarios.id"), nullable=False)
+    curso_id: Mapped[int] = mapped_column(ForeignKey("Cursos.id"), nullable=False)
+    fecha_inscripcion: Mapped[datetime] = mapped_column(DateTime, nullable=False)
 
     usuario: Mapped['Usuario'] = relationship("Usuario", back_populates="inscripciones")
     curso: Mapped['Curso'] = relationship("Curso", back_populates="inscripciones")
@@ -203,13 +244,14 @@ class Membresia(Base):
     __tablename__ = 'Membresias'
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    id_usuario: Mapped[int] = mapped_column(ForeignKey('Usuarios.id'))
-    id_grupo: Mapped[int] = mapped_column(ForeignKey('Grupos.id'))
-    fecha_membresia: Mapped[datetime] = mapped_column(DateTime(), default=datetime.now)
-    
+    usuario_id: Mapped[int] = mapped_column(ForeignKey('Usuarios.id'), nullable=False)
+    grupo_id: Mapped[int] = mapped_column(ForeignKey('Grupos.id'), nullable=False)
+    fecha_membresia: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+
     usuario: Mapped['Usuario'] = relationship("Usuario", back_populates="membresias")
     grupo: Mapped['Grupo'] = relationship("Grupo", back_populates="membresias")
 
 
-# Base.metadata.drop_all(Engine)
-# Base.metadata.create_all(Engine)
+if __name__ == '__main__':
+    Base.metadata.drop_all(Engine)
+    Base.metadata.create_all(Engine)

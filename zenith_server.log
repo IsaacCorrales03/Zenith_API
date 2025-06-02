@@ -1,0 +1,10 @@
+2025-06-02 17:09:25,041 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 17:09:25,044 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 17:09:25,169 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 17:09:25,183 - waitress - INFO - Serving on http://0.0.0.0:8080
+2025-06-02 17:15:18,600 - ZenithServer - INFO - Servidor detenido
+2025-06-02 17:37:58,581 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 17:37:58,583 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 17:37:58,639 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 17:37:58,651 - waitress - INFO - Serving on http://0.0.0.0:8080
+2025-06-02 17:40:59,322 - ZenithServer - INFO - Servidor detenido

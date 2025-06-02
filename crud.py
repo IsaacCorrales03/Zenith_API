@@ -2,7 +2,7 @@ from sqlalchemy.exc import IntegrityError, DataError
 from psycopg2.errors import StringDataRightTruncation
 import re
 from criptografic import PasswordManager, generate_api_key, generate_group_link
-from models import session, Usuario, Curso, Grupo, Inscripciones, Membresia
+from models import session, Usuario, Curso, Grupo, Inscripciones, Membresia, Leccion, Recurso, Capitulo
 from server_strings import service_url
 
 
@@ -168,7 +168,6 @@ def obtener_curso_by_id(id):
 def obtener_cursos():
     try: 
         cursos = session.query(Curso).all()
-        print(cursos)
         return cursos
     except Exception as e:
         print(e) 
