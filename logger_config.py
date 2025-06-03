@@ -19,7 +19,8 @@ def get_logger(name="ZenithServer"):
             "ERROR": "red",
             "CRITICAL": "bold_red"
         },
-        datefmt='%m-%d %H:%M:%S''
+        datefmt='%m-%d %H:%M:%S'
+        
     )
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.DEBUG)
