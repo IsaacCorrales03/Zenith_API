@@ -876,3 +876,10 @@
 2025-06-02 23:49:25,045 - ZenithServer - INFO - GET /cursos - 200 OK
 2025-06-02 23:49:25,079 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
 2025-06-02 23:49:34,653 - ZenithServer - INFO - Realizando petición
+2025-06-03 01:14:10,679 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-03 01:14:10,691 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-03 01:14:10,691 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-03 01:14:10,785 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-03 01:14:10,790 - ZenithServer - INFO - Bot iniciado
+2025-06-03 01:14:10,791 - ZenithServer - INFO - Realizando petición
+2025-06-03 01:14:10,791 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
