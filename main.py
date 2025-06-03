@@ -6,22 +6,13 @@ from werkzeug.utils import secure_filename
 from server_strings import *
 from bot import Bot
 from waitress import serve
-import logging
 import torch
 from Zenith import Zenith, cargar_escalador
 import numpy as np
+from logger_config import get_logger
 
-# Configurar logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("zenith_server.log"),
-        logging.StreamHandler()
-    ]
-)
+logger = get_logger("ZenithServer")
 
-logger = logging.getLogger("ZenithServer")
 app = Flask('__main__')
 app.secret_key = os.getenv('secret_key')
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -44,7 +35,7 @@ try:
     model_path = os.path.join('modelos', 'zenithQ1.pt')
     modelo.load_state_dict(torch.load(model_path))
     modelo.eval()  # Poner el modelo en modo evaluación
-    logger.info(f"Modelo cargado correctamente desde {model_path}")
+    logger.debug(f"Modelo cargado correctamente desde {model_path}")
 except Exception as e:
     logger.error(f"Error al cargar el modelo: {str(e)}")
     raise
@@ -350,9 +341,10 @@ def change_profile_picture():
 def assetlinks():
     return jsonify(links_json)
 
-uptime_bot = Bot(service_url, 40)
-
 if __name__ == '__main__':
+    uptime_bot = Bot(service_url, 40)
     uptime_bot.iniciar()
-    serve(app, host='0.0.0.0', port=8080, threads=4)
-    logger.info("Servidor detenido")
+    logger.warning("Servidor inciado en: 127.0.0.1:1900")
+    serve(app, host='127.0.0.1', port=1900, threads=4)
+    
+    logger.critical("Servidor detenido")

@@ -10,6 +10,8 @@ import pickle
 import os
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import joblib
+from logger_config import get_logger
+logger = get_logger("ZenithServer")
 
 # Configuración de semilla para reproducibilidad
 torch.manual_seed(42)
@@ -112,7 +114,7 @@ def cargar_escalador(ruta_archivo='escalador_preferencias.pkl'):
     """Carga el escalador previamente guardado."""
     try:
         escalador = joblib.load(ruta_archivo)
-        print(f"Escalador cargado correctamente desde {ruta_archivo}")
+        logger.debug(f"Escalador cargado correctamente desde {ruta_archivo}")
         return escalador
     except Exception as e:
         print(f"Error al cargar el escalador: {str(e)}")
