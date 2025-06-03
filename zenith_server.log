@@ -1,126 +1,878 @@
-2025-06-02 17:09:25,041 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 17:09:25,044 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 17:09:25,169 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 17:09:25,183 - waitress - INFO - Serving on http://0.0.0.0:8080
-2025-06-02 17:15:18,600 - ZenithServer - INFO - Servidor detenido
-2025-06-02 17:37:58,581 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 17:37:58,583 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 17:37:58,639 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 17:37:58,651 - waitress - INFO - Serving on http://0.0.0.0:8080
-2025-06-02 17:40:59,322 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:40:06,487 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:40:06,490 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:40:06,540 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:44:03,847 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:44:10,959 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:44:10,960 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:44:10,979 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:44:33,200 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:44:40,071 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:44:40,072 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:44:40,087 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:45:26,545 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:45:33,317 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:45:33,318 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:45:33,342 - ZenithServer - INFO - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:45:54,567 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:46:01,275 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:46:01,277 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:47:40,206 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:47:47,257 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:47:47,259 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:47:47,260 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:47:47,278 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:47:47,284 - ZenithServer - DEBUG - Bot iniciado
-2025-06-02 19:47:47,286 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:48:27,604 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:49:07,883 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:49:42,499 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:49:50,050 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:49:50,051 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:49:50,052 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:49:50,072 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:49:50,079 - ZenithServer - DEBUG - Bot iniciado
-2025-06-02 19:49:50,080 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:50:05,244 - ZenithServer - INFO - Servidor detenido
-2025-06-02 19:50:12,586 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:50:12,588 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:50:12,588 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:50:12,605 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:50:12,609 - ZenithServer - DEBUG - Bot iniciado
-2025-06-02 19:50:12,611 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:50:13,628 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:50:43,257 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:50:43,258 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:50:43,259 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:50:43,280 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:50:43,285 - ZenithServer - DEBUG - Bot iniciado
-2025-06-02 19:50:43,286 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:50:46,315 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:52:06,493 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:52:06,494 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:52:06,494 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:52:06,510 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:52:06,515 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:52:06,516 - ZenithServer - DEBUG - Realizando la petición
-2025-06-02 19:52:22,679 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:52:30,138 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:52:30,139 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:52:30,139 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:52:30,160 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:52:30,165 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:53:02,540 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:53:09,785 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:53:09,786 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:53:09,787 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:53:09,806 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:53:09,811 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:53:09,813 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:53:50,104 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:54:03,426 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:54:10,031 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:54:10,032 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:54:10,033 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:54:10,051 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:54:10,056 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:54:10,057 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:54:39,362 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:56:07,255 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:56:07,257 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:56:07,257 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:56:07,276 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:56:07,282 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:56:07,283 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:56:21,416 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:57:59,170 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:58:04,005 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:58:04,007 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:58:04,029 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:58:04,033 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:58:04,035 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:58:06,048 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 19:58:19,047 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 19:58:19,048 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 19:58:19,049 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 19:58:19,064 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 19:58:19,068 - ZenithServer - INFO - Bot iniciado
-2025-06-02 19:58:19,069 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:58:59,393 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:59:39,694 - ZenithServer - INFO - Realizando petición
-2025-06-02 19:59:58,115 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 20:02:46,107 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 20:02:55,940 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 20:02:55,942 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 20:02:55,964 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 20:02:55,968 - ZenithServer - INFO - Bot iniciado
-2025-06-02 20:02:55,969 - ZenithServer - INFO - Realizando petición
-2025-06-02 20:02:55,969 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
-2025-06-02 20:02:59,008 - ZenithServer - CRITICAL - Servidor detenido
-2025-06-02 20:03:10,881 - ZenithServer - INFO - Inicializando el modelo Zenith...
-2025-06-02 20:03:10,882 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
-2025-06-02 20:03:10,882 - ZenithServer - INFO - Escalador cargado correctamente
-2025-06-02 20:03:10,899 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
-2025-06-02 20:03:10,903 - ZenithServer - INFO - Bot iniciado
-2025-06-02 20:03:10,904 - ZenithServer - INFO - Realizando petición
-2025-06-02 20:03:10,904 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
-2025-06-02 20:03:17,971 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:04:23,085 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:04:26,324 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:04:26,326 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:04:26,345 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:04:26,349 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:04:26,350 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:04:26,351 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:05:06,646 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:05:27,219 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:05:27,220 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:05:27,221 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:05:27,236 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:05:27,241 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:05:27,242 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:05:27,242 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:06:54,932 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:06:54,933 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:06:54,934 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:06:54,949 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:06:54,953 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:06:54,954 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:06:54,954 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:06:56,989 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:07:03,763 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:07:03,764 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:07:03,765 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:07:03,780 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:07:03,785 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:07:03,785 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:07:03,786 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:07:06,820 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:08:19,972 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:08:19,973 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:08:19,974 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:08:19,989 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:08:19,994 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:08:19,995 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:08:19,995 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:08:21,010 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:08:29,892 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:08:29,893 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:08:29,894 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:08:29,922 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:08:29,927 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:08:29,929 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:08:29,929 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:08:50,527 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:08:50,528 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:08:50,529 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:08:50,544 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:08:50,548 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:08:50,549 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:08:50,550 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:09:03,451 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:09:03,452 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:09:03,454 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:09:03,470 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:09:03,475 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:09:03,484 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:09:03,484 - ZenithServer - WARNING - Servidor inciado en: 127.0.0.1:1900
+2025-06-02 20:09:43,807 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:10:22,259 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:10:35,086 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:10:35,087 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:10:35,087 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:10:35,103 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:10:35,107 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:10:35,108 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:10:35,109 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:11:15,420 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:11:59,888 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:12:40,156 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:13:20,443 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:13:33,632 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:13:33,633 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:13:33,633 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:13:33,648 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:13:33,653 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:13:33,654 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:13:33,654 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:13:45,818 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:14:13,989 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:18:48,130 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:18:58,394 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:18:58,395 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:18:58,396 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:18:58,411 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:18:58,415 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:18:58,416 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:18:58,416 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:19:07,253 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:19:19,164 - ZenithServer - INFO - GET /cursos/1 - 404 NOT FOUND
+2025-06-02 20:19:38,722 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:20:19,179 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:20:19,180 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:20:19,180 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:20:19,198 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:20:19,202 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:20:19,203 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:20:19,203 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:20:23,420 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 20:20:31,293 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:20:33,342 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:20:36,368 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:20:43,811 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:20:43,814 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:20:43,814 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:20:43,832 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:20:43,838 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:20:43,840 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:20:43,840 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:20:55,607 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:21:02,010 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:21:07,717 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:21:19,428 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:21:19,429 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:21:19,430 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:21:19,446 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:21:19,452 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:21:19,454 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:21:19,455 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:21:22,855 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:21:28,439 - ZenithServer - INFO - GET /cursos/1 - 404 NOT FOUND
+2025-06-02 20:21:33,072 - ZenithServer - INFO - GET /cursos/3 - 404 NOT FOUND
+2025-06-02 20:21:35,808 - ZenithServer - INFO - GET /cursos/2 - 404 NOT FOUND
+2025-06-02 20:21:40,408 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:21:51,609 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 20:21:55,649 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:22:03,908 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:22:20,072 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:22:20,073 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:22:20,093 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:22:20,097 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:22:20,099 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:22:20,099 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:22:22,125 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:22:34,804 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:22:47,664 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:22:47,665 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:22:47,685 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:22:47,690 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:22:47,691 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:22:47,691 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:23:29,196 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:23:38,568 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:23:38,569 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:23:38,593 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:23:38,597 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:23:38,598 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:23:38,598 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:23:42,204 - ZenithServer - INFO - GET /cursos/1 - 404 NOT FOUND
+2025-06-02 20:23:43,120 - ZenithServer - INFO - GET /cursos/1 - 404 NOT FOUND
+2025-06-02 20:23:49,680 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:24:17,822 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 20:24:25,659 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 20:24:25,660 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 20:24:25,660 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 20:24:25,675 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 20:24:25,680 - ZenithServer - INFO - Bot iniciado
+2025-06-02 20:24:25,681 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:24:25,681 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 20:25:06,053 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:25:14,670 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:25:20,254 - ZenithServer - INFO - GET /cursos/1 - 404 NOT FOUND
+2025-06-02 20:25:24,405 - ZenithServer - INFO - GET /cursos/3 - 404 NOT FOUND
+2025-06-02 20:25:27,936 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 20:25:32,819 - ZenithServer - INFO - GET /grupos - 400 BAD REQUEST
+2025-06-02 20:25:40,590 - ZenithServer - INFO - GET /usuarios - 404 NOT FOUND
+2025-06-02 20:25:46,332 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:25:50,389 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 20:26:26,627 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:27:06,922 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:27:47,195 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:28:27,488 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:29:07,785 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:29:48,114 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:30:28,473 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:31:08,754 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:31:49,025 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:32:29,350 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:33:09,617 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:33:49,891 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:34:30,174 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:35:10,484 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:35:50,856 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:36:31,133 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:37:11,450 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:37:51,773 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:38:32,050 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:39:12,339 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:39:52,628 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:40:32,946 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:41:13,345 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:41:53,619 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:42:33,908 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:43:14,209 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:43:54,516 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:44:34,817 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:45:15,139 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:45:55,415 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:46:35,743 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:47:16,054 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:47:56,330 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:48:36,618 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:49:16,926 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:49:57,225 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:50:37,517 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:51:17,817 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:51:58,204 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:52:38,505 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:52:47,245 - ZenithServer - INFO - OPTIONS /usuario - 200 OK
+2025-06-02 20:52:47,773 - ZenithServer - INFO - POST /usuario - 440 UNKNOWN
+2025-06-02 20:52:58,482 - ZenithServer - INFO - OPTIONS /usuario - 200 OK
+2025-06-02 20:52:59,558 - ZenithServer - INFO - POST /usuario - 201 CREATED
+2025-06-02 20:53:00,007 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 20:53:06,443 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:53:18,787 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:53:59,062 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:54:39,373 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:54:51,683 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 20:54:55,324 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 20:55:19,710 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:55:59,985 - ZenithServer - INFO - Realizando petición
+2025-06-02 20:59:40,487 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 21:02:46,842 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 21:02:46,846 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 21:02:46,917 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 21:02:46,922 - ZenithServer - INFO - Bot iniciado
+2025-06-02 21:02:46,922 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:02:46,923 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 21:03:27,299 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:03:45,740 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 21:03:45,838 - ZenithServer - INFO - GET /favicon.ico - 404 NOT FOUND
+2025-06-02 21:04:01,176 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 21:04:04,306 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:04:07,618 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:04:47,915 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:05:28,212 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:05:29,079 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:05:29,911 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:06:08,529 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:06:48,831 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:07:20,087 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:07:29,100 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:07:42,248 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:08:09,391 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:08:09,834 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:08:49,752 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:09:30,063 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:10:10,345 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:10:50,656 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:11:23,783 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:11:30,930 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:11:50,075 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:11:50,107 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:12:11,209 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:12:47,171 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:12:47,189 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:12:50,036 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:12:50,056 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:12:51,509 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:13:31,780 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:14:05,806 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:14:09,800 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:14:12,160 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:14:13,114 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:14:13,139 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:14:30,375 - ZenithServer - INFO - GET /assets/placeholder-curso.jpg - 404 NOT FOUND
+2025-06-02 21:14:52,471 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:14:58,899 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 200 OK
+2025-06-02 21:15:18,903 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:15:18,922 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 200 OK
+2025-06-02 21:15:32,760 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:16:03,934 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:16:13,066 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:16:53,347 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:17:33,591 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:18:13,878 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:18:54,186 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:19:34,537 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:20:12,187 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:20:12,216 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:20:14,839 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:20:55,126 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:21:35,404 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:22:15,670 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:22:55,963 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:23:23,109 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:23:23,141 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:23:29,715 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:23:29,740 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:23:31,900 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:23:36,249 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:23:43,485 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:23:43,507 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:23:56,166 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:23:56,193 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:24:16,557 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:24:56,929 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:25:37,232 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:26:17,509 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:26:57,796 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:27:25,561 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:27:25,592 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:27:38,107 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:28:18,400 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:28:58,685 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:29:19,473 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:29:19,545 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:29:38,956 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:30:19,307 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:30:19,565 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:30:19,593 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:30:59,599 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:31:39,884 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:32:20,164 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:33:00,453 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:33:18,761 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:33:18,804 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:33:40,745 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:33:41,866 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:33:41,896 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:34:21,040 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:35:01,325 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:35:41,666 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:36:01,823 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:36:01,850 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:36:21,961 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:37:02,230 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:37:42,533 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:38:22,805 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:39:03,111 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:39:43,409 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:40:23,704 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:41:04,043 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:41:44,332 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:42:24,614 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:43:04,908 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:43:45,186 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:44:25,454 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:45:05,726 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:45:40,872 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:45:41,767 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:45:42,491 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:45:43,217 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:45:46,025 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:46:26,386 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:47:06,653 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:47:17,664 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 21:47:24,637 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:47:24,672 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:47:46,944 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:48:26,402 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:48:26,428 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:48:27,250 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:48:34,103 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:48:34,134 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:49:07,536 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:49:31,952 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:49:31,972 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:49:43,905 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:49:43,930 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:49:47,795 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:49:52,980 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:49:53,005 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:50:02,904 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:50:02,940 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:50:21,210 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:50:21,243 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:50:28,115 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:51:08,398 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:51:17,075 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:51:17,111 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:51:42,455 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:51:42,488 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:51:48,748 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:52:14,633 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:52:14,668 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:52:29,024 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:53:03,572 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:53:03,606 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:53:09,335 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:53:25,548 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:53:49,624 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:56:37,079 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:56:42,125 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:56:54,251 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:56:59,485 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:57:25,921 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:57:25,941 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:57:33,250 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:57:33,284 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:57:39,579 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:57:39,609 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:57:39,769 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:58:02,105 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:58:02,133 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:58:12,022 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:58:12,057 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:58:20,041 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:58:20,760 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:58:20,792 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:58:22,495 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 21:58:39,872 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 21:58:54,448 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 21:58:54,482 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 21:59:00,345 - ZenithServer - INFO - Realizando petición
+2025-06-02 21:59:40,640 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:00:20,949 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:00:37,236 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:01:01,224 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:01:41,486 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:02:21,758 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:02:45,260 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:03:02,077 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:03:42,348 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:03:52,922 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:03:57,635 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:03:57,664 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:04:16,983 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:04:17,002 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:04:19,752 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:04:19,786 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:04:22,680 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:05:02,990 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:05:43,268 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:06:23,558 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:06:28,779 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:06:28,803 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:06:31,989 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:06:32,023 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:06:33,042 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:07:03,860 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:07:44,146 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:08:24,516 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:09:04,809 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:09:25,104 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:09:25,139 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:09:26,293 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:09:45,102 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:10:23,302 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:10:23,340 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:10:25,379 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:10:27,229 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:11:05,679 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:11:45,946 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:12:14,463 - ZenithServer - INFO - OPTIONS /login - 200 OK
+2025-06-02 22:12:15,255 - ZenithServer - INFO - POST /login - 200 OK
+2025-06-02 22:12:15,764 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:12:22,000 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:12:22,031 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:12:23,180 - ZenithServer - INFO - OPTIONS /enroll/4/1 - 404 NOT FOUND
+2025-06-02 22:12:26,258 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:13:06,544 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:13:46,884 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:14:27,177 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:14:28,906 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:14:28,927 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:14:31,975 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:14:31,997 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:14:42,749 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:14:49,353 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:14:49,388 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:15:01,349 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:15:07,451 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:15:23,978 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:15:24,002 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:15:47,754 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:16:28,058 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:17:08,341 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:17:48,633 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:17:52,538 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:17:52,570 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:17:54,026 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:18:28,929 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:19:09,261 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:19:38,171 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:19:38,209 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:19:39,690 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:19:49,521 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:19:57,322 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:19:57,359 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:19:58,128 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:20:29,329 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:20:29,363 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:20:29,820 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:20:32,168 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:20:53,675 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:20:53,710 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:20:57,101 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:21:04,011 - ZenithServer - INFO - OPTIONS /enroll/4/1 - 404 NOT FOUND
+2025-06-02 22:21:10,104 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:21:50,375 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:22:10,968 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:22:11,007 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:22:16,940 - ZenithServer - INFO - OPTIONS /enroll//1 - 404 NOT FOUND
+2025-06-02 22:22:30,671 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:23:10,951 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:23:17,333 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:23:17,365 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:23:22,603 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:23:26,309 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:23:29,367 - ZenithServer - INFO - OPTIONS /enroll/4/1 - 404 NOT FOUND
+2025-06-02 22:23:36,153 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:23:36,187 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:23:37,103 - ZenithServer - INFO - OPTIONS /enroll/4/1 - 404 NOT FOUND
+2025-06-02 22:23:51,213 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:24:01,233 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:24:01,268 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:24:31,556 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:25:11,835 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:25:15,958 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:25:15,983 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:25:52,167 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:26:32,484 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:27:12,774 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:27:53,041 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:28:33,345 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:29:13,622 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:29:53,961 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:30:34,229 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:30:47,062 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:30:47,088 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:31:14,516 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:31:43,975 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:31:44,003 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:31:54,790 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:32:00,410 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:32:00,434 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:32:06,892 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:32:06,915 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:32:09,220 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:32:09,240 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:32:17,004 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:32:17,027 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:32:35,068 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:33:05,298 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:33:05,326 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:33:08,915 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:33:08,942 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:33:15,339 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:33:49,317 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:33:49,342 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:33:55,637 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:34:04,936 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:34:04,959 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:34:26,166 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:34:26,203 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:34:28,167 - ZenithServer - INFO - OPTIONS /cursos/4/1 - 404 NOT FOUND
+2025-06-02 22:34:35,945 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:35:16,278 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:35:56,569 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:36:36,866 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:37:17,150 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:37:57,447 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:38:37,713 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:38:43,982 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:38:59,766 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:39:07,823 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 22:39:26,419 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 22:39:33,751 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 22:39:33,752 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 22:39:33,798 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 22:39:33,803 - ZenithServer - INFO - Bot iniciado
+2025-06-02 22:39:33,804 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:39:33,804 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 22:39:38,026 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:40:14,094 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:40:16,407 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:40:54,449 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:41:03,848 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:41:14,258 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:41:16,112 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:41:23,313 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:41:24,872 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:41:34,708 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:41:47,031 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:42:14,971 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:42:45,307 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:42:48,327 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:42:55,259 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:43:06,778 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:43:13,939 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:43:35,548 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:43:56,986 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:44:15,869 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:44:20,365 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-02 22:44:56,162 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:45:36,456 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:46:16,830 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:46:22,548 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:46:24,926 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:46:53,768 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:46:57,096 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:47:06,145 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:47:22,591 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:47:27,577 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:47:30,681 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:47:37,382 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:47:37,687 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:47:37,792 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:47:40,149 - ZenithServer - INFO - OPTIONS /cursos/4/1 - 404 NOT FOUND
+2025-06-02 22:48:17,644 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:48:57,938 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:49:38,230 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:50:18,500 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:50:58,792 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:51:39,124 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:51:52,259 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 22:52:05,600 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 22:52:05,601 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 22:52:05,602 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 22:52:05,618 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 22:52:05,622 - ZenithServer - INFO - Bot iniciado
+2025-06-02 22:52:05,624 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:52:05,625 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 22:52:29,896 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:52:30,006 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:52:31,701 - ZenithServer - INFO - OPTIONS /cursos/4/1 - 404 NOT FOUND
+2025-06-02 22:52:45,899 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:53:26,201 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:53:54,807 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 22:54:06,296 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 22:54:13,053 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 22:54:13,054 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 22:54:13,073 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 22:54:13,078 - ZenithServer - INFO - Bot iniciado
+2025-06-02 22:54:13,079 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:54:13,079 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 22:54:18,359 - ZenithServer - INFO - OPTIONS /cursos/4/1 - 404 NOT FOUND
+2025-06-02 22:54:53,377 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:55:33,660 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:56:13,968 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:56:54,302 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:57:34,600 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:58:14,889 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:58:23,108 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:58:53,635 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 22:58:55,202 - ZenithServer - INFO - Realizando petición
+2025-06-02 22:58:57,134 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 22:58:57,228 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 22:59:01,650 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-02 22:59:01,937 - ZenithServer - INFO - PUT /cursos - 400 BAD REQUEST
+2025-06-02 22:59:35,499 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:00:15,784 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:00:56,086 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:02:02,236 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 23:02:02,238 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 23:02:02,238 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 23:02:02,255 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 23:02:02,261 - ZenithServer - INFO - Bot iniciado
+2025-06-02 23:02:02,262 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:02:02,262 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 23:02:06,576 - ZenithServer - INFO - GET / - 200 OK
+2025-06-02 23:02:17,341 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-02 23:02:19,341 - ZenithServer - INFO - PUT /cursos - 400 BAD REQUEST
+2025-06-02 23:02:42,662 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:03:22,926 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:03:34,532 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-02 23:03:43,279 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 23:03:43,281 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 23:03:43,281 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 23:03:43,297 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 23:03:43,303 - ZenithServer - INFO - Bot iniciado
+2025-06-02 23:03:43,304 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:03:43,305 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 23:04:01,669 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:04:04,686 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-02 23:04:05,181 - ZenithServer - INFO - PUT /cursos - 200 OK
+2025-06-02 23:04:23,608 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:05:03,876 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:05:44,139 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:06:24,430 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:07:04,723 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:07:45,067 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:07:56,237 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-02 23:07:56,238 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-02 23:07:56,238 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-02 23:07:56,264 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-02 23:07:56,274 - ZenithServer - INFO - Bot iniciado
+2025-06-02 23:07:56,276 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:07:56,277 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-02 23:08:12,860 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:08:12,965 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:08:14,688 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-02 23:08:14,971 - ZenithServer - WARNING - 4 ya está inscrito en 1
+2025-06-02 23:08:14,972 - ZenithServer - INFO - PUT /cursos - 400 BAD REQUEST
+2025-06-02 23:08:36,574 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:08:49,196 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:08:49,230 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:08:57,908 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:08:57,950 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:09:16,908 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:09:57,203 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:10:37,469 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:10:58,164 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:10:58,195 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:11:10,768 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:11:10,812 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:11:17,801 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:11:21,095 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:11:21,114 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:11:58,034 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:11:58,061 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:11:58,097 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:12:02,130 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:12:02,164 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:12:37,435 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:12:37,454 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:12:38,359 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:12:59,744 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:12:59,778 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:04,604 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:13:04,642 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:18,695 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:13:27,895 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:13:27,925 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:36,984 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:13:37,002 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:44,616 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:13:44,652 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:58,367 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:13:58,402 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:13:58,965 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:14:12,136 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:12,289 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:14:16,678 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:16,707 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:14:21,841 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:21,878 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:14:33,099 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:33,118 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:14:35,080 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:35,100 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:14:39,262 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:14:48,916 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:14:48,956 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:15:16,091 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:15:16,128 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:15:18,087 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:15:18,116 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:15:19,526 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:15:59,826 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:16:26,836 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:16:34,877 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:16:34,914 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:16:40,101 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:17:20,372 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:18:00,643 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:18:40,986 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:18:49,533 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:18:49,585 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:19:21,245 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:20:01,545 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:20:41,847 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:21:22,142 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:22:02,419 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:22:42,705 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:23:23,002 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:24:03,347 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:24:43,645 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:25:10,724 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:25:10,746 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:25:23,939 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:26:04,238 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:26:44,534 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:26:47,890 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:26:47,929 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:26:49,433 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-02 23:26:49,923 - ZenithServer - INFO - 4 inscrito en 1 exitosamente.
+2025-06-02 23:26:49,923 - ZenithServer - INFO - PUT /cursos - 200 OK
+2025-06-02 23:27:04,235 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:27:24,815 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:27:49,098 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:27:49,120 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:28:05,111 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:28:27,003 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:28:27,032 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:28:45,396 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:28:58,168 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:28:58,191 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:29:25,721 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:29:26,645 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:29:26,669 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:29:54,143 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:29:54,173 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:30:06,009 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:30:22,637 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:30:22,667 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:30:29,574 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:30:46,292 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:30:51,871 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:30:51,906 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:30:53,632 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:31:26,591 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:31:32,599 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:31:54,044 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:31:54,067 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:01,126 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:01,163 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:06,892 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:32:09,119 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:09,139 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:16,023 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:16,058 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:21,069 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:21,091 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:28,169 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:29,028 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:29,049 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:36,204 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:36,237 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:42,044 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:42,065 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:47,201 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:32:48,031 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:48,070 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:53,137 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:53,156 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:32:58,047 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:32:58,074 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:33:27,469 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:33:31,237 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:33:31,260 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:33:49,335 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:33:49,356 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:34:07,773 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:34:19,828 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:34:19,865 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:34:48,132 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:34:52,887 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:34:52,926 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:35:28,396 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:36:08,692 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:36:48,989 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:37:29,259 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:38:09,518 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:38:49,819 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:39:30,169 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:40:10,535 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:40:50,805 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:41:31,078 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:42:11,349 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:42:51,633 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:43:31,922 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:44:12,197 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:44:41,111 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:44:41,140 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:44:52,498 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:45:05,045 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:45:05,073 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:45:14,480 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:45:16,583 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:45:19,438 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:45:19,473 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:45:32,861 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:46:08,014 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:46:08,039 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:46:12,087 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:46:12,108 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:46:13,136 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:46:53,431 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:47:33,738 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:47:37,700 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:47:37,731 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:47:41,113 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:47:41,172 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:48:14,009 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:48:54,287 - ZenithServer - INFO - Realizando petición
+2025-06-02 23:49:11,591 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:49:11,687 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:49:17,436 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:49:17,471 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:49:20,985 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:49:22,761 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-02 23:49:25,045 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-02 23:49:25,079 - ZenithServer - INFO - GET /assets/cursos/placeholder-curso.jpg - 304 NOT MODIFIED
+2025-06-02 23:49:34,653 - ZenithServer - INFO - Realizando petición

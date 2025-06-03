@@ -15,7 +15,7 @@ logger = get_logger("ZenithServer")
 
 app = Flask('__main__')
 app.secret_key = os.getenv('secret_key')
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # Cargar el modelo y escalador al iniciar el servidor
 logger.info("Inicializando el modelo Zenith...")
@@ -64,6 +64,11 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER_BASE
 UPLOAD_FOLDER_CURSOS = os.path.join(UPLOAD_FOLDER_BASE, "cursos")
 UPLOAD_FOLDER_GRUPOS = os.path.join(UPLOAD_FOLDER_BASE, "grupos")
 UPLOAD_FOLDER_FOTOS_PERFIL = os.path.join(UPLOAD_FOLDER_BASE, "perfil_usuario")
+
+@app.after_request
+def log_response_info(response):
+    logger.info(f"{request.method} {request.path} - {response.status}")
+    return response
 
 @app.route('/status', methods=['GET'])
 def health_check():
@@ -213,8 +218,10 @@ def login():
     
     return jsonify(resultado), 200
 
-@app.route('/cursos', methods=['POST', 'GET', 'PUT', 'DELETE'])
+@app.route('/cursos', methods=['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'])
 def cursos():
+    if request.method == 'OPTIONS':
+        return '', 200
     if request.method == 'GET':
         id_curso = request.args.get('id', type=int)
         if not id_curso:
@@ -344,7 +351,10 @@ def assetlinks():
 if __name__ == '__main__':
     uptime_bot = Bot(service_url, 40)
     uptime_bot.iniciar()
-    logger.warning("Servidor inciado en: 127.0.0.1:1900")
-    serve(app, host='127.0.0.1', port=1900, threads=4)
+    host = '127.0.0.1'
+    port = 1900
+    logger.warning(f"Servidor iniciado en: http://{host}:{port}")
+
+    serve(app, host=host, port=port, threads=4)
     
     logger.critical("Servidor detenido")

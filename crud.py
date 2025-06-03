@@ -4,7 +4,10 @@ import re
 from criptografic import PasswordManager, generate_api_key, generate_group_link
 from models import session, Usuario, Curso, Grupo, Inscripciones, Membresia, Leccion, Recurso, Capitulo
 from server_strings import service_url
+from datetime import datetime
+from logger_config import get_logger
 
+logger = get_logger()
 
 def crear_usuario(nombre: str, correo: str, password: str):
     """
@@ -41,28 +44,20 @@ def crear_usuario(nombre: str, correo: str, password: str):
                 elif violated_field == "correo":
                     return 441
             else:
-                print(f"Error de integridad: {error}")
+                logger.critical(f"Error de integridad: {error}")
         else:
-            print(f"Error de integridad: {error}")
+            logger.error(f"Error de integridad: {error}")
         return None
     except DataError as e:
         session.rollback()
-        print(f"Error de longitud de datos: {e}")
+        logger.critical(f"Error de longitud de datos: {e}")
         return 442
     except Exception as e:
         session.rollback()
-        print(f"Error inesperado: {e.__context__}")
+        logger.critical(f"Error inesperado: {e.__context__}")
         return 401
 
 def crear_curso(nombre: str, duracion: int,autor_id:str, url_imagen: str = ""):
-    """
-    Crear un nuevo curso en la base de datos.
-    
-    :param nombre: Nombre del curso
-    :param duracion: Duración del curso en horas
-    :param url_imagen: URL de la imagen del curso (opcional)
-    :return: Objeto Curso creado o None si hay error
-    """
     try:
         # Verificar si el curso ya existe
         curso_existente = session.query(Curso).filter(Curso.nombre == nombre).first()
@@ -88,25 +83,17 @@ def crear_curso(nombre: str, duracion: int,autor_id:str, url_imagen: str = ""):
         return None
 
 def crear_grupo(nombre: str, administrador_id: str, es_publico: bool = False, banner: str = f"{service_url}/grupos/default.webp"):
-    """
-    Crear un nuevo grupo en la base de datos.
-    
-    :param nombre: Nombre del grupo
-    :param administrador_nombre: Nombre del usuario administrador
-    :param es_publico: Indica si el grupo es público
-    :return: Objeto Grupo creado o None si hay error
-    """
     try:
         # Buscar al administrador
         administrador = session.query(Usuario).filter(Usuario.id == administrador_id).first()
         if not administrador:
-            print(f"No se encontró el usuario {administrador_id}")
+            logger.warning(f"No se encontró el usuario {administrador_id}")
             return None
         
         # Verificar si el grupo ya existe
         grupo_existente = session.query(Grupo).filter(Grupo.nombre == nombre).first()
         if grupo_existente:
-            print(f"El grupo {nombre} ya existe.")
+            logger.warning(f"El grupo {nombre} ya existe.")
             return grupo_existente
         
         nuevo_grupo = Grupo(
@@ -119,39 +106,32 @@ def crear_grupo(nombre: str, administrador_id: str, es_publico: bool = False, ba
         
         session.add(nuevo_grupo)
         session.commit()
-        print(f"Grupo {nombre} creado exitosamente.")
+        logger.info(f"Grupo {nombre} creado exitosamente.")
         return nuevo_grupo
     
     except Exception as e:
         session.rollback()
-        print(f"Error al crear grupo: {e}")
+        logger.error(f"Error al crear grupo: {e}")
         return None
 
 def obtener_usuario_by_id(id, api_key):
-    """
-    Obtener información detallada de un usuario por su ID y API key.
-    
-    :param id: ID del usuario
-    :param api_key: API key del usuario
-    :return: Diccionario con información del usuario o None si no se encuentra
-    """
     try:
         usuario = session.query(Usuario).filter(Usuario.id == id,  Usuario.api_key == api_key).first()
         
         if usuario is None:
-            print(f"No se encontró un usuario con el ID {id}")
+            logger.warning(f"No se encontró un usuario con el ID {id}")
             return None
         
         return usuario.to_dict()
     except Exception as e:
-        print(f"Error al obtener usuario: {e}")
+        logger.error(f"Error al obtener usuario: {e}")
         return None
 
 def obtener_curso_by_id(id):
     try:
         curso = session.query(Curso).filter(Curso.id == id).first()
         if curso is None:
-            print(f"No se encontró un usuario con el ID {id}")
+            logger.warning(f"No se encontró un usuario con el ID {id}")
             return None
 
         curso_dict = {
@@ -162,7 +142,7 @@ def obtener_curso_by_id(id):
         }
         return curso_dict
     except Exception as e:
-        print(f"Error al obtener el Curso: {e}")
+        logger.error(f"Error al obtener el Curso: {e}")
         return None
 
 def obtener_cursos():
@@ -191,12 +171,11 @@ def obtener_grupos():
             
         return grupos_list
     except Exception as e:
-        print(f"Error al obtener los Grupos: {e}")
+        logger.error(f"Error al obtener los Grupos: {e}")
         return []
 
 def obtener_grupo_by_id(id, codigo):
     try:
-        print(codigo)
         grupo = session.query(Grupo).filter(Grupo.id == id).first() if id else session.query(Grupo).filter(Grupo.codigo == codigo).first()
         if not grupo:
             return None
@@ -210,7 +189,7 @@ def obtener_grupo_by_id(id, codigo):
         }
         return grupo_dict
     except Exception as e:
-            print(f"Error al obtener el Grupo: {e}")
+            logger.error(f"Error al obtener el Grupo: {e}")
             return None
 
 def eliminar_grupo(grupo_id, usuario_id):
@@ -223,55 +202,52 @@ def eliminar_grupo(grupo_id, usuario_id):
         return True
     except Exception as e:
         session.rollback()
-        print(f"Error al darse de baja: {str(e)}")
+        logger.error(f"Error al darse de baja: {str(e)}")
         return False
 
+
+
 def inscribir_usuario_a_curso(id_usuario: int, id_curso: int):
-    """
-    Inscribir un usuario a un curso.
-    
-    :param nombre_usuario: Nombre del usuario
-    :param nombre_curso: Nombre del curso
-    :return: Objeto Inscripciones o None si hay error
-    """
     try:
         # Buscar usuario
         usuario = session.query(Usuario).filter(Usuario.id == id_usuario).first()
         if not usuario:
-            print(f"No se encontró el usuario {id_usuario}")
+            logger.warning(f"No se encontró el usuario {id_usuario}")
             return None
         
         # Buscar curso
         curso = session.query(Curso).filter(Curso.id == id_curso).first()
         if not curso:
-            print(f"No se encontró el curso {id_curso}")
+            logger.warning(f"No se encontró el curso {id_curso}")
             return None
         
         # Verificar si ya está inscrito
         inscripcion_existente = session.query(Inscripciones).filter(
-            Inscripciones.id_usuario == usuario.id,
-            Inscripciones.id_curso == curso.id
+            Inscripciones.usuario_id == usuario.id,
+            Inscripciones.curso_id == curso.id
         ).first()
         
         if inscripcion_existente:
-            print(f"{id_usuario} ya está inscrito en {id_curso}")
-            return inscripcion_existente
-        
+            logger.warning(f"{id_usuario} ya está inscrito en {id_curso}")
+            return None  # O puedes devolver inscripcion_existente si deseas
+
         # Crear nueva inscripción
         nueva_inscripcion = Inscripciones(
-            id_usuario=usuario.id,
-            id_curso=curso.id
+            usuario_id=usuario.id,
+            curso_id=curso.id,
+            fecha_inscripcion=datetime.utcnow()
         )
         
         session.add(nueva_inscripcion)
         session.commit()
-        print(f"{id_usuario} inscrito en {id_curso} exitosamente.")
+        logger.info(f"{id_usuario} inscrito en {id_curso} exitosamente.")
         return nueva_inscripcion
-    
+
     except Exception as e:
         session.rollback()
-        print(f"Error al inscribir usuario: {e}")
+        logger.error(f"Error al inscribir usuario: {e}")
         return None
+
 
 def unir_usuario_a_grupo(id_usuario: int, id_grupo: int):
     """
