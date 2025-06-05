@@ -1,53 +1,111 @@
-{
-  "id": "1",
-  "nombre": "Matemáticas Noveno",
-  "duracion": 540,
-  "url_imagen": null,
-  "autor": {
-    "id": 1,
-    "nombre": "usuario_ejemplo"
-  },
-  "capitulos": {
-    "1": {
+[
+  {
+    "autor": {
       "id": 1,
-      "nombre": "Números reales y sus operaciones.",
-      "lecciones": {
-        "1": {
-          "id": 1,
-          "nombre": "Introducción a los números reales",
-          "duracion": 25,
-          "creditos": 400,
-          "tema": "Uso y clasificación de los números reales.",
-          "concepto": "En esta lección, se introducirá el conjunto de los números reales, que incluye números enteros, fraccionarios, decimales y los irracionales. Se explicará cómo se representan estos números en la recta numérica y su aplicación en situaciones cotidianas.",
-          "recursos": {
-            "1": {
-              "id": 1,
-              "tipo": "Visual",
-              "afinacion": "Artículo",
-              "contenido": "https://www.sdelsol.com/glosario/numeros-reales/",
-              "externo": true,
-              "descripcion": "Glosario sobre los números reales."
+      "nombre": "Naturalcherry "
+    },
+    "capitulos": {
+      "1": {
+        "id": 1,
+        "lecciones": {
+          "1": {
+            "concepto": "En esta lección, se introducirá el conjunto de los números reales, que incluye\nnúmeros enteros, fraccionarios, decimales y los irracionales. Se explicará cómo se representan\nestos números en la recta numérica y su aplicación en situaciones cotidianas.",
+            "creditos": 400,
+            "duracion": 25,
+            "id": 1,
+            "nombre": "Los Números Reales y su Clasificación",
+            "recursos": {
+              "1": {
+                "afinacion": "Lectura",
+                "contenido": "Números reales\nLos números reales no son nuevos en la historia pues ya los egipcios utilizaban fracciones dando pie al concepto de números reales. El conjunto de los números reales abarca a los números racionales y a los números irracionales, pudiendo ser expresados por un número entero o un número decimal. El descubrimiento de estos números se atribuye a Pitágoras, famoso matemático griego.\n\nLos números reales son parte de nuestro día a día y los usamos para realizar todo tipo de cálculos cotidianos de manera inconsciente. Cuando se consulta la hora, se hace un presupuesto, se realiza una compra o se mira un extracto bancario, se están utilizando números reales.\n\nQué son los números reales\nCuando se definen los números reales se dice que son cualquier número que se encuentre o corresponda con la recta real que incluye a los números racionales y números irracionales, Por lo tanto, el dominio de los números reales se encuentra entre menos infinito y más infinito.\n\nLas principales características de los números reales son:\n\nOrden. Todos los números reales siguen un orden, por ejemplo 1, 2, 3, 4 …\nIntegral. La integridad de los números reales marca que no hay espacios vacíos, es decir, cada conjunto que dispone de un límite superior tiene un límite más pequeño.\nInfinitos. Los números reales no tienen final, ni por el lado positivo ni por el lado negativo. Por eso su dominio está entre menos infinito y más infinito.\nDecimal. Los números reales pueden ser expresados como una expansión decimal infinita.\nClasificación de los números reales\nLa clasificación de los números reales incluye los siguientes números.\n\nNúmeros naturales. Son los números iguales o mayores que uno no decimales. El conjunto de los números naturales no tiene en cuenta el cero.\nNúmeros enteros. Son los números positivos y negativos no decimales, incluyendo el cero. Es decir, los números naturales incluyendo los números negativos y el cero.\nNúmeros racionales. Los que se pueden representar como el cociente de dos enteros con denominador diferente a cero. Son las fracciones que pueden crearse utilizando números naturales y enteros.\nNúmeros irracionales. Aquellos que no pueden ser expresados como una fracción de números enteros con denominador distinto a cero. Se trata de números decimales que no pueden expresarse ni de manera exacta, ni de manera periódica, siendo el número pi un ejemplo de este tipo de números.\nOperaciones de los números reales\nLas distintas operaciones de los números reales cumplen con una serie de propiedades:\n\nPropiedad Interna\nCuando se suman dos números reales el resultado que se obtiene es otro número real. Lo mismo ocurre con la multiplicación de números reales, que también da como resultado otro número real.\n\nPropiedad Asociativa\nEl modo en que se asocian o agrupan los sumandos no influye en el resultado de una suma. En el caso de una multiplicación tampoco importa la asociación pues el resultado será siempre el mismo\n\na + (b + c) = (a + b) + c\n\na x (b x c) = (a x b) x c\n\nPropiedad Conmutativa\nTanto la suma como la multiplicación de números reales cumplen con la propiedad conmutativa que indica que el orden no varía el resultado.\n\na + b = b + a\n\na x b = b x a\n\nElemento neutro y elemento opuesto\nEn la suma el cero se convierte en el elemento neutro pues cualquier número que se sume con el 0 va a dar como resultado el mismo número.\n\na + 0 = a\n\nPor su parte, si al sumar dos números reales se obtiene cero se dice que esos números son opuestos (e - e = 0).\n\nEn cuanto a la multiplicación, el elemento neutro en los números reales es el 1, ya que cualquier número real que se multiplique por 1 da lugar al mismo número.\n\na x 1 = a\n\n0.453 x 1 = 0.453\n\nEn la multiplicación el inverso de un número es aquel que al multiplicarlo, da como resultado la unidad:\n\na x 1/a = 1\n\n3.4 x 1/3.4 = 1\n\nPropiedad Distributiva\nEl producto de un número real por una suma de números reales es igual a la suma de los productos de dicho número por cada uno de los sumandos.\n\na x (b + c) = a x b + a x c\n\nAl proceso inverso de la propiedad distributiva se le conoce como sacar el factor común.\n\na x b + a x c = a x (b + c)\n\nLa gran mayoría de las situaciones físicas que tienen lugar se modelan con números reales por lo que son de suma importancia. El conjunto de los números reales está formado por otros números como los naturales, enteros, racionales e irracionales. Los números reales son infinitos y siguen un orden, pudiendo ser decimales y negativos.\n\nEs habitual que utilicemos los números naturales en el día a día y que sepamos mucho más de ellos de lo que pensamos, porque forman parte importante en nuestra sociedad para organizar, contar y realizar cálculos.",
+                "descripcion": "Un articulo acerca de los números reales",
+                "externo": false,
+                "id": 1,
+                "tipo": "Visual"
+              },
+              "2": {
+                "afinacion": "Videos",
+                "contenido": "https://www.youtube.com/watch?v=lsoFP2YApvs",
+                "descripcion": "Ejemplos de numeros reales",
+                "externo": false,
+                "id": 2,
+                "tipo": "Auditivo"
+              },
+              "3": {
+                "afinacion": "Juegos",
+                "contenido": "Juego: “Salta al Número” Objetivo:\nReconocer si un número es real, y si lo es, qué tipo es (entero, racional o irracional).\n\n🧍Materiales:\nTú mismo.\n\nTu cuarto.\n\n3 posiciones fijas que representen las categorías:\n\nLugar A: Entero\n\nLugar B: Racional o Irracional\n\nLugar C: No Real\n\n(Usa lo que tengas: una esquina, una silla, la cama, la puerta, etc.)\n\n🕹️ Cómo se juega:\nPiensa (o pide a alguien que diga) un número.\n\nTú decides a cuál de las 3 zonas ir:\n\nA (Entero)\n\nB (Racional/Irracional)\n\nC (No Real)\n\nDespués verifica si tu respuesta fue correcta.\n\nCada acierto suma 1 punto. Haz 5 rondas.\n\n¡Intenta superarte en el siguiente intento!\n\n🧠 Ejemplos para probarte:\n-5 → Entero\n\n0.25 → Racional\n\nπ → Irracional\n\n√2 → Irracional\n\n5/0 → No Real\n\ni → No Real\n\n0 → Entero\n\n-√9 → Entero\n\n22/7 → Racional\n\n1.333… → Racional\n\n🏁 Final del juego:\n¿Cuántas acertaste?\n\n¿Te confundiste entre racional e irracional?\n\n¿Puedes explicar por qué?",
+                "descripcion": "Juego de práctica",
+                "externo": false,
+                "id": 3,
+                "tipo": "Kinestésico"
+              },
+              "4": {
+                "afinacion": "Imagenes",
+                "contenido": "https://zenith-ai-api.onrender.com/assets/cursos/imagen_numerosreales.png",
+                "descripcion": "Una imagen sobre números reales",
+                "externo": false,
+                "id": 4,
+                "tipo": "Visual"
+              },
+              "5": {
+                "afinacion": "Graficos",
+                "contenido": "https://zenith-ai-api.onrender.com/assets/cursos/numeros-reales-29.gif",
+                "descripcion": "Gráfica de la recta real",
+                "externo": false,
+                "id": 5,
+                "tipo": "Visual"
+              },
+              "6": {
+                "afinacion": "Escuchar_clase",
+                "contenido": "https://youtu.be/X_cvP7SNKAU?si=fUXVatQgM3lzBhd0",
+                "descripcion": "Clase acerca de números reales",
+                "externo": false,
+                "id": 6,
+                "tipo": "Auditivo"
+              },
+              "7": {
+                "afinacion": "Debates",
+                "contenido": "“¿Son los números reales una invención humana o un descubrimiento de la naturaleza?”  Bando A – Los números reales son un descubrimiento de la naturaleza   Bando B – Los números reales son una invención humana Preguntas a resolver: ¿Puede existir algo que no se pueda medir con un número racional?\n\n¿Cómo se justifica la existencia de números infinitos no racionales?\n\n¿Es válida la idea de infinito en la naturaleza?\n\n¿Puede la física existir sin números reales?",
+                "descripcion": "Un debate acerca de números reales",
+                "externo": false,
+                "id": 7,
+                "tipo": "Auditivo"
+              },
+              "8": {
+                "afinacion": "Experimentos",
+                "contenido": "Objetivo:\nComprobar que el cociente entre la circunferencia y el diámetro de un objeto circular no es un número exacto, sino un número irracional (π ≈ 3.1416).\n\n🧰 Materiales:\n1 vaso, tapa, moneda o cualquier objeto circular.\n\n1 cuerda o hilo.\n\n1 regla con milímetros.\n\nLápiz y papel.\n\nCalculadora.\n\n🧪 Procedimiento:\nUsa el hilo para medir la circunferencia del objeto circular (ponlo alrededor y luego mide el hilo con la regla).\n\nUsa la regla para medir el diámetro del objeto (de lado a lado, pasando por el centro).\n\nDivide la medida de la circunferencia entre el diámetro con la calculadora. \n\nAnota el resultado.",
+                "descripcion": "Un experimento que prueba la existencia de los números irracionales",
+                "externo": false,
+                "id": 8,
+                "tipo": "Kinestésico"
+              },
+              "9": {
+                "afinacion": "Practica",
+                "contenido": "Clasificación de números\nInstrucciones: Escribe a qué conjunto(s) pertenece cada número:\n\nN (naturales)\n\nZ (enteros)\n\nQ (racionales)\n\nI (irracionales)\n\nR (reales)\n\nNúmero\tConjuntos que pertenece \n7\t\n-3\t\n0\t\n2.5\t\n√2\t\n-8.25\t\nπ\t\n4/9\t\n-√16\t\n5",
+                "descripcion": "Clasificar números reales",
+                "externo": false,
+                "id": 9,
+                "tipo": "Kinestésico"
+              },
+              "10": {
+                "afinacion": "Diagramas",
+                "contenido": "https://zenith-ai-api.onrender.com/assets/cursos/esquema_numeros_reales.png",
+                "descripcion": "Un esquema de la clasificación de los números reales",
+                "externo": false,
+                "id": 10,
+                "tipo": "Visual"
+              }
             },
-            "2": {
-              "id": 2,
-              "tipo": "Visual",
-              "afinacion": "Artículo",
-              "contenido": "https://classbot.es/ejemplos-de-numeros-reales-aprende-su-uso-y-aplicacion/",
-              "externo": true,
-              "descripcion": "Ejemplos de uso de números reales."
-            },
-            "3": {
-              "id": 3,
-              "tipo": "Audiovisual",
-              "afinacion": "Video",
-              "contenido": "https://www.youtube.com/watch?v=lsoFP2YApvs",
-              "externo": true,
-              "descripcion": "Video explicativo sobre los números reales."
-            }
+            "tema": "Uso y clasificación de los números reales"
           }
-        }
+        },
+        "nombre": "Números reales"
       }
-    }
-  },
-  "inscripciones": []
-}
+    },
+    "duracion": 540,
+    "id": 1,
+    "inscripciones": [],
+    "nombre": "Matemáticas Noveno",
+    "url_imagen": "https://zenith-ai-api.onrender.com/assets/1742443945_mates.webp"
+  }
+]

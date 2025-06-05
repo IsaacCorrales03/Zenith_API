@@ -200,7 +200,20 @@ class Leccion(Base):
 
     capitulo: Mapped['Capitulo'] = relationship("Capitulo", back_populates="lecciones")
     recursos: Mapped[List['Recurso']] = relationship("Recurso", back_populates="leccion", cascade="all, delete-orphan")
-
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "nombre": self.nombre,
+            "numero": self.numero,
+            "duracion": self.duracion,
+            "creditos": self.creditos,
+            "tema": self.tema,
+            "concepto": self.concepto,
+            "capitulo_id": self.capitulo_id,
+            "recursos": [r.to_dict() for r in self.recursos]
+        }
+    
 class Recurso(Base):
     __tablename__ = "Recursos"
 
@@ -209,12 +222,21 @@ class Recurso(Base):
 
     tipo: Mapped[str] = mapped_column(String(32), nullable=False)      # Visual, Audiovisual, Auditivo, etc.
     afinacion: Mapped[str] = mapped_column(String(32), nullable=False)  # Video, Artículo, Texto, Práctica
-    contenido: Mapped[str] = mapped_column(String(256), nullable=False) # URL o ruta relativa
+    contenido: Mapped[str] = mapped_column(Text, nullable=False) # URL o ruta relativa
     externo: Mapped[bool] = mapped_column(Boolean, default=True)       # True si es un enlace externo
     descripcion: Mapped[str] = mapped_column(String(256), nullable=True)
 
     leccion: Mapped["Leccion"] = relationship("Leccion", back_populates="recursos")
-
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "tipo": self.tipo,
+            "afinacion": self.afinacion,
+            "descripcion": self.descripcion,
+            "contenido": self.contenido,
+            "externo": self.externo
+        }
 class Grupo(Base):
     __tablename__ = 'Grupos'
 

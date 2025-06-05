@@ -184,10 +184,19 @@ class AdminCursos:
         self.rec_tipo.grid(row=1, column=1, sticky="w", pady=2, padx=(10, 0))
         
         ttk.Label(form_frame, text="Afinación:").grid(row=2, column=0, sticky="w", pady=2)
-        self.rec_afinacion = ttk.Combobox(form_frame, values=["Video", "Artículo", "Texto", "Práctica", "Audio"], width=20)
+        self.rec_afinacion = ttk.Combobox(
+            form_frame,
+            values=[
+                "Lectura", "Graficos", "Diagramas", "Videos", "Imagenes",       # Visual
+                "Escuchar_clase", "Grabaciones", "Musica", "Podcast", "Debates",  # Auditivo
+                "Experimentos", "Simulaciones", "Proyectos", "Practica", "Juegos"  # Kinestésico
+            ],
+            width=20
+        )
         self.rec_afinacion.grid(row=2, column=1, sticky="w", pady=2, padx=(10, 0))
-        
-        ttk.Label(form_frame, text="Contenido (URL):").grid(row=0, column=2, sticky="w", pady=2, padx=(20, 0))
+
+                
+        ttk.Label(form_frame, text="Contenido o URL:").grid(row=0, column=2, sticky="w", pady=2, padx=(20, 0))
         self.rec_contenido = ttk.Entry(form_frame, width=40)
         self.rec_contenido.grid(row=0, column=3, pady=2, padx=(10, 0))
         

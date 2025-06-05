@@ -296,6 +296,17 @@ def unir_usuario_a_grupo(id_usuario: int, id_grupo: int):
         print(f"Error al unir usuario a grupo: {e}")
         return None
 
+def obtener_lecciones(capitulo_id):
+    try:
+        lecciones = session.query(Leccion).filter(Leccion.capitulo_id == capitulo_id).all()
+        if lecciones:
+            return [leccion.to_dict() for leccion in lecciones]
+        else:
+            return []
+    except Exception as e:
+        print("Error al obtener las lecciones:", e)
+        return []
+    
 def darse_de_baja_de_un_curso(id_usuario, id_curso):
     try:
         inscripcion = session.query(Inscripciones).filter(Inscripciones.id_usuario == id_usuario, Inscripciones.id_curso == id_curso).first()
