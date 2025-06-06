@@ -158,7 +158,6 @@ def predict():
         }), 500
 
 
-
 @app.route("/adaptar_lecciones", methods=["POST"])
 def adaptar_lecciones():
     data = request.get_json()
@@ -197,19 +196,22 @@ def adaptar_lecciones():
                 recurso_adaptado["adaptabilidad"] = peso
                 adaptados.append(recurso_adaptado)
 
-        # La suma de preferencias totales del usuario (100) es el máximo posible
-        adaptabilidad_leccion = min(round((puntaje_total / 100) * 100, 2), 100)
+        # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
+        adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
+        # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
         adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
         mejores = adaptados[:3]
 
         resultado.append({
             "leccion_id": leccion["id"],
-            "leccion_nombre": leccion["nombre"],
+            "leccion_nombre": leccion.get("nombre", "Sin nombre"),
             "adaptabilidad_leccion": adaptabilidad_leccion,
             "recursos_adaptados": mejores
         })
 
     return jsonify(resultado)
+
+
 
 
 
@@ -415,5 +417,5 @@ if __name__ == '__main__':
     logger.warning(f"Servidor iniciado en: http://{host}:{port}")
 
     serve(app, host=host, port=port, threads=4)
-    
+
     logger.critical("Servidor detenido")

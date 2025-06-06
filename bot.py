@@ -22,7 +22,8 @@ class Bot:
             except Exception as e:
                 logger.error(f"Error en petición periódica: {e}")
             time.sleep(self.sleep_time)
-
+    def get_status(self):
+        return self.active
     def iniciar(self):
         if not self.active:
             logger.info("Bot iniciado")

@@ -14,7 +14,7 @@ class AdminCursos:
     def __init__(self, root):
         self.root = root
         self.root.title("Administrador de Cursos")
-        self.root.geometry("800x600")
+        self.root.geometry("900x700")
         
         # Crear el notebook (pestañas)
         self.notebook = ttk.Notebook(root)
@@ -25,6 +25,7 @@ class AdminCursos:
         self.crear_pestana_capitulos()
         self.crear_pestana_lecciones()
         self.crear_pestana_recursos()
+        self.crear_pestana_parrafos()
         
     def crear_pestana_cursos(self):
         # Frame para la pestaña de cursos
@@ -223,6 +224,64 @@ class AdminCursos:
         
         self.actualizar_recursos()
     
+    def crear_pestana_parrafos(self):
+        frame_parrafos = ttk.Frame(self.notebook)
+        self.notebook.add(frame_parrafos, text="Párrafos Explicativos")
+        
+        # Formulario para crear párrafos explicativos
+        form_frame = ttk.LabelFrame(frame_parrafos, text="Crear Nuevo Párrafo Explicativo", padding=10)
+        form_frame.pack(fill="x", padx=10, pady=5)
+        
+        # Primera fila de campos
+        ttk.Label(form_frame, text="ID de la Lección:").grid(row=0, column=0, sticky="w", pady=2)
+        self.par_leccion_id = ttk.Entry(form_frame, width=20)
+        self.par_leccion_id.grid(row=0, column=1, sticky="w", pady=2, padx=(10, 0))
+        
+        ttk.Label(form_frame, text="Orden:").grid(row=0, column=2, sticky="w", pady=2, padx=(20, 0))
+        self.par_orden = ttk.Entry(form_frame, width=20)
+        self.par_orden.grid(row=0, column=3, sticky="w", pady=2, padx=(10, 0))
+        
+        # Botón para obtener próximo orden automáticamente
+        ttk.Button(form_frame, text="Obtener Próximo Orden", 
+                  command=self.obtener_proximo_orden).grid(row=0, column=4, pady=2, padx=(10, 0))
+        
+        # Campo de contenido
+        ttk.Label(form_frame, text="Contenido:").grid(row=1, column=0, sticky="nw", pady=2)
+        self.par_contenido = scrolledtext.ScrolledText(form_frame, width=80, height=8)
+        self.par_contenido.grid(row=1, column=1, columnspan=4, pady=2, padx=(10, 0))
+        
+        # Botón para crear párrafo
+        ttk.Button(form_frame, text="Crear Párrafo", command=self.crear_parrafo).grid(row=2, column=1, pady=10, sticky="w", padx=(10, 0))
+        
+        # Lista de párrafos explicativos
+        lista_frame = ttk.LabelFrame(frame_parrafos, text="Párrafos Explicativos Existentes", padding=10)
+        lista_frame.pack(fill="both", expand=True, padx=10, pady=5)
+        
+        # Treeview para mostrar párrafos
+        self.tree_parrafos = ttk.Treeview(lista_frame, columns=("ID", "Orden", "Contenido", "Lección"), show="headings")
+        self.tree_parrafos.heading("ID", text="ID")
+        self.tree_parrafos.heading("Orden", text="Orden")
+        self.tree_parrafos.heading("Contenido", text="Contenido")
+        self.tree_parrafos.heading("Lección", text="Lección ID")
+        
+        self.tree_parrafos.column("ID", width=50)
+        self.tree_parrafos.column("Orden", width=80)
+        self.tree_parrafos.column("Contenido", width=400)
+        self.tree_parrafos.column("Lección", width=100)
+        
+        self.tree_parrafos.pack(fill="both", expand=True)
+        
+        # Botones de acción
+        botones_frame = ttk.Frame(lista_frame)
+        botones_frame.pack(fill="x", pady=5)
+        
+        ttk.Button(botones_frame, text="Actualizar Lista", command=self.actualizar_parrafos).pack(side="left", padx=5)
+        ttk.Button(botones_frame, text="Eliminar Párrafo", command=self.eliminar_parrafo).pack(side="left", padx=5)
+        ttk.Button(botones_frame, text="Editar Párrafo", command=self.editar_parrafo).pack(side="left", padx=5)
+        
+        # Cargar párrafos al inicio
+        self.actualizar_parrafos()
+    
     # Métodos para manejar la lógica de base de datos
     def crear_curso(self):
         try:
@@ -356,6 +415,202 @@ class AdminCursos:
             session.rollback()
             messagebox.showerror("Error", f"Error al crear recurso: {str(e)}")
     
+    def crear_parrafo(self):
+        try:
+            leccion_id = int(self.par_leccion_id.get())
+            orden = int(self.par_orden.get())
+            contenido = self.par_contenido.get("1.0", tk.END).strip()
+            
+            if not contenido:
+                messagebox.showerror("Error", "El contenido del párrafo es obligatorio")
+                return
+            
+            if len(contenido) > 2000:
+                messagebox.showerror("Error", "El contenido no puede exceder los 2000 caracteres")
+                return
+            
+            # Verificar si ya existe un párrafo con el mismo orden para esta lección
+            parrafo_existente = session.query(ParrafoExplicativo).filter_by(
+                leccion_id=leccion_id, orden=orden
+            ).first()
+            
+            if parrafo_existente:
+                messagebox.showerror("Error", f"Ya existe un párrafo con el orden {orden} para esta lección")
+                return
+            
+            parrafo = ParrafoExplicativo(
+                leccion_id=leccion_id,
+                orden=orden,
+                contenido=contenido
+            )
+            
+            session.add(parrafo)
+            session.commit()
+            
+            messagebox.showinfo("Éxito", "Párrafo explicativo creado exitosamente")
+            self.limpiar_formulario_parrafo()
+            self.actualizar_parrafos()
+            
+        except ValueError:
+            messagebox.showerror("Error", "Verifique que los campos numéricos sean válidos")
+        except Exception as e:
+            session.rollback()
+            messagebox.showerror("Error", f"Error al crear párrafo: {str(e)}")
+    
+    def obtener_proximo_orden(self):
+        try:
+            leccion_id = int(self.par_leccion_id.get())
+            
+            # Obtener el orden más alto para esta lección
+            max_orden = session.query(func.max(ParrafoExplicativo.orden)).filter_by(
+                leccion_id=leccion_id
+            ).scalar()
+            
+            proximo_orden = (max_orden or 0) + 1
+            
+            self.par_orden.delete(0, tk.END)
+            self.par_orden.insert(0, str(proximo_orden))
+            
+        except ValueError:
+            messagebox.showerror("Error", "Primero ingrese un ID de lección válido")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error al obtener próximo orden: {str(e)}")
+    
+    def eliminar_parrafo(self):
+        seleccion = self.tree_parrafos.selection()
+        if not seleccion:
+            messagebox.showwarning("Advertencia", "Seleccione un párrafo para eliminar")
+            return
+        
+        item = self.tree_parrafos.item(seleccion[0])
+        parrafo_id = item['values'][0]
+        
+        respuesta = messagebox.askyesno("Confirmar", "¿Está seguro de que desea eliminar este párrafo?")
+        if respuesta:
+            try:
+                parrafo = session.query(ParrafoExplicativo).get(parrafo_id)
+                if parrafo:
+                    session.delete(parrafo)
+                    session.commit()
+                    messagebox.showinfo("Éxito", "Párrafo eliminado exitosamente")
+                    self.actualizar_parrafos()
+                else:
+                    messagebox.showerror("Error", "Párrafo no encontrado")
+            except Exception as e:
+                session.rollback()
+                messagebox.showerror("Error", f"Error al eliminar párrafo: {str(e)}")
+    
+    def editar_parrafo(self):
+        seleccion = self.tree_parrafos.selection()
+        if not seleccion:
+            messagebox.showwarning("Advertencia", "Seleccione un párrafo para editar")
+            return
+        
+        item = self.tree_parrafos.item(seleccion[0])
+        parrafo_id = item['values'][0]
+        
+        try:
+            parrafo = session.query(ParrafoExplicativo).get(parrafo_id)
+            if parrafo:
+                # Llenar el formulario con los datos del párrafo
+                self.par_leccion_id.delete(0, tk.END)
+                self.par_leccion_id.insert(0, str(parrafo.leccion_id))
+                
+                self.par_orden.delete(0, tk.END)
+                self.par_orden.insert(0, str(parrafo.orden))
+                
+                self.par_contenido.delete("1.0", tk.END)
+                self.par_contenido.insert("1.0", parrafo.contenido)
+                
+                # Cambiar el botón de crear por actualizar temporalmente
+                messagebox.showinfo("Modo Edición", "Los datos se han cargado en el formulario. Modifique lo necesario y haga clic en 'Actualizar Párrafo'")
+                
+                # Crear ventana de edición
+                self.ventana_edicion_parrafo(parrafo)
+                
+            else:
+                messagebox.showerror("Error", "Párrafo no encontrado")
+        except Exception as e:
+            messagebox.showerror("Error", f"Error al cargar párrafo: {str(e)}")
+    
+    def ventana_edicion_parrafo(self, parrafo):
+        # Crear ventana de edición
+        ventana = tk.Toplevel(self.root)
+        ventana.title("Editar Párrafo Explicativo")
+        ventana.geometry("600x400")
+        ventana.resizable(True, True)
+        
+        # Frame principal
+        main_frame = ttk.Frame(ventana, padding=10)
+        main_frame.pack(fill="both", expand=True)
+        
+        # Campos de edición
+        ttk.Label(main_frame, text="ID de la Lección:").grid(row=0, column=0, sticky="w", pady=2)
+        leccion_entry = ttk.Entry(main_frame, width=20)
+        leccion_entry.grid(row=0, column=1, sticky="w", pady=2, padx=(10, 0))
+        leccion_entry.insert(0, str(parrafo.leccion_id))
+        
+        ttk.Label(main_frame, text="Orden:").grid(row=0, column=2, sticky="w", pady=2, padx=(20, 0))
+        orden_entry = ttk.Entry(main_frame, width=20)
+        orden_entry.grid(row=0, column=3, sticky="w", pady=2, padx=(10, 0))
+        orden_entry.insert(0, str(parrafo.orden))
+        
+        ttk.Label(main_frame, text="Contenido:").grid(row=1, column=0, sticky="nw", pady=2)
+        contenido_text = scrolledtext.ScrolledText(main_frame, width=70, height=15)
+        contenido_text.grid(row=1, column=1, columnspan=3, pady=2, padx=(10, 0))
+        contenido_text.insert("1.0", parrafo.contenido)
+        
+        # Frame para botones
+        botones_frame = ttk.Frame(main_frame)
+        botones_frame.grid(row=2, column=1, columnspan=3, pady=10)
+        
+        def actualizar_parrafo():
+            try:
+                nueva_leccion_id = int(leccion_entry.get())
+                nuevo_orden = int(orden_entry.get())
+                nuevo_contenido = contenido_text.get("1.0", tk.END).strip()
+                
+                if not nuevo_contenido:
+                    messagebox.showerror("Error", "El contenido del párrafo es obligatorio")
+                    return
+                
+                if len(nuevo_contenido) > 2000:
+                    messagebox.showerror("Error", "El contenido no puede exceder los 2000 caracteres")
+                    return
+                
+                # Verificar si el nuevo orden ya existe (solo si cambió)
+                if nueva_leccion_id != parrafo.leccion_id or nuevo_orden != parrafo.orden:
+                    parrafo_existente = session.query(ParrafoExplicativo).filter_by(
+                        leccion_id=nueva_leccion_id, orden=nuevo_orden
+                    ).first()
+                    
+                    if parrafo_existente and parrafo_existente.id != parrafo.id:
+                        messagebox.showerror("Error", f"Ya existe un párrafo con el orden {nuevo_orden} para esta lección")
+                        return
+                
+                # Actualizar el párrafo
+                parrafo.leccion_id = nueva_leccion_id
+                parrafo.orden = nuevo_orden
+                parrafo.contenido = nuevo_contenido
+                
+                session.commit()
+                
+                messagebox.showinfo("Éxito", "Párrafo actualizado exitosamente")
+                ventana.destroy()
+                self.actualizar_parrafos()
+                
+            except ValueError:
+                messagebox.showerror("Error", "Verifique que los campos numéricos sean válidos")
+            except Exception as e:
+                session.rollback()
+                messagebox.showerror("Error", f"Error al actualizar párrafo: {str(e)}")
+        
+        def cancelar():
+            ventana.destroy()
+        
+        ttk.Button(botones_frame, text="Actualizar", command=actualizar_parrafo).pack(side="left", padx=5)
+        ttk.Button(botones_frame, text="Cancelar", command=cancelar).pack(side="left", padx=5)
+    
     # Métodos para actualizar las listas
     def actualizar_cursos(self):
         for item in self.tree_cursos.get_children():
@@ -410,6 +665,23 @@ class AdminCursos:
         except Exception as e:
             messagebox.showerror("Error", f"Error al cargar recursos: {str(e)}")
     
+    def actualizar_parrafos(self):
+        for item in self.tree_parrafos.get_children():
+            self.tree_parrafos.delete(item)
+        
+        try:
+            parrafos = session.query(ParrafoExplicativo).order_by(
+                ParrafoExplicativo.leccion_id, ParrafoExplicativo.orden
+            ).all()
+            
+            for parrafo in parrafos:
+                contenido_corto = parrafo.contenido[:50] + "..." if len(parrafo.contenido) > 50 else parrafo.contenido
+                self.tree_parrafos.insert("", "end", values=(
+                    parrafo.id, parrafo.orden, contenido_corto, parrafo.leccion_id
+                ))
+        except Exception as e:
+            messagebox.showerror("Error", f"Error al cargar párrafos: {str(e)}")
+    
     # Métodos para limpiar formularios
     def limpiar_formulario_curso(self):
         self.curso_nombre.delete(0, tk.END)
@@ -438,6 +710,11 @@ class AdminCursos:
         self.rec_contenido.delete(0, tk.END)
         self.rec_externo.state(['!selected'])
         self.rec_descripcion.delete("1.0", tk.END)
+    
+    def limpiar_formulario_parrafo(self):
+        self.par_leccion_id.delete(0, tk.END)
+        self.par_orden.delete(0, tk.END)
+        self.par_contenido.delete("1.0", tk.END)
 
 if __name__ == "__main__":
     try:

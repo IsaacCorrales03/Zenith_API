@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, ForeignKey, Enum, Boolean, Text
+from sqlalchemy import create_engine, ForeignKey, Enum, Boolean, Text, func
 from sqlalchemy.orm import sessionmaker, mapped_column, Mapped, relationship, declarative_base
 from sqlalchemy import Integer, String, JSON, ARRAY, TEXT, BOOLEAN, DateTime
 from dotenv import load_dotenv
@@ -112,35 +112,19 @@ class Curso(Base):
 
     def to_dict(self):
         try:
+            # Organizar capítulos por número usando su método to_dict
             capitulos_data = {}
             for cap in self.capitulos:
-                lecciones_data = {}
-                for i, lec in enumerate(cap.lecciones, start=1):
-                    recursos_data = {}
-                    for j, rec in enumerate(lec.recursos, start=1):
-                        recursos_data[j] = {
-                            "id": rec.id,
-                            "tipo": rec.tipo,
-                            "afinacion": rec.afinacion,
-                            "contenido": rec.contenido,
-                            "externo": rec.externo,
-                            "descripcion": rec.descripcion
-                        }
-                    lecciones_data[i] = {
-                        "id": lec.id,
-                        "nombre": lec.nombre,
-                        "duracion": lec.duracion,
-                        "creditos": lec.creditos,
-                        "tema": lec.tema,
-                        "concepto":lec.concepto,
-                        "recursos": recursos_data
-                    }
                 capitulos_data[cap.numero] = {
                     "id": cap.id,
                     "nombre": cap.nombre,
-                    "lecciones": lecciones_data
+                    "lecciones": {
+                        i: leccion.to_dict() 
+                        for i, leccion in enumerate(cap.lecciones, start=1)
+                    }
                 }
 
+            # Inscripciones (mantener como está ya que no tiene to_dict)
             inscripciones_data = [
                 {
                     "id": inscripcion.id,
@@ -151,6 +135,7 @@ class Curso(Base):
                 for inscripcion in self.inscripciones
             ]
 
+            # Autor
             autor_data = {
                 "id": self.autor.id,
                 "nombre": self.autor.nombre
@@ -200,7 +185,7 @@ class Leccion(Base):
 
     capitulo: Mapped['Capitulo'] = relationship("Capitulo", back_populates="lecciones")
     recursos: Mapped[List['Recurso']] = relationship("Recurso", back_populates="leccion", cascade="all, delete-orphan")
-    
+    parrafos: Mapped[List['ParrafoExplicativo']] = relationship("ParrafoExplicativo", back_populates="leccion", cascade="all, delete-orphan")
     def to_dict(self):
         return {
             "id": self.id,
@@ -211,9 +196,20 @@ class Leccion(Base):
             "tema": self.tema,
             "concepto": self.concepto,
             "capitulo_id": self.capitulo_id,
-            "recursos": [r.to_dict() for r in self.recursos]
+            "recursos": [r.to_dict() for r in self.recursos],
+            "parrafos": [p.contenido for p in sorted(self.parrafos, key=lambda x: x.orden)]
         }
-    
+
+class ParrafoExplicativo(Base):
+    __tablename__ = 'ParrafosExplicativos'
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    contenido: Mapped[str] = mapped_column(String(2000), nullable=False)
+    orden: Mapped[int] = mapped_column(Integer(), nullable=False)
+
+    leccion_id: Mapped[int] = mapped_column(ForeignKey("Lecciones.id"), nullable=False)
+    leccion: Mapped['Leccion'] = relationship("Leccion", back_populates="parrafos")
+
 class Recurso(Base):
     __tablename__ = "Recursos"
 
@@ -237,6 +233,7 @@ class Recurso(Base):
             "contenido": self.contenido,
             "externo": self.externo
         }
+
 class Grupo(Base):
     __tablename__ = 'Grupos'
 

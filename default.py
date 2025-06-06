@@ -16,7 +16,7 @@ def default_preferencias():
         },
         'Auditivo': {
             'Escuchar_clase': 0, #
-            'Grabaciones': 0, 
+            'Grabaciones': 0, #
             'Musica': 0, 
             'Podcast': 0, 
             'Debates': 0 #
