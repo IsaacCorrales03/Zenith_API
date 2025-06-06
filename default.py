@@ -4,7 +4,7 @@ def default_porcentajes():
         "Kinestésico": 0,
         "Auditivo": 0
     }
-service_url = "https://zenith-api-38ka.onrender.com"
+service_url = "https://zenith-ai-api.onrender.com/"
 def default_preferencias():
     return {
         "Visual": {
