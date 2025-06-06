@@ -6,6 +6,7 @@ import enum
 from typing import List
 from datetime import datetime
 import os
+from default import *
 
 load_dotenv()
 # Use postgresql+psycopg2 as the dialect
@@ -33,7 +34,7 @@ class Usuario(Base):
     racha: Mapped[int] = mapped_column(Integer(), default=0)
     lecciones: Mapped[int] = mapped_column(Integer(), default=30, server_default='30')
     aprendizaje_principal: Mapped[EstilosDeAprendizaje] = mapped_column(Enum(EstilosDeAprendizaje), default=EstilosDeAprendizaje.NO_DEFINIDO)
-    porcentajes_aprendizaje: Mapped[dict] = mapped_column(JSON(), default=dict)  # Cambia default_porcentajes si es necesario
+    porcentajes_aprendizaje: Mapped[dict] = mapped_column(JSON(), default=default_preferencias())  # Cambia default_porcentajes si es necesario
     preferencias: Mapped[dict] = mapped_column(JSON(), default=dict)  # Cambia default_preferencias si es necesario
     retroalimentacion: Mapped[List[dict]] = mapped_column(ARRAY(JSON), nullable=True, default=list)
     url_foto_perfil: Mapped[str] = mapped_column(String(600), nullable=True, server_default='https://example.com/assets/perfil_usuario/default.webp')
