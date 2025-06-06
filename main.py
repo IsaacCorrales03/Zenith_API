@@ -160,58 +160,72 @@ def predict():
 
 @app.route("/adaptar_leccion", methods=["POST"])
 def adaptar_lecciones():
-    data = request.get_json()
+    try:
+        data = request.get_json()
 
-    leccion_id = data.get("leccion_id")
-    preferencias = data.get("preferencias")
+        leccion_id = data.get("leccion_id")
+        preferencias = data.get("preferencias")
 
-    if not isinstance(preferencias, list) or len(preferencias) != 15:
-        return jsonify({"error": "Preferencias inválidas. Deben ser una lista de 15 valores."}), 400
+        if not isinstance(preferencias, list) or len(preferencias) != 15:
+            logger.warning(f"Preferencias inválidas recibidas: {preferencias}")
+            return jsonify({"error": "Preferencias inválidas. Deben ser una lista de 15 valores."}), 400
 
-    if leccion_id is None:
-        return jsonify({"error": "Falta el capitulo_id"}), 400
+        if leccion_id is None:
+            logger.warning("leccion_id no proporcionado en la request")
+            return jsonify({"error": "Falta el leccion_id"}), 400
 
-    leccion = crud.obtener_leccion(leccion_id)
+        leccion = crud.obtener_leccion(leccion_id)
+        
+        if not leccion:
+            logger.error(f"No se encontró la lección con ID: {leccion_id}")
+            return jsonify({"error": "No se encontraron lecciones para el capítulo dado."}), 404
 
-    if not leccion:
-        logger.error("No se encontró la lección")
-        return jsonify({"error": "No se encontraron lecciones para el capítulo dado."}), 404
+        resultado = []
+        recursos = leccion['recursos']
+        adaptados = []
 
-    resultado = []
-    recursos = leccion['recursos']
-    adaptados = []
+        puntaje_total = 0
 
-    puntaje_total = 0
+        for recurso in recursos:
+            afinacion = recurso.get('afinacion')
+            subcat_info = subcategorias_a_indice.get(afinacion)
 
-    for recurso in recursos:
-        afinacion = recurso.get('afinacion')
-        subcat_info = subcategorias_a_indice.get(afinacion)
+            if subcat_info:
+                indice, _ = subcat_info
+                peso = preferencias[indice]
+                puntaje_total += peso
 
-        if subcat_info:
-            indice, _ = subcat_info
-            peso = preferencias[indice]
-            puntaje_total += peso
+                recurso_adaptado = recurso.copy()
+                recurso_adaptado["adaptabilidad"] = peso
+                adaptados.append(recurso_adaptado)
 
-            recurso_adaptado = recurso.copy()
-            recurso_adaptado["adaptabilidad"] = peso
-            adaptados.append(recurso_adaptado)
+        # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
+        adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
+        # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
+        adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
+        mejores = adaptados[:3]
 
-    # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
-    adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
-    # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
-    adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
-    mejores = adaptados[:3]
+        resultado.append({
+            "leccion_id": leccion["id"],
+            "leccion_nombre": leccion.get("nombre", "Sin nombre"),
+            "adaptabilidad_leccion": adaptabilidad_leccion,
+            "recursos_adaptados": mejores
+        })
 
-    resultado.append({
-        "leccion_id": leccion["id"],
-        "leccion_nombre": leccion.get("nombre", "Sin nombre"),
-        "adaptabilidad_leccion": adaptabilidad_leccion,
-        "recursos_adaptados": mejores
-    })
+        logger.info(f"Lección {leccion_id} adaptada exitosamente con adaptabilidad: {adaptabilidad_leccion}")
+        return jsonify(resultado)
 
-    return jsonify(resultado)
-
-
+    except KeyError as e:
+        logger.error(f"Error de clave al adaptar lección {leccion_id}: {str(e)}")
+        return jsonify({"error": "Error en los datos de la lección"}), 500
+    
+    except IndexError as e:
+        logger.error(f"Error de índice al adaptar lección {leccion_id}: {str(e)}")
+        return jsonify({"error": "Error en el índice de preferencias"}), 500
+    
+    except Exception as e:
+        logger.error(f"Error inesperado al adaptar lección {leccion_id}: {str(e)}")
+        return jsonify({"error": "Error interno del servidor"}), 500
 
 
 

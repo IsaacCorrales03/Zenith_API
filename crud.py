@@ -60,6 +60,7 @@ def crear_usuario(nombre: str, correo: str, password: str):
 def obtener_leccion(leccion_id):
     leccion = session.query(Leccion).filter(Leccion.id == leccion_id).first()
     return leccion.to_dict()
+
 def crear_curso(nombre: str, duracion: int,autor_id:str, url_imagen: str = ""):
     try:
         # Verificar si el curso ya existe
