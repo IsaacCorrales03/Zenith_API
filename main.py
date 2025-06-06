@@ -158,56 +158,56 @@ def predict():
         }), 500
 
 
-@app.route("/adaptar_lecciones", methods=["POST"])
+@app.route("/adaptar_leccion", methods=["POST"])
 def adaptar_lecciones():
     data = request.get_json()
 
-    capitulo_id = data.get("capitulo_id")
+    leccion_id = data.get("leccion_id")
     preferencias = data.get("preferencias")
 
     if not isinstance(preferencias, list) or len(preferencias) != 15:
         return jsonify({"error": "Preferencias inválidas. Deben ser una lista de 15 valores."}), 400
 
-    if capitulo_id is None:
+    if leccion_id is None:
         return jsonify({"error": "Falta el capitulo_id"}), 400
 
-    lecciones = crud.obtener_lecciones(capitulo_id)
-    if not lecciones:
+    leccion = crud.obtener_leccion(leccion_id)
+
+    if not leccion:
+        logger.error("No se encontró la lección")
         return jsonify({"error": "No se encontraron lecciones para el capítulo dado."}), 404
 
     resultado = []
+    recursos = leccion['recursos']
+    adaptados = []
 
-    for leccion in lecciones:
-        recursos = leccion.get('recursos', [])
-        adaptados = []
+    puntaje_total = 0
 
-        puntaje_total = 0
+    for recurso in recursos:
+        afinacion = recurso.get('afinacion')
+        subcat_info = subcategorias_a_indice.get(afinacion)
 
-        for recurso in recursos:
-            afinacion = recurso.get('afinacion')
-            subcat_info = subcategorias_a_indice.get(afinacion)
+        if subcat_info:
+            indice, _ = subcat_info
+            peso = preferencias[indice]
+            puntaje_total += peso
 
-            if subcat_info:
-                indice, _ = subcat_info
-                peso = preferencias[indice]
-                puntaje_total += peso
+            recurso_adaptado = recurso.copy()
+            recurso_adaptado["adaptabilidad"] = peso
+            adaptados.append(recurso_adaptado)
 
-                recurso_adaptado = recurso.copy()
-                recurso_adaptado["adaptabilidad"] = peso
-                adaptados.append(recurso_adaptado)
+    # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
+    adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
+    # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
+    adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
+    mejores = adaptados[:3]
 
-        # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
-        adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
-        # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
-        adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
-        mejores = adaptados[:3]
-
-        resultado.append({
-            "leccion_id": leccion["id"],
-            "leccion_nombre": leccion.get("nombre", "Sin nombre"),
-            "adaptabilidad_leccion": adaptabilidad_leccion,
-            "recursos_adaptados": mejores
-        })
+    resultado.append({
+        "leccion_id": leccion["id"],
+        "leccion_nombre": leccion.get("nombre", "Sin nombre"),
+        "adaptabilidad_leccion": adaptabilidad_leccion,
+        "recursos_adaptados": mejores
+    })
 
     return jsonify(resultado)
 

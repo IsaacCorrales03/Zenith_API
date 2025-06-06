@@ -1616,3 +1616,84 @@
 2025-06-06 00:16:17,323 - ZenithServer - DEBUG - [El servidor sigue funcional]
 2025-06-06 00:16:49,578 - ZenithServer - INFO - Deteniendo bot...
 2025-06-06 00:16:57,325 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:02:39,406 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:02:39,408 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:02:39,409 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:02:39,485 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:02:39,491 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:02:39,492 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:02:39,492 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:02:57,586 - ZenithServer - INFO - POST /adaptar_lecciones - 404 NOT FOUND
+2025-06-06 01:03:08,764 - ZenithServer - INFO - POST /adaptar_lecciones - 404 NOT FOUND
+2025-06-06 01:03:19,889 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:04:00,204 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:04:40,523 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:05:20,816 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:06:01,123 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:06:25,678 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:06:34,234 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:06:34,236 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:06:34,236 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:06:34,255 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:06:34,262 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:06:34,263 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:06:34,263 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:06:43,041 - ZenithServer - INFO - POST /adaptar_lecciones - 404 NOT FOUND
+2025-06-06 01:07:14,567 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:07:54,872 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:08:08,277 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:08:14,947 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:08:14,949 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:08:14,949 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:08:14,965 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:08:14,970 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:08:14,971 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:08:14,971 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:08:21,196 - ZenithServer - INFO - POST /adaptar_lecciones - 404 NOT FOUND
+2025-06-06 01:08:39,748 - ZenithServer - INFO - POST /adaptar_leccion - 500 INTERNAL SERVER ERROR
+2025-06-06 01:08:55,291 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:09:35,615 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:10:15,920 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:10:24,291 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:10:31,473 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:10:31,475 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:10:31,475 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:10:31,491 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:10:31,497 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:10:31,498 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:10:31,498 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:10:33,659 - ZenithServer - INFO - POST /adaptar_leccion - 500 INTERNAL SERVER ERROR
+2025-06-06 01:11:05,811 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:11:14,171 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:11:14,172 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:11:14,172 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:11:14,193 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:11:14,200 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:11:14,201 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:11:14,201 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:11:16,332 - ZenithServer - INFO - POST /adaptar_leccion - 500 INTERNAL SERVER ERROR
+2025-06-06 01:11:54,522 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:12:24,769 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:12:31,496 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:12:31,497 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:12:31,498 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:12:31,516 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:12:31,521 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:12:31,522 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:12:31,522 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:12:33,772 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 01:13:10,892 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 01:13:17,576 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 01:13:17,577 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 01:13:17,577 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 01:13:17,595 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 01:13:17,603 - ZenithServer - INFO - Bot iniciado
+2025-06-06 01:13:17,605 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:13:17,606 - ZenithServer - WARNING - Servidor iniciado en: http://0.0.0.0:1900
+2025-06-06 01:13:20,633 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 01:13:57,957 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:14:38,245 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:15:18,559 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:15:58,938 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:16:39,247 - ZenithServer - INFO - Realizando petición
+2025-06-06 01:16:45,099 - ZenithServer - CRITICAL - Servidor detenido
