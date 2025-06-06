@@ -412,7 +412,7 @@ def assetlinks():
 if __name__ == '__main__':
     uptime_bot = Bot(service_url, 40)
     uptime_bot.iniciar()
-    host = '127.0.0.1'
+    host = '0.0.0.0'
     port = 1900
     logger.warning(f"Servidor iniciado en: http://{host}:{port}")
 
