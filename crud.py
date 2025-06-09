@@ -387,3 +387,5 @@ def iniciar_sesion(email, password):
     finally:
         # Cerrar la sesión de SQLAlchemy
         session.close()
+
+session.rollback()

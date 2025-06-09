@@ -2175,3 +2175,837 @@
 2025-06-09 00:12:21,801 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
 2025-06-09 00:12:21,802 - ZenithServer - INFO - Realizando petición
 2025-06-09 00:12:22,100 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:13:02,101 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:13:02,392 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:13:10,792 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:13:10,796 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:13:12,844 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:13:15,307 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:13:33,543 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:13:37,502 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:13:37,779 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:13:37,781 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:13:42,393 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:13:42,710 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:14:22,711 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:14:22,995 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:15:02,997 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:15:03,294 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:15:43,295 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:15:43,574 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:15:44,144 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:15:44,147 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:15:44,509 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:16:05,344 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:16:09,229 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:16:09,510 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:16:09,511 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:16:23,576 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:16:23,883 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:17:03,884 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:17:04,165 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:17:44,170 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:17:44,436 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:18:24,437 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:18:24,718 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:18:40,859 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:18:54,667 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:18:54,945 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:18:54,945 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:19:04,719 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:19:05,009 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:19:45,010 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:19:45,304 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:20:25,304 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:20:25,724 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:21:05,725 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:21:06,047 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:21:46,049 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:21:46,367 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:22:13,471 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:22:20,034 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:22:20,312 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:22:20,312 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:22:26,368 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:22:26,639 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:23:06,639 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:23:06,917 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:23:46,919 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:23:47,319 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:24:27,320 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:24:27,579 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:24:46,666 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:24:51,177 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:24:51,452 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:24:51,453 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:25:07,580 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:25:07,888 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:25:11,576 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:25:11,851 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:25:11,852 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:25:36,369 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:25:41,834 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:25:42,111 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:25:42,112 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:25:47,889 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:25:48,162 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:26:28,163 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:26:28,446 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:26:34,571 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:26:34,847 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:26:34,848 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:26:40,797 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:26:45,601 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:26:45,878 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:26:45,879 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:27:08,447 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:27:08,735 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:27:48,737 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:27:49,016 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:27:52,120 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:27:52,395 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:27:52,396 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:28:04,478 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:28:09,208 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:28:09,484 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:28:09,485 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:28:22,586 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:28:22,862 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:28:22,862 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:28:29,018 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:28:29,276 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:29:09,277 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:29:09,647 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:29:15,162 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:29:27,360 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:29:27,636 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:29:27,637 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:29:49,648 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:29:49,956 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:30:13,027 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:30:18,561 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:30:18,839 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:30:18,840 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:30:29,957 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:30:30,253 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:30:59,285 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:31:00,535 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:31:07,945 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:31:08,222 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:31:08,225 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:31:10,254 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:31:10,520 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:31:17,100 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:31:18,998 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:31:33,120 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:31:33,398 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:31:33,399 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:31:50,520 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:31:50,808 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:32:30,810 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:32:31,099 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:33:11,100 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:33:11,394 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:33:51,395 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:33:51,660 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:34:31,660 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:34:32,018 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:35:08,770 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:35:12,019 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:35:12,323 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:35:14,715 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:35:15,005 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:35:15,006 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:35:52,324 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:35:52,586 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:35:57,243 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:36:02,168 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:36:02,443 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:36:02,444 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:36:32,587 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:36:32,903 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:36:58,554 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:36:58,837 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:36:58,839 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:37:12,904 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:37:13,172 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:37:18,022 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:37:22,804 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:37:23,080 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:37:23,081 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:37:30,199 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:37:30,479 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:37:30,480 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:37:53,173 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:37:53,457 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:38:02,834 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:38:07,586 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:38:07,864 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:38:07,865 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:38:27,589 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:38:27,865 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:38:27,865 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:38:33,141 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:38:33,458 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:38:33,723 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:38:37,647 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:38:37,922 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:38:37,922 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:38:48,755 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:38:49,032 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:38:49,033 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:38:52,959 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:38:58,175 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:38:58,450 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:38:58,451 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:39:13,724 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:39:14,037 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:39:29,737 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:39:34,508 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:39:34,782 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:39:34,783 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:39:54,038 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:39:54,332 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:40:15,245 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:40:16,388 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:40:20,767 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:40:21,045 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:40:21,046 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:40:34,333 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:40:34,634 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:40:42,517 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:40:42,797 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:40:42,800 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:40:56,283 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:41:06,472 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:41:06,750 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:41:06,752 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:41:14,635 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:41:15,007 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:41:40,761 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:41:41,041 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:41:41,042 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:41:50,651 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:41:50,926 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:41:50,927 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:41:55,008 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:41:55,297 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:42:35,298 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:42:35,577 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:43:15,578 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:43:15,860 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:43:32,859 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:43:39,560 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:43:39,835 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:43:39,837 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:43:49,630 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:43:49,917 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:43:49,917 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:43:52,902 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:43:52,903 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:43:55,861 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:43:56,253 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:44:01,137 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:44:07,957 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:44:08,234 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:44:08,234 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:44:36,254 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:44:36,597 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:44:53,165 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:44:58,551 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:44:58,839 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:44:58,840 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:45:16,598 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:45:16,905 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:45:56,906 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:45:57,183 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:46:13,194 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:46:13,471 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:46:13,472 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:46:37,184 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:46:37,484 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:47:17,485 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:47:17,761 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:47:57,762 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:47:58,058 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:48:38,059 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:48:38,328 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:48:58,084 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:49:18,329 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:49:18,646 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:49:31,418 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:49:36,248 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:49:36,541 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:49:36,542 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:49:58,647 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:49:58,996 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:50:33,490 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:50:38,758 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:50:38,997 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:50:39,035 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:50:39,035 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:50:39,260 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:51:19,261 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:51:19,607 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:51:22,967 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:51:23,244 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:51:23,245 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:51:28,328 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:51:32,632 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:51:32,911 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:51:32,912 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:51:55,103 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:51:55,382 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:51:55,382 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:51:59,609 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:51:59,895 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:52:06,180 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:52:11,918 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:52:12,198 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:52:12,199 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:52:39,896 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:52:40,152 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:53:20,153 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:53:20,450 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:54:00,451 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:54:00,800 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:54:17,663 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:54:23,618 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:54:23,896 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:54:23,897 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:54:40,802 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:54:41,096 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:55:21,098 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:55:21,440 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:55:42,960 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:55:42,963 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:55:43,427 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:55:50,371 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:55:54,718 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:55:54,997 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:55:54,997 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:56:01,441 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:56:01,763 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:56:28,769 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:56:28,772 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:56:29,227 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:56:37,983 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:56:41,764 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:56:41,980 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:56:42,063 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:56:42,254 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:56:42,256 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:57:22,064 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:57:22,328 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:58:01,929 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 00:58:02,329 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:58:02,601 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:58:06,893 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 00:58:07,169 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 00:58:07,170 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 00:58:42,601 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:58:42,888 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:59:22,888 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:59:23,176 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:00:03,177 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:00:03,465 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:00:43,466 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:00:43,810 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:00:59,194 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:01:04,611 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 01:01:04,887 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 01:01:04,887 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 01:01:23,811 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:01:24,165 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:01:59,543 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 01:01:59,547 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 01:02:00,000 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 01:02:04,165 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:02:04,459 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:02:07,803 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:02:12,050 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 01:02:12,325 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 01:02:12,326 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 01:02:44,461 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:02:44,734 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:03:24,735 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:03:25,007 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:04:05,008 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:04:05,331 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:04:45,332 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:04:45,672 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:04:54,322 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:05:03,921 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 01:05:03,925 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 01:05:04,378 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 01:05:07,280 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:05:11,562 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 01:05:11,837 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 01:05:11,838 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 01:05:23,317 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:05:25,674 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:05:25,946 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:05:39,168 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:05:42,160 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 01:05:42,163 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 01:05:42,617 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 01:05:45,556 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:05:49,345 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 01:05:49,620 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 01:05:49,621 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 01:06:05,947 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:06:06,317 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:06:46,318 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:06:46,679 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:07:07,099 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:07:11,986 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 01:07:12,262 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 100
+2025-06-09 01:07:12,264 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 01:07:26,680 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:07:26,968 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:08:01,546 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 01:08:06,969 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:08:07,248 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:08:47,249 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:08:47,537 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:09:27,538 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:09:27,816 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:10:07,817 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:10:08,115 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:10:39,935 - ZenithServer - INFO - OPTIONS /usuario - 200 OK
+2025-06-09 01:10:40,547 - ZenithServer - ERROR - Error de integridad: (psycopg2.errors.NotNullViolation) null value in column "preferencias" of relation "Usuarios" violates not-null constraint
+DETAIL:  Failing row contains (3, megacherry2.0, 5Ay3MJDPrYzhmp8cQtR-jDyAYnytaxzU9UOIgMHdLyw, cherry@cherry.cherry, $2b$12$d9OWUIWqMmj0D0Vo6iMI9eL3ryWk6L6jKsO4CEWDvwqDF6oWRH79i, 0, 30, NO_DEFINIDO, {"Visual": {"Lectura": 0, "Graficos": 0, "Diagramas": 0, "Video"..., null, {}, https://example.com/assets/perfil_usuario/default.webp).
+
+[SQL: INSERT INTO "Usuarios" (nombre, api_key, correo, password, racha, lecciones, aprendizaje_principal, porcentajes_aprendizaje, retroalimentacion) VALUES (%(nombre)s, %(api_key)s, %(correo)s, %(password)s, %(racha)s, %(lecciones)s, %(aprendizaje_principal)s, %(porcentajes_aprendizaje)s::JSON, %(retroalimentacion)s::JSON[]) RETURNING "Usuarios".id, "Usuarios".url_foto_perfil]
+[parameters: {'nombre': 'megacherry2.0', 'api_key': '5Ay3MJDPrYzhmp8cQtR-jDyAYnytaxzU9UOIgMHdLyw', 'correo': 'cherry@cherry.cherry', 'password': '$2b$12$d9OWUIWqMmj0D0Vo6iMI9eL3ryWk6L6jKsO4CEWDvwqDF6oWRH79i', 'racha': 0, 'lecciones': 30, 'aprendizaje_principal': 'NO_DEFINIDO', 'porcentajes_aprendizaje': '{"Visual": {"Lectura": 0, "Graficos": 0, "Diagramas": 0, "Video": 0, "Imagenes": 0}, "Auditivo": {"Escuchar_clase": 0, "Grabaciones": 0, "Musica": 0, "Podcast": 0, "Debates": 0}, "Kinestesico": {"Experimentos": 0, "Simulaciones": 0, "Proyectos": 0, "Practica": 0, "Juegos": 0}}', 'retroalimentacion': []}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-09 01:10:40,555 - ZenithServer - INFO - POST /usuario - 201 CREATED
+2025-06-09 01:10:48,116 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:10:48,410 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:11:28,411 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:11:28,766 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:12:08,767 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:12:09,120 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:12:49,121 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:13:57,354 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:14:37,355 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:14:37,642 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:15:17,642 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:15:18,002 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:15:58,003 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:15:58,291 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:16:38,292 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:16:38,632 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:17:03,590 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 01:17:18,650 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 01:21:18,401 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 01:21:18,402 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 01:21:18,403 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 01:21:18,454 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 01:21:18,488 - ZenithServer - INFO - Bot iniciado
+2025-06-09 01:21:18,489 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 01:21:18,490 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:21:41,091 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 01:21:45,964 - ZenithServer - INFO - OPTIONS /usuario - 200 OK
+2025-06-09 01:21:46,919 - ZenithServer - INFO - POST /usuario - 201 CREATED
+2025-06-09 01:21:58,771 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:22:03,969 - ZenithServer - ERROR - Error en petición periódica: HTTPSConnectionPool(host='zenith-ai-api.onrender.com', port=443): Read timed out. (read timeout=5)
+2025-06-09 01:22:43,970 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:22:49,126 - ZenithServer - ERROR - Error en petición periódica: HTTPSConnectionPool(host='zenith-ai-api.onrender.com', port=443): Read timed out. (read timeout=5)
+2025-06-09 01:22:57,048 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 01:22:57,051 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 01:22:57,242 - ZenithServer - INFO - POST /set_user_preferences - 500 INTERNAL SERVER ERROR
+2025-06-09 01:22:59,469 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:23:02,868 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:23:03,637 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:23:29,132 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:23:34,265 - ZenithServer - ERROR - Error en petición periódica: HTTPSConnectionPool(host='zenith-ai-api.onrender.com', port=443): Read timed out. (read timeout=5)
+2025-06-09 01:23:55,985 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:24:06,457 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:24:14,266 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:24:14,583 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:24:54,584 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:24:54,853 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:25:34,854 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:25:35,193 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:26:15,194 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:26:15,477 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:26:55,478 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:26:55,778 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:26:57,015 - ZenithServer - INFO - GET /cursos - 500 INTERNAL SERVER ERROR
+2025-06-09 01:27:06,978 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 01:27:35,784 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 01:29:07,320 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 01:29:07,321 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 01:29:07,321 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 01:29:07,339 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 01:29:07,372 - ZenithServer - INFO - Bot iniciado
+2025-06-09 01:29:07,374 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 01:29:07,374 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:29:07,725 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:29:47,726 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:29:48,016 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:30:28,017 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:30:28,283 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:31:08,284 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:31:08,603 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:31:48,604 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:31:49,063 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:32:29,064 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:32:29,347 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:33:09,348 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:33:09,651 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:33:49,652 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:33:50,023 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:34:30,024 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:34:30,385 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:35:10,386 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:35:10,657 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:35:50,658 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:35:50,939 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:36:30,940 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:36:31,205 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:37:11,206 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:37:11,482 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:37:51,483 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:37:51,764 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:38:31,764 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:38:32,049 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:39:12,050 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:39:12,404 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:39:52,405 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:39:52,744 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:40:32,745 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:40:33,027 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:41:13,028 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:41:13,319 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:41:53,320 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:41:53,594 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:42:33,595 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:42:33,879 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:43:13,880 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:43:14,184 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:43:54,184 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:43:54,452 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:44:34,453 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:44:34,788 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:45:14,789 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:45:15,133 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:45:55,134 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:45:55,463 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:46:35,464 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:46:35,728 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:47:15,729 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:47:15,994 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:47:55,995 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:47:56,261 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:48:36,262 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:48:36,526 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:49:16,527 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:49:16,796 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:49:56,797 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:49:57,128 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:50:37,129 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:50:37,470 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:51:17,470 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:51:17,814 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:51:57,815 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:51:58,108 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:52:38,108 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:52:38,393 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:53:18,394 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:53:18,669 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:53:58,670 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:53:58,971 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:54:38,972 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:54:39,256 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:55:19,256 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:55:19,522 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:55:59,523 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:55:59,888 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:56:39,889 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:56:40,172 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:57:20,173 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:57:20,470 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:58:00,471 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:58:00,753 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:58:40,754 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:58:41,034 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 01:59:21,034 - ZenithServer - INFO - Realizando petición
+2025-06-09 01:59:21,326 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:00:01,327 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:00:01,630 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:00:41,630 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:00:41,971 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:01:21,972 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:01:22,348 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:02:02,349 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:02:02,654 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:02:42,655 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:02:42,936 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:03:22,937 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:03:23,232 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:04:03,233 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:04:03,526 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:04:43,527 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:04:43,827 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:05:23,828 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:05:24,186 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:06:04,186 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:06:04,492 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:06:44,493 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:06:44,821 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:07:24,822 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:07:25,086 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:08:05,086 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:08:05,350 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:08:45,351 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:08:45,640 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:09:25,641 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:09:25,927 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:10:05,928 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:10:06,215 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:10:46,216 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:10:46,491 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:11:26,493 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:11:26,782 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:12:06,783 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:12:07,192 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:12:47,193 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:12:47,473 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:13:27,474 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:13:27,739 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:14:07,740 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:14:08,047 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:14:48,048 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:14:48,313 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:15:25,864 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 02:15:28,314 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:15:28,588 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 02:16:08,589 - ZenithServer - INFO - Realizando petición
+2025-06-09 02:16:08,889 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 08:58:20,820 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 08:58:20,833 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 08:58:20,834 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 08:58:20,932 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 08:58:20,981 - ZenithServer - INFO - Bot iniciado
+2025-06-09 08:58:20,982 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 08:58:20,982 - ZenithServer - INFO - Realizando petición
+2025-06-09 08:58:21,375 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 08:59:01,376 - ZenithServer - INFO - Realizando petición
+2025-06-09 08:59:01,729 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 08:59:41,730 - ZenithServer - INFO - Realizando petición
+2025-06-09 08:59:42,013 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 08:59:50,923 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 08:59:50,928 - ZenithServer - ERROR - Error al procesar la solicitud: float() argument must be a string or a real number, not 'dict'
+2025-06-09 08:59:50,929 - ZenithServer - INFO - POST /predict - 500 INTERNAL SERVER ERROR
+2025-06-09 09:00:02,431 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 09:00:22,015 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 09:00:37,160 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 09:00:37,161 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 09:00:37,162 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 09:00:37,178 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 09:00:37,206 - ZenithServer - INFO - Bot iniciado
+2025-06-09 09:00:37,207 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 09:00:37,208 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:00:37,515 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:01:17,516 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:01:17,828 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:01:50,678 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:01:50,684 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:01:57,829 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:01:58,113 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:02:38,114 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:02:38,404 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:02:50,791 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:02:50,795 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:03:18,404 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:03:18,704 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:03:58,705 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:03:59,072 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:04:39,073 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:04:39,349 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:05:19,350 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:05:19,668 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:05:49,424 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:05:49,428 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:05:59,669 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:05:59,982 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:06:39,984 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:06:40,262 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:07:20,263 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:07:20,579 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:08:00,580 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:08:00,853 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:08:40,854 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:08:41,143 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:09:21,144 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:09:21,498 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:10:01,498 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:10:01,792 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:10:41,793 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:10:42,086 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:11:22,087 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:11:22,359 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:12:02,360 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:12:02,667 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:12:42,668 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:12:42,996 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:13:22,997 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:13:23,304 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:14:03,304 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:14:03,578 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:14:26,214 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:14:26,230 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:14:43,580 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:14:43,919 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:15:23,920 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:15:24,211 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:16:04,212 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:16:04,500 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:16:44,501 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:16:44,791 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:17:24,791 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:17:25,100 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:18:05,101 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:18:05,436 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:18:45,438 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:18:45,732 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:19:25,737 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:19:26,022 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:20:06,023 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:20:06,374 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:20:46,375 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:20:46,665 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:21:26,667 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:21:26,980 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:22:06,981 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:22:07,295 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:22:22,256 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:22:22,266 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:22:47,296 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:22:47,589 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:23:27,595 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:23:27,899 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:23:59,305 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:23:59,311 - ZenithServer - INFO - POST /predict - 400 BAD REQUEST
+2025-06-09 09:24:07,923 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:24:08,234 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:24:48,235 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:24:48,534 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:25:16,462 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:25:16,679 - ZenithServer - INFO - Predicción realizada. Suma final: 100.0
+2025-06-09 09:25:16,680 - ZenithServer - INFO - POST /predict - 200 OK
+2025-06-09 09:25:28,535 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:25:28,877 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:26:08,878 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:26:09,175 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:26:21,912 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:26:21,926 - ZenithServer - INFO - Predicción realizada. Suma final: 100.0
+2025-06-09 09:26:21,927 - ZenithServer - INFO - POST /predict - 200 OK
+2025-06-09 09:26:49,175 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:26:49,486 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:27:29,487 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:27:29,821 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:28:09,822 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:28:10,133 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:28:50,135 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:28:50,443 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:29:30,444 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:29:30,729 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:30:10,729 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:30:11,012 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:30:51,013 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:30:51,377 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:31:31,378 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:31:31,647 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:32:11,648 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:32:11,982 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:32:19,524 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:32:19,530 - ZenithServer - INFO - Predicción realizada. Suma final: 100.0
+2025-06-09 09:32:19,530 - ZenithServer - INFO - POST /predict - 200 OK
+2025-06-09 09:32:51,983 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:32:52,303 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:33:32,304 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:33:32,588 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:34:12,589 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:34:12,873 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:34:52,874 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:34:53,164 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:35:33,165 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:35:33,442 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:36:13,446 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:36:13,809 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:36:53,811 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:36:54,098 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:37:34,099 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:37:34,391 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:38:14,392 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:38:14,681 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:38:54,682 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:38:55,010 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:39:35,011 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:39:35,305 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:40:15,306 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:40:15,619 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:40:55,620 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:40:55,922 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:41:35,923 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:41:36,299 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:42:16,300 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:42:16,633 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:42:56,634 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:42:56,921 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:43:36,922 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:43:37,208 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:44:17,221 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:44:17,526 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:44:53,615 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:44:54,353 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:44:55,081 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:44:55,607 - ZenithServer - INFO - OPTIONS /cursos - 200 OK
+2025-06-09 09:44:55,810 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:44:56,325 - ZenithServer - INFO - 4 inscrito en 1 exitosamente.
+2025-06-09 09:44:56,332 - ZenithServer - INFO - PUT /cursos - 200 OK
+2025-06-09 09:44:57,527 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:44:57,809 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:44:59,684 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 09:45:00,052 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 82.8
+2025-06-09 09:45:00,053 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 09:45:33,447 - ZenithServer - INFO - OPTIONS /predict - 200 OK
+2025-06-09 09:45:33,597 - ZenithServer - INFO - Predicción realizada. Suma final: 100.0
+2025-06-09 09:45:33,598 - ZenithServer - INFO - POST /predict - 200 OK
+2025-06-09 09:45:37,810 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:45:38,141 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:46:15,058 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:46:18,142 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:46:18,436 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:46:21,628 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-09 09:46:21,906 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 82.3
+2025-06-09 09:46:21,906 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-09 09:46:58,438 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:46:58,835 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:47:38,836 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:47:39,124 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:48:19,127 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:48:19,439 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:48:59,440 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:48:59,753 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:49:39,754 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:49:40,031 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:50:20,032 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:50:20,326 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:51:00,327 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:51:00,621 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:51:40,622 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:51:40,894 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:52:20,895 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:52:21,273 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:53:01,274 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:53:01,564 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:53:41,565 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:53:41,857 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:54:21,858 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:54:22,152 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:55:02,153 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:55:02,447 - ZenithServer - DEBUG - [El servidor sigue funcional]
