@@ -300,12 +300,9 @@ def cursos():
         if not id_curso:
             cursos = crud.obtener_cursos()
             cursos_list = []
-            if curso != 401:
-                for cursos in cursos:
-                    cursos_list.append(curso.to_dict())
-                return jsonify(cursos_list)
-            else: return jsonify({'Error': 'Unknown'})
-
+            for curso in cursos:
+                cursos_list.append(curso.to_dict())
+            return jsonify(cursos_list)
         curso = crud.obtener_curso_by_id(id_curso)
         if not curso:
             return 'No se encontró un curso', 400

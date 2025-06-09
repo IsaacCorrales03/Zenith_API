@@ -3021,3 +3021,77 @@ DETAIL:  Failing row contains (3, megacherry2.0, 5Ay3MJDPrYzhmp8cQtR-jDyAYnytaxz
 2025-06-09 09:58:22,716 - ZenithServer - INFO - GET /cursos - 200 OK
 2025-06-09 09:58:23,705 - ZenithServer - INFO - Realizando petición
 2025-06-09 09:58:24,008 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:59:04,009 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:59:04,309 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:59:44,309 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:59:44,616 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:00:24,617 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:00:24,913 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:01:04,914 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:01:05,205 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:01:45,206 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:01:45,535 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:02:25,536 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:02:25,853 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:03:05,854 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:03:06,183 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:03:46,184 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:03:46,469 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:04:26,470 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:04:26,763 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:05:06,764 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:05:07,060 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:05:47,061 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:05:47,375 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:06:27,376 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:06:27,650 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:07:07,651 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:07:07,938 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:07:47,939 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:07:48,225 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:08:28,226 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:08:28,568 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:09:08,569 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:09:08,856 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:09:48,857 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:09:49,150 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:10:29,151 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:11:09,594 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:11:50,032 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:12:30,499 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:13:10,993 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:13:51,447 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:14:31,948 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:14:32,225 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:15:12,226 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:15:12,547 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:15:52,548 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:16:32,982 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:17:13,460 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:17:53,949 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:18:34,417 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:18:34,725 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:19:14,726 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:19:15,108 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:19:55,108 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:19:55,393 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:20:35,394 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:20:35,759 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:21:15,760 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:21:16,034 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:21:56,034 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:21:56,311 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:22:36,312 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:22:36,595 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:23:16,596 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:23:16,877 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:23:56,878 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:23:57,186 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:24:37,187 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:24:37,517 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:25:17,518 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:25:17,940 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:25:57,940 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:25:58,226 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 10:26:38,227 - ZenithServer - INFO - Realizando petición
+2025-06-09 10:26:38,517 - ZenithServer - DEBUG - [El servidor sigue funcional]
