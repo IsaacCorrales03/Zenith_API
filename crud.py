@@ -163,10 +163,12 @@ def obtener_cursos():
         cursos = session.query(Curso).all()
         return cursos
     except Exception as e:
+
         print(e) 
         return 401
 
 def obtener_grupos():
+    sesión.rollback()
     try:
         grupos = session.query(Grupo).filter(Grupo.public == True).all()
         grupos_list = []
