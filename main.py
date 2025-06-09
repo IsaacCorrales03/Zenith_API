@@ -199,9 +199,7 @@ def adaptar_lecciones():
                 recurso_adaptado["adaptabilidad"] = peso
                 adaptados.append(recurso_adaptado)
 
-        # Adaptabilidad de la lección, basada en la suma total de pesos (máximo 100)
         adaptabilidad_leccion = min(round(puntaje_total, 2), 100)
-        # Ordenar recursos por adaptabilidad descendente y quedarnos con los 3 mejores
         adaptados.sort(key=lambda r: r["adaptabilidad"], reverse=True)
         mejores = adaptados[:3]
 
@@ -344,6 +342,19 @@ def cursos():
         if not resultado:
             return {'error', 'Algo salió mal'}, 400
         return {'mensaje': 'El usuario se dio de baja'}
+
+@app.route('/set_user_preferences', methods= ['POST'])
+def set_preferences():
+    logger.info("Choi homelo chino")
+    id = request.args.get('id')
+    key = request.args.get('key')
+    preferences = request.get_json() 
+    resultado = crud.set_preferences(id, key, preferences)
+    if resultado:
+        print(resultado)
+        return jsonify({'Success': 'Se establecieron las nuevas preferencias'})
+    else:
+        return jsonify({'Error': 'unknown'})
 
 @app.route('/grupos', methods=['POST', 'GET', 'LINK', 'DELETE', 'UNLINK'])
 def grupos():

@@ -1709,3 +1709,469 @@
 2025-06-06 01:50:09,437 - ZenithServer - INFO - Realizando petición
 2025-06-06 01:50:49,741 - ZenithServer - INFO - Realizando petición
 2025-06-06 01:51:17,604 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-06 17:46:39,628 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-06 17:46:39,638 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-06 17:46:39,639 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-06 17:46:39,718 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-06 17:46:39,775 - ZenithServer - INFO - Bot iniciado
+2025-06-06 17:46:39,776 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-06 17:46:39,776 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:46:40,181 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:47:20,182 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:47:20,538 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:48:00,538 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:48:00,819 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:48:40,820 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:48:41,094 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:49:21,095 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:49:21,384 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:50:01,385 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:50:01,689 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:50:41,690 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:50:41,977 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:51:21,978 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:51:22,249 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:52:02,250 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:52:02,555 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:52:42,556 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:52:42,924 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:53:22,925 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:54:03,393 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:54:43,830 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:54:45,797 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-06 17:54:51,922 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-06 17:54:52,202 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 0
+2025-06-06 17:54:52,202 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 17:55:10,323 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-06 17:55:16,244 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-06 17:55:16,520 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 0
+2025-06-06 17:55:16,522 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 17:55:24,301 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:55:24,621 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:55:47,287 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-06 17:55:54,698 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-06 17:55:54,972 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 0
+2025-06-06 17:55:54,973 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 17:56:04,622 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:56:04,902 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:56:22,506 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-06 17:56:31,533 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-06 17:56:31,808 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 0
+2025-06-06 17:56:31,808 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-06 17:56:44,903 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:56:45,191 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:57:25,192 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:57:25,491 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:58:05,492 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:58:05,880 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 17:58:45,880 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:59:26,316 - ZenithServer - INFO - Realizando petición
+2025-06-06 17:59:26,599 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:00:06,599 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:00:06,886 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:00:46,887 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:00:47,186 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:01:27,186 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:01:27,478 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:02:07,479 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:02:07,755 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:02:47,756 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:02:48,034 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:03:28,035 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:03:28,363 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:04:08,364 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:04:08,637 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:04:48,638 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:04:48,911 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:05:28,912 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:05:29,204 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:06:09,205 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:06:09,505 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:06:49,505 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:06:49,814 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:07:29,816 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:07:30,087 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:08:10,088 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:08:10,405 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:08:50,406 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:08:50,757 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:09:30,758 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:09:31,100 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:10:11,101 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:10:11,371 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:10:51,372 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:10:51,674 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:11:31,675 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:11:31,953 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:12:11,954 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:12:12,239 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:12:52,240 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:12:52,533 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:13:32,534 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:13:32,815 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:14:12,816 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:14:13,170 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:14:53,171 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:14:53,457 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:15:33,457 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:15:33,738 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:16:13,739 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:16:14,025 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:16:54,026 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:16:54,321 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:17:34,322 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:17:34,602 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:18:14,603 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:18:14,886 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:18:54,887 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:18:55,163 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:19:35,164 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:19:35,509 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:20:15,509 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:20:15,839 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:20:55,839 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:20:56,147 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:21:36,147 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:21:36,447 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:22:16,448 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:22:16,734 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:22:56,735 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:22:57,017 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:23:37,018 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:23:37,326 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:24:17,326 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:24:17,635 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:24:57,635 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:24:57,998 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:25:37,998 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:25:38,279 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:26:18,280 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:26:18,571 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:26:58,572 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:26:58,845 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:27:38,846 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:27:39,147 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:28:19,148 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:28:19,439 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:28:59,440 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:28:59,742 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:29:39,743 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:29:40,027 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-06 18:30:20,028 - ZenithServer - INFO - Realizando petición
+2025-06-06 18:30:20,376 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:15:16,585 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-08 23:15:16,597 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-08 23:15:16,597 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-08 23:15:16,692 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-08 23:15:16,724 - ZenithServer - INFO - Bot iniciado
+2025-06-08 23:15:16,725 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-08 23:15:16,725 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:15:17,151 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:15:57,151 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:15:57,433 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:16:24,926 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-08 23:16:25,849 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-08 23:16:31,536 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-08 23:16:31,540 - ZenithServer - INFO - Preferencias recibidas (valor - etiqueta):
+2025-06-08 23:16:31,540 - ZenithServer - INFO - 5 - Lectura
+2025-06-08 23:16:31,541 - ZenithServer - INFO - 5 - Grafico
+2025-06-08 23:16:31,541 - ZenithServer - INFO - 5 - Diagrama
+2025-06-08 23:16:31,542 - ZenithServer - INFO - 5 - Video
+2025-06-08 23:16:31,542 - ZenithServer - INFO - 5 - Imagen
+2025-06-08 23:16:31,545 - ZenithServer - INFO - 5 - Escuchar_clase
+2025-06-08 23:16:31,546 - ZenithServer - INFO - 5 - Grabacion
+2025-06-08 23:16:31,546 - ZenithServer - INFO - 5 - Musica
+2025-06-08 23:16:31,547 - ZenithServer - INFO - 5 - Podcast
+2025-06-08 23:16:31,548 - ZenithServer - INFO - 5 - Debate
+2025-06-08 23:16:31,549 - ZenithServer - INFO - 5 - Experimento
+2025-06-08 23:16:31,552 - ZenithServer - INFO - 5 - Simulacion
+2025-06-08 23:16:31,552 - ZenithServer - INFO - 5 - Proyecto
+2025-06-08 23:16:31,553 - ZenithServer - INFO - 5 - Practica
+2025-06-08 23:16:31,554 - ZenithServer - INFO - 30 - Juego
+2025-06-08 23:16:31,847 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 85
+2025-06-08 23:16:31,848 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-08 23:16:37,433 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:16:37,721 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:17:17,722 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:17:18,016 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:17:58,017 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:17:58,322 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:18:12,864 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-08 23:18:19,097 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-08 23:18:19,100 - ZenithServer - INFO - Preferencias recibidas (valor - etiqueta):
+2025-06-08 23:18:19,101 - ZenithServer - INFO - 5 - Lectura
+2025-06-08 23:18:19,102 - ZenithServer - INFO - 5 - Grafico
+2025-06-08 23:18:19,102 - ZenithServer - INFO - 5 - Diagrama
+2025-06-08 23:18:19,102 - ZenithServer - INFO - 5 - Video
+2025-06-08 23:18:19,104 - ZenithServer - INFO - 5 - Imagen
+2025-06-08 23:18:19,107 - ZenithServer - INFO - 5 - Escuchar_clase
+2025-06-08 23:18:19,108 - ZenithServer - INFO - 5 - Grabacion
+2025-06-08 23:18:19,109 - ZenithServer - INFO - 5 - Musica
+2025-06-08 23:18:19,110 - ZenithServer - INFO - 5 - Podcast
+2025-06-08 23:18:19,111 - ZenithServer - INFO - 5 - Debate
+2025-06-08 23:18:19,111 - ZenithServer - INFO - 5 - Experimento
+2025-06-08 23:18:19,112 - ZenithServer - INFO - 5 - Simulacion
+2025-06-08 23:18:19,112 - ZenithServer - INFO - 5 - Proyecto
+2025-06-08 23:18:19,113 - ZenithServer - INFO - 5 - Practica
+2025-06-08 23:18:19,113 - ZenithServer - INFO - 30 - Juego
+2025-06-08 23:18:19,407 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 85
+2025-06-08 23:18:19,408 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-08 23:18:38,324 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:18:38,592 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:19:18,593 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:19:18,886 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:19:58,887 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:19:59,187 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:20:10,941 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-08 23:20:16,312 - ZenithServer - INFO - OPTIONS /adaptar_leccion - 200 OK
+2025-06-08 23:20:16,315 - ZenithServer - INFO - Preferencias recibidas (valor - etiqueta):
+2025-06-08 23:20:16,316 - ZenithServer - INFO - 5 - Lectura
+2025-06-08 23:20:16,317 - ZenithServer - INFO - 5 - Grafico
+2025-06-08 23:20:16,317 - ZenithServer - INFO - 5 - Diagrama
+2025-06-08 23:20:16,318 - ZenithServer - INFO - 30 - Video
+2025-06-08 23:20:16,320 - ZenithServer - INFO - 5 - Imagen
+2025-06-08 23:20:16,324 - ZenithServer - INFO - 5 - Escuchar_clase
+2025-06-08 23:20:16,325 - ZenithServer - INFO - 5 - Grabacion
+2025-06-08 23:20:16,327 - ZenithServer - INFO - 5 - Musica
+2025-06-08 23:20:16,328 - ZenithServer - INFO - 5 - Podcast
+2025-06-08 23:20:16,328 - ZenithServer - INFO - 5 - Debate
+2025-06-08 23:20:16,329 - ZenithServer - INFO - 5 - Experimento
+2025-06-08 23:20:16,329 - ZenithServer - INFO - 5 - Simulacion
+2025-06-08 23:20:16,330 - ZenithServer - INFO - 5 - Proyecto
+2025-06-08 23:20:16,330 - ZenithServer - INFO - 5 - Practica
+2025-06-08 23:20:16,331 - ZenithServer - INFO - 5 - Juego
+2025-06-08 23:20:16,613 - ZenithServer - INFO - Lección 1 adaptada exitosamente con adaptabilidad: 85
+2025-06-08 23:20:16,614 - ZenithServer - INFO - POST /adaptar_leccion - 200 OK
+2025-06-08 23:20:39,188 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:20:39,538 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:21:19,539 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:21:19,847 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:21:59,848 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:22:00,153 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:22:40,160 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:22:40,448 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:23:20,451 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:23:20,757 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:23:37,354 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-08 23:23:37,430 - ZenithServer - INFO - GET /favicon.ico - 404 NOT FOUND
+2025-06-08 23:23:42,779 - ZenithServer - INFO - GET /usuarios - 404 NOT FOUND
+2025-06-08 23:23:51,103 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-08 23:23:57,303 - ZenithServer - INFO - GET /usuario - 400 BAD REQUEST
+2025-06-08 23:24:00,758 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:24:01,044 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:24:22,948 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:24:41,045 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:24:41,380 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:25:21,381 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:25:21,692 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:26:01,693 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:26:02,055 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:26:42,056 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:26:42,328 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:27:22,329 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:27:22,636 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:28:02,636 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:28:02,919 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:28:42,920 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:28:43,204 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:28:52,724 - ZenithServer - INFO - Deteniendo bot...
+2025-06-08 23:29:23,206 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-08 23:31:31,557 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-08 23:31:31,559 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-08 23:31:31,559 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-08 23:31:31,582 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-08 23:31:31,618 - ZenithServer - INFO - Bot iniciado
+2025-06-08 23:31:31,619 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-08 23:31:31,619 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:31:32,018 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:32:12,019 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:32:12,313 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:32:52,314 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:32:52,633 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:33:32,633 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:33:32,905 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:34:12,907 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:34:13,185 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:34:53,185 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:34:53,453 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:35:33,454 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:35:33,746 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:35:45,757 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:36:13,747 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:36:14,045 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:36:54,046 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:36:54,408 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:37:34,409 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:37:34,742 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:38:14,743 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:38:15,016 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:38:55,016 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:38:55,306 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:39:35,307 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:39:35,605 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:40:15,606 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:40:15,890 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:40:55,891 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:40:56,187 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:41:36,187 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:41:36,495 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:42:16,496 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:42:16,853 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:42:56,854 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:42:57,144 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:43:37,145 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:43:37,432 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:44:17,433 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:44:17,725 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:44:57,726 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:44:58,020 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:45:38,020 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:45:38,306 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:46:18,307 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:46:18,577 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:46:58,577 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:46:58,849 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:47:38,850 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:47:39,215 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:48:19,216 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:48:19,508 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:49:10,670 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-08 23:49:10,672 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-08 23:49:10,673 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-08 23:49:10,689 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-08 23:49:10,749 - ZenithServer - INFO - Bot iniciado
+2025-06-08 23:49:10,749 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-08 23:49:10,750 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:49:11,028 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:49:51,029 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:49:51,309 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:50:31,310 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:50:31,633 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:51:11,634 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:51:11,957 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:51:51,957 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:51:52,229 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:52:09,494 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:52:32,230 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:52:32,528 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:52:57,339 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:53:12,529 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:53:12,899 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:53:49,556 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:53:52,900 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:53:53,211 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:54:33,212 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:54:33,484 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:55:11,959 - ZenithServer - INFO - Deteniendo bot...
+2025-06-08 23:55:13,487 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-08 23:55:13,488 - ZenithServer - INFO - Deteniendo bot...
+2025-06-08 23:55:13,489 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-08 23:55:34,391 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-08 23:55:45,202 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-08 23:55:45,203 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-08 23:55:45,225 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-08 23:55:45,280 - ZenithServer - INFO - Bot iniciado
+2025-06-08 23:55:45,281 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-08 23:55:45,281 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:55:45,597 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:56:25,598 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:56:25,884 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:56:46,785 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-08 23:57:05,885 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:57:06,152 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:57:44,167 - ZenithServer - INFO - GET /set_user_preferences - 405 METHOD NOT ALLOWED
+2025-06-08 23:57:46,153 - ZenithServer - INFO - Realizando petición
+2025-06-08 23:57:46,439 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-08 23:58:26,440 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:02:18,172 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:02:28,096 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:02:42,678 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:02:50,595 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:02:50,857 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:03:10,230 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:03:30,858 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:03:31,143 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:03:44,581 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:04:11,145 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 00:04:11,146 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:04:11,146 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 00:04:25,614 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 00:04:25,616 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 00:04:25,616 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 00:04:25,632 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 00:04:25,692 - ZenithServer - INFO - Bot iniciado
+2025-06-09 00:04:25,693 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 00:04:25,693 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:04:25,990 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:04:27,839 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:05:03,988 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:05:03,991 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:05:04,085 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:05:05,991 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:05:06,255 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:05:44,837 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:05:46,256 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 00:05:46,257 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:05:46,257 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 00:05:59,953 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 00:05:59,955 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 00:05:59,955 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 00:05:59,986 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 00:06:00,103 - ZenithServer - INFO - Bot iniciado
+2025-06-09 00:06:00,104 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 00:06:00,106 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:06:00,654 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:06:12,208 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:06:12,213 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:06:13,942 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:06:21,949 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:06:40,654 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:06:40,915 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:07:20,916 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:07:21,194 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:07:27,474 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:07:44,258 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:08:01,195 - ZenithServer - CRITICAL - Servidor detenido
+2025-06-09 00:08:15,717 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 00:08:15,718 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 00:08:15,719 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 00:08:15,736 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 00:08:15,813 - ZenithServer - INFO - Bot iniciado
+2025-06-09 00:08:15,814 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 00:08:15,815 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:08:16,204 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:08:21,922 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:08:21,926 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:08:23,655 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:08:33,703 - ZenithServer - INFO - GET /usuario - 404 NOT FOUND
+2025-06-09 00:08:39,072 - ZenithServer - INFO - GET /usuario - 404 NOT FOUND
+2025-06-09 00:08:56,205 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:08:56,478 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:09:36,479 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:09:36,767 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:09:40,452 - ZenithServer - INFO - Deteniendo bot...
+2025-06-09 00:10:18,601 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 00:10:18,602 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 00:10:18,602 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 00:10:18,619 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 00:10:18,680 - ZenithServer - INFO - Bot iniciado
+2025-06-09 00:10:18,681 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 00:10:18,681 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:10:19,002 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:10:50,761 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:10:59,002 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:11:00,997 - ZenithServer - INFO - OPTIONS /set_user_preferences - 200 OK
+2025-06-09 00:11:04,817 - ZenithServer - INFO - GET /usuario - 200 OK
+2025-06-09 00:11:10,705 - ZenithServer - INFO - Choi homelo chino
+2025-06-09 00:11:10,798 - ZenithServer - INFO - POST /set_user_preferences - 200 OK
+2025-06-09 00:11:11,022 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:11:51,023 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:11:51,314 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 00:12:21,724 - ZenithServer - INFO - Inicializando el modelo Zenith...
+2025-06-09 00:12:21,725 - ZenithServer - DEBUG - Escalador cargado correctamente desde escalador_preferencias.pkl
+2025-06-09 00:12:21,725 - ZenithServer - INFO - Escalador cargado correctamente
+2025-06-09 00:12:21,742 - ZenithServer - DEBUG - Modelo cargado correctamente desde modelos\zenithQ1.pt
+2025-06-09 00:12:21,801 - ZenithServer - INFO - Bot iniciado
+2025-06-09 00:12:21,801 - ZenithServer - WARNING - Servidor iniciado en: http://127.0.0.1:1900
+2025-06-09 00:12:21,802 - ZenithServer - INFO - Realizando petición
+2025-06-09 00:12:22,100 - ZenithServer - DEBUG - [El servidor sigue funcional]
