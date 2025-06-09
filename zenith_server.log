@@ -3009,3 +3009,15 @@ DETAIL:  Failing row contains (3, megacherry2.0, 5Ay3MJDPrYzhmp8cQtR-jDyAYnytaxz
 2025-06-09 09:54:22,152 - ZenithServer - DEBUG - [El servidor sigue funcional]
 2025-06-09 09:55:02,153 - ZenithServer - INFO - Realizando petición
 2025-06-09 09:55:02,447 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:55:42,448 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:55:42,741 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:56:22,742 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:56:23,038 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:57:03,041 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:57:03,345 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:57:43,346 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:57:43,704 - ZenithServer - DEBUG - [El servidor sigue funcional]
+2025-06-09 09:58:21,823 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:58:22,716 - ZenithServer - INFO - GET /cursos - 200 OK
+2025-06-09 09:58:23,705 - ZenithServer - INFO - Realizando petición
+2025-06-09 09:58:24,008 - ZenithServer - DEBUG - [El servidor sigue funcional]
